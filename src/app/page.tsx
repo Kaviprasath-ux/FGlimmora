@@ -81,16 +81,14 @@ export default function LoginPage() {
         }}
       >
         {/* Logo & Title */}
-        <div style={{ textAlign: "center", marginBottom: 40 }}>
+        <div style={{ display: "flex", justifyContent: "center", marginBottom: 40 }}>
           <img
             src="/logo.png"
             alt="FilmGlimmora"
             style={{
-              width: 64,
-              height: 64,
-              borderRadius: 16,
-              marginBottom: 24,
-              objectFit: "cover",
+              height: 120,
+              objectFit: "contain",
+              filter: "brightness(1.1)",
             }}
           />
         </div>

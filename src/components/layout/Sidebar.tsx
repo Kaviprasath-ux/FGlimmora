@@ -54,8 +54,9 @@ export function Sidebar() {
           src="/logo.png"
           alt="FilmGlimmora"
           style={{
-            width: "80%",
+            height: 70,
             objectFit: "contain",
+            borderRadius: 6,
           }}
         />
       </div>

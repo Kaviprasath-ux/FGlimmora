@@ -85,7 +85,7 @@ export default function ActionStuntsPage() {
             key={i}
             name="Star"
             size={14}
-            color={i <= count ? "#C4A042" : "#3A3A3A"}
+            color={i <= count ? "#C4A042" : "#4A4A4A"}
             fill={i <= count ? "#C4A042" : "none"}
           />
         ))}
@@ -97,7 +97,7 @@ export default function ActionStuntsPage() {
   const maxCost = Math.max(...actionStuntScenes.map(s => s.estimatedCost));
 
   return (
-    <div style={{ padding: "32px", background: "#0F0F0F", minHeight: "100vh" }}>
+    <div style={{ padding: "32px", background: "#1A1A1A", minHeight: "100vh" }}>
       {/* Header */}
       <div style={{ marginBottom: "32px" }}>
         <h1 style={{ fontSize: "32px", fontWeight: "700", color: "#E8E0D4", marginBottom: "8px", letterSpacing: "-0.02em" }}>
@@ -110,7 +110,7 @@ export default function ActionStuntsPage() {
 
       {/* Overview Stats */}
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "16px", marginBottom: "32px" }}>
-        <div style={{ background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px", padding: "20px" }}>
+        <div style={{ background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px", padding: "20px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
             <div style={{ width: "48px", height: "48px", borderRadius: "12px", background: "#C4A04222", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <LucideIcon name="Flame" size={24} color="#C4A042" />
@@ -122,7 +122,7 @@ export default function ActionStuntsPage() {
           </div>
         </div>
 
-        <div style={{ background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px", padding: "20px" }}>
+        <div style={{ background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px", padding: "20px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
             <div style={{ width: "48px", height: "48px", borderRadius: "12px", background: "#C4A88222", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <LucideIcon name="IndianRupee" size={24} color="#C4A882" />
@@ -134,7 +134,7 @@ export default function ActionStuntsPage() {
           </div>
         </div>
 
-        <div style={{ background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px", padding: "20px" }}>
+        <div style={{ background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px", padding: "20px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
             <div style={{ width: "48px", height: "48px", borderRadius: "12px", background: "#5B8C5A22", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <LucideIcon name="CheckCircle" size={24} color="#5B8C5A" />
@@ -165,8 +165,8 @@ export default function ActionStuntsPage() {
               <div
                 key={scene.id}
                 style={{
-                  background: "#1A1A1A",
-                  border: "1px solid #2A2A2A",
+                  background: "#262626",
+                  border: "1px solid #3A3A3A",
                   borderRadius: "16px",
                   padding: "24px",
                 }}
@@ -183,7 +183,7 @@ export default function ActionStuntsPage() {
                     justifyContent: "center",
                     fontSize: "28px",
                     fontWeight: "700",
-                    color: "#0F0F0F",
+                    color: "#1A1A1A",
                   }}>
                     {scene.sceneNumber}
                   </div>
@@ -260,8 +260,8 @@ export default function ActionStuntsPage() {
                     {/* Stunt Breakdown */}
                     {sceneStunts.length > 0 && (
                       <div style={{
-                        background: "#0F0F0F",
-                        border: "1px solid #2A2A2A",
+                        background: "#1A1A1A",
+                        border: "1px solid #3A3A3A",
                         borderRadius: "12px",
                         padding: "16px",
                       }}>
@@ -301,8 +301,8 @@ export default function ActionStuntsPage() {
       {/* Safety Checklist */}
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px", marginBottom: "32px" }}>
         <div style={{
-          background: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          background: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "16px",
           padding: "24px",
         }}>
@@ -327,17 +327,17 @@ export default function ActionStuntsPage() {
                   alignItems: "center",
                   gap: "12px",
                   padding: "12px",
-                  background: item.checked ? "#5B8C5A11" : "#0F0F0F",
-                  border: `1px solid ${item.checked ? "#5B8C5A" : "#2A2A2A"}`,
+                  background: item.checked ? "#5B8C5A11" : "#1A1A1A",
+                  border: `1px solid ${item.checked ? "#5B8C5A" : "#3A3A3A"}`,
                   borderRadius: "10px",
                   cursor: "pointer",
                   transition: "all 0.2s ease",
                 }}
                 onMouseEnter={(e) => {
-                  if (!item.checked) e.currentTarget.style.borderColor = "#3A3A3A";
+                  if (!item.checked) e.currentTarget.style.borderColor = "#4A4A4A";
                 }}
                 onMouseLeave={(e) => {
-                  if (!item.checked) e.currentTarget.style.borderColor = "#2A2A2A";
+                  if (!item.checked) e.currentTarget.style.borderColor = "#3A3A3A";
                 }}
               >
                 <input
@@ -365,8 +365,8 @@ export default function ActionStuntsPage() {
 
         {/* Cost Breakdown */}
         <div style={{
-          background: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          background: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "16px",
           padding: "24px",
         }}>
@@ -389,7 +389,7 @@ export default function ActionStuntsPage() {
                 <div style={{
                   width: "100%",
                   height: "8px",
-                  background: "#0F0F0F",
+                  background: "#1A1A1A",
                   borderRadius: "4px",
                   overflow: "hidden",
                 }}>
@@ -408,7 +408,7 @@ export default function ActionStuntsPage() {
             <div style={{
               marginTop: "12px",
               paddingTop: "16px",
-              borderTop: "1px solid #2A2A2A",
+              borderTop: "1px solid #3A3A3A",
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",

@@ -71,7 +71,7 @@ export default function InvestmentPage() {
   ];
 
   return (
-    <div style={{ padding: "32px", backgroundColor: "#0F0F0F", minHeight: "100vh" }}>
+    <div style={{ padding: "32px", backgroundColor: "#1A1A1A", minHeight: "100vh" }}>
       {/* Header */}
       <div style={{ marginBottom: "32px" }}>
         <h1
@@ -92,8 +92,8 @@ export default function InvestmentPage() {
       {/* Large Investment Card */}
       <div
         style={{
-          backgroundColor: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          backgroundColor: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "16px",
           padding: "32px",
           marginBottom: "24px",
@@ -175,8 +175,8 @@ export default function InvestmentPage() {
         {/* Deployment Timeline */}
         <div
           style={{
-            backgroundColor: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            backgroundColor: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "24px",
           }}
@@ -201,8 +201,8 @@ export default function InvestmentPage() {
                     padding: "6px 12px",
                     borderRadius: "8px",
                     border: "1px solid",
-                    borderColor: selectedTimeline === period ? "#C4A882" : "#2A2A2A",
-                    backgroundColor: selectedTimeline === period ? "#C4A88220" : "#242424",
+                    borderColor: selectedTimeline === period ? "#C4A882" : "#3A3A3A",
+                    backgroundColor: selectedTimeline === period ? "#C4A88220" : "#333333",
                     color: selectedTimeline === period ? "#C4A882" : "#9A9080",
                     fontSize: "13px",
                     cursor: "pointer",
@@ -270,8 +270,8 @@ export default function InvestmentPage() {
         {/* Investment Protection Score */}
         <div
           style={{
-            backgroundColor: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            backgroundColor: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "24px",
           }}
@@ -302,7 +302,7 @@ export default function InvestmentPage() {
                   cy="80"
                   r="70"
                   fill="none"
-                  stroke="#242424"
+                  stroke="#333333"
                   strokeWidth="12"
                 />
                 <circle
@@ -346,7 +346,7 @@ export default function InvestmentPage() {
                   justifyContent: "space-between",
                   alignItems: "center",
                   padding: "12px",
-                  backgroundColor: "#242424",
+                  backgroundColor: "#333333",
                   borderRadius: "8px",
                 }}
               >
@@ -371,8 +371,8 @@ export default function InvestmentPage() {
       {/* Investment Breakdown by Category */}
       <div
         style={{
-          backgroundColor: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          backgroundColor: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "16px",
           padding: "24px",
           marginBottom: "24px",
@@ -411,7 +411,7 @@ export default function InvestmentPage() {
                 <div
                   style={{
                     height: "8px",
-                    backgroundColor: "#242424",
+                    backgroundColor: "#333333",
                     borderRadius: "4px",
                     overflow: "hidden",
                   }}
@@ -446,7 +446,7 @@ export default function InvestmentPage() {
                   alignItems: "center",
                   gap: "12px",
                   padding: "12px",
-                  backgroundColor: "#242424",
+                  backgroundColor: "#333333",
                   borderRadius: "8px",
                 }}
               >
@@ -476,8 +476,8 @@ export default function InvestmentPage() {
         {/* Comparable Films */}
         <div
           style={{
-            backgroundColor: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            backgroundColor: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "24px",
           }}
@@ -499,8 +499,8 @@ export default function InvestmentPage() {
                 key={idx}
                 style={{
                   padding: "16px",
-                  backgroundColor: "#242424",
-                  border: "1px solid #2A2A2A",
+                  backgroundColor: "#333333",
+                  border: "1px solid #3A3A3A",
                   borderRadius: "12px",
                   transition: "all 0.2s",
                   cursor: "pointer",
@@ -509,7 +509,7 @@ export default function InvestmentPage() {
                   e.currentTarget.style.borderColor = "#C4A882";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = "#2A2A2A";
+                  e.currentTarget.style.borderColor = "#3A3A3A";
                 }}
               >
                 <div
@@ -562,8 +562,8 @@ export default function InvestmentPage() {
         {/* Capital Call Schedule */}
         <div
           style={{
-            backgroundColor: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            backgroundColor: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "24px",
           }}
@@ -588,17 +588,17 @@ export default function InvestmentPage() {
                 key={idx}
                 style={{
                   padding: "16px",
-                  backgroundColor: "#242424",
-                  border: "1px solid #2A2A2A",
+                  backgroundColor: "#333333",
+                  border: "1px solid #3A3A3A",
                   borderRadius: "12px",
                   transition: "all 0.2s",
                   cursor: "pointer",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "#2A2A2A";
+                  e.currentTarget.style.backgroundColor = "#3A3A3A";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "#242424";
+                  e.currentTarget.style.backgroundColor = "#333333";
                 }}
               >
                 <div

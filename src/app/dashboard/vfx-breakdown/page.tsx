@@ -79,7 +79,7 @@ export default function VfxBreakdownPage() {
   };
 
   return (
-    <div style={{ padding: "2rem", background: "#0F0F0F", minHeight: "100vh" }}>
+    <div style={{ padding: "2rem", background: "#1A1A1A", minHeight: "100vh" }}>
       {/* Header */}
       <div style={{ marginBottom: "2rem" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "0.5rem" }}>
@@ -89,7 +89,7 @@ export default function VfxBreakdownPage() {
           </h1>
           <span
             style={{
-              background: "#242424",
+              background: "#333333",
               color: "#C4A882",
               padding: "0.25rem 0.75rem",
               borderRadius: "1rem",
@@ -123,8 +123,8 @@ export default function VfxBreakdownPage() {
           <div
             key={i}
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "1rem",
               padding: "1.25rem",
             }}
@@ -143,8 +143,8 @@ export default function VfxBreakdownPage() {
       {/* Filters */}
       <div
         style={{
-          background: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          background: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "1rem",
           padding: "1.5rem",
           marginBottom: "2rem",
@@ -160,8 +160,8 @@ export default function VfxBreakdownPage() {
               onChange={(e) => setStatusFilter(e.target.value)}
               style={{
                 width: "100%",
-                background: "#242424",
-                border: "1px solid #2A2A2A",
+                background: "#333333",
+                border: "1px solid #3A3A3A",
                 borderRadius: "0.5rem",
                 padding: "0.625rem",
                 color: "#E8E0D4",
@@ -185,8 +185,8 @@ export default function VfxBreakdownPage() {
               onChange={(e) => setTypeFilter(e.target.value)}
               style={{
                 width: "100%",
-                background: "#242424",
-                border: "1px solid #2A2A2A",
+                background: "#333333",
+                border: "1px solid #3A3A3A",
                 borderRadius: "0.5rem",
                 padding: "0.625rem",
                 color: "#E8E0D4",
@@ -210,8 +210,8 @@ export default function VfxBreakdownPage() {
               onChange={(e) => setComplexityFilter(e.target.value)}
               style={{
                 width: "100%",
-                background: "#242424",
-                border: "1px solid #2A2A2A",
+                background: "#333333",
+                border: "1px solid #3A3A3A",
                 borderRadius: "0.5rem",
                 padding: "0.625rem",
                 color: "#E8E0D4",
@@ -235,8 +235,8 @@ export default function VfxBreakdownPage() {
               onChange={(e) => setVendorFilter(e.target.value)}
               style={{
                 width: "100%",
-                background: "#242424",
-                border: "1px solid #2A2A2A",
+                background: "#333333",
+                border: "1px solid #3A3A3A",
                 borderRadius: "0.5rem",
                 padding: "0.625rem",
                 color: "#E8E0D4",
@@ -257,8 +257,8 @@ export default function VfxBreakdownPage() {
       {/* Shot Table */}
       <div
         style={{
-          background: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          background: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "1rem",
           marginBottom: "2rem",
           overflow: "hidden",
@@ -270,7 +270,7 @@ export default function VfxBreakdownPage() {
             justifyContent: "space-between",
             alignItems: "center",
             padding: "1.25rem 1.5rem",
-            borderBottom: "1px solid #2A2A2A",
+            borderBottom: "1px solid #3A3A3A",
           }}
         >
           <h2 style={{ fontSize: "1.25rem", fontWeight: "600", color: "#E8E0D4", margin: 0 }}>{t("vfxShots")}</h2>
@@ -278,7 +278,7 @@ export default function VfxBreakdownPage() {
             onClick={() => setShowAddModal(true)}
             style={{
               background: "#C4A882",
-              color: "#0F0F0F",
+              color: "#1A1A1A",
               border: "none",
               padding: "0.625rem 1.25rem",
               borderRadius: "0.5rem",
@@ -293,7 +293,7 @@ export default function VfxBreakdownPage() {
         <div style={{ overflowX: "auto" }}>
           <table style={{ width: "100%", borderCollapse: "collapse" }}>
             <thead>
-              <tr style={{ background: "#242424", borderBottom: "1px solid #2A2A2A" }}>
+              <tr style={{ background: "#333333", borderBottom: "1px solid #3A3A3A" }}>
                 {[t("thScene"), t("thShot"), t("thType"), t("thComplexity"), t("thEstCost"), t("thActualCost"), t("thVendor"), t("thStatus"), t("thRework")].map(
                   (header) => (
                     <th
@@ -318,11 +318,11 @@ export default function VfxBreakdownPage() {
                   key={shot.id}
                   onClick={() => setSelectedShot(shot)}
                   style={{
-                    borderBottom: "1px solid #2A2A2A",
+                    borderBottom: "1px solid #3A3A3A",
                     cursor: "pointer",
                     transition: "background 0.2s",
                   }}
-                  onMouseEnter={(e) => (e.currentTarget.style.background = "#242424")}
+                  onMouseEnter={(e) => (e.currentTarget.style.background = "#333333")}
                   onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
                 >
                   <td style={{ padding: "1rem 1.5rem", color: "#E8E0D4", fontWeight: "600" }}>
@@ -332,7 +332,7 @@ export default function VfxBreakdownPage() {
                   <td style={{ padding: "1rem 1.5rem" }}>
                     <span
                       style={{
-                        background: "#242424",
+                        background: "#333333",
                         color: "#C4A882",
                         padding: "0.25rem 0.75rem",
                         borderRadius: "0.5rem",
@@ -398,8 +398,8 @@ export default function VfxBreakdownPage() {
         {/* Vendor Summary */}
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "1rem",
             padding: "1.5rem",
           }}
@@ -418,7 +418,7 @@ export default function VfxBreakdownPage() {
                   <div
                     style={{
                       height: "0.5rem",
-                      background: "#242424",
+                      background: "#333333",
                       borderRadius: "0.25rem",
                       overflow: "hidden",
                     }}
@@ -448,8 +448,8 @@ export default function VfxBreakdownPage() {
         {/* Complexity Distribution */}
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "1rem",
             padding: "1.5rem",
           }}
@@ -477,7 +477,7 @@ export default function VfxBreakdownPage() {
               <div
                 style={{
                   height: "0.5rem",
-                  background: "#242424",
+                  background: "#333333",
                   borderRadius: "0.25rem",
                   overflow: "hidden",
                 }}
@@ -515,8 +515,8 @@ export default function VfxBreakdownPage() {
           <div
             onClick={(e) => e.stopPropagation()}
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "1rem",
               padding: "2rem",
               maxWidth: "600px",
@@ -628,8 +628,8 @@ export default function VfxBreakdownPage() {
           <div
             onClick={(e) => e.stopPropagation()}
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "1rem",
               padding: "2rem",
               maxWidth: "600px",
@@ -661,7 +661,7 @@ export default function VfxBreakdownPage() {
               style={{
                 width: "100%",
                 background: "#C4A882",
-                color: "#0F0F0F",
+                color: "#1A1A1A",
                 border: "none",
                 padding: "0.75rem",
                 borderRadius: "0.5rem",

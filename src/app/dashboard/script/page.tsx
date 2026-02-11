@@ -464,7 +464,7 @@ export default function ScriptIntelligencePage() {
   // ═══════════════════════════════════════════════════════════
 
   return (
-    <div style={{ background: "#0F0F0F", minHeight: "100vh", padding: "32px" }}>
+    <div style={{ background: "#1A1A1A", minHeight: "100vh", padding: "32px" }}>
       <style>{`
         @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
         @keyframes pulse-glow { 0%, 100% { box-shadow: 0 0 8px #5B8C5A40; } 50% { box-shadow: 0 0 16px #5B8C5A80; } }
@@ -477,7 +477,7 @@ export default function ScriptIntelligencePage() {
         {/* ═══════ HEADER ═══════ */}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "32px", flexWrap: "wrap", gap: "16px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-            <div style={{ padding: "12px", background: "linear-gradient(135deg, #1A1A1A, #242424)", borderRadius: "14px", border: "1px solid #C4A88240" }}>
+            <div style={{ padding: "12px", background: "linear-gradient(135deg, #262626, #333333)", borderRadius: "14px", border: "1px solid #C4A88240" }}>
               <LucideIcon name="Sparkles" size={28} style={{ color: "#C4A882" }} />
             </div>
             <div>
@@ -509,7 +509,7 @@ export default function ScriptIntelligencePage() {
               onClick={() => setShowUploadModal(true)}
               style={{
                 padding: "10px 20px", background: "#C4A882", border: "none", borderRadius: "10px",
-                color: "#0F0F0F", fontSize: "14px", fontWeight: "600", cursor: "pointer",
+                color: "#1A1A1A", fontSize: "14px", fontWeight: "600", cursor: "pointer",
                 display: "flex", alignItems: "center", gap: "8px",
               }}
             >
@@ -518,7 +518,7 @@ export default function ScriptIntelligencePage() {
             </button>
             <div style={{
               display: "flex", gap: "16px", padding: "8px 20px",
-              background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "10px",
+              background: "#262626", border: "1px solid #3A3A3A", borderRadius: "10px",
             }}>
               <span style={{ fontSize: "13px", color: "#C4A882", fontWeight: "600" }}>{scenes.length} {t("scenes")}</span>
               <span style={{ fontSize: "13px", color: "#6B6560" }}>|</span>
@@ -544,7 +544,7 @@ export default function ScriptIntelligencePage() {
             { label: t("scenesAnalyzed"), value: `${globalMetrics.scenesAnalyzed}/${globalMetrics.scenesAnalyzed}`, icon: "FileText", color: "#5B8C5A" },
           ].map((stat, i) => (
             <div key={i} style={{
-              background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "14px", padding: "18px",
+              background: "#262626", border: "1px solid #3A3A3A", borderRadius: "14px", padding: "18px",
               animation: `fadeIn 0.3s ease-out ${i * 0.05}s both`,
             }}>
               <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "10px" }}>
@@ -562,8 +562,8 @@ export default function ScriptIntelligencePage() {
 
         {/* ═══════ TAB NAVIGATION ═══════ */}
         <div style={{
-          display: "flex", gap: "4px", marginBottom: "24px", background: "#1A1A1A",
-          border: "1px solid #2A2A2A", borderRadius: "14px", padding: "6px", overflowX: "auto",
+          display: "flex", gap: "4px", marginBottom: "24px", background: "#262626",
+          border: "1px solid #3A3A3A", borderRadius: "14px", padding: "6px", overflowX: "auto",
         }}>
           {tabList.map(tab => (
             <button
@@ -573,13 +573,13 @@ export default function ScriptIntelligencePage() {
                 flex: "1 0 auto", padding: "12px 20px",
                 background: activeTab === tab.id ? "#C4A882" : "transparent",
                 border: "none", borderRadius: "10px",
-                color: activeTab === tab.id ? "#0F0F0F" : "#9A9080",
+                color: activeTab === tab.id ? "#1A1A1A" : "#9A9080",
                 fontSize: "13px", fontWeight: "600", cursor: "pointer",
                 display: "flex", alignItems: "center", justifyContent: "center", gap: "8px",
                 transition: "all 0.2s", whiteSpace: "nowrap",
               }}
             >
-              <LucideIcon name={tab.icon} size={16} style={{ color: activeTab === tab.id ? "#0F0F0F" : "#9A9080" }} />
+              <LucideIcon name={tab.icon} size={16} style={{ color: activeTab === tab.id ? "#1A1A1A" : "#9A9080" }} />
               {tab.label}
             </button>
           ))}
@@ -593,11 +593,11 @@ export default function ScriptIntelligencePage() {
                 key={si.scene.id}
                 onClick={() => setSelectedScene(si.scene)}
                 style={{
-                  background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px",
+                  background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px",
                   padding: "24px", cursor: "pointer", transition: "all 0.2s",
                 }}
                 onMouseEnter={e => { e.currentTarget.style.borderColor = "#C4A882"; e.currentTarget.style.transform = "translateY(-2px)"; }}
-                onMouseLeave={e => { e.currentTarget.style.borderColor = "#2A2A2A"; e.currentTarget.style.transform = "translateY(0)"; }}
+                onMouseLeave={e => { e.currentTarget.style.borderColor = "#3A3A3A"; e.currentTarget.style.transform = "translateY(0)"; }}
               >
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start", marginBottom: "12px" }}>
                   <div style={{ padding: "5px 10px", background: "#C4A88225", borderRadius: "8px", fontSize: "13px", fontWeight: "700", color: "#C4A882" }}>
@@ -636,7 +636,7 @@ export default function ScriptIntelligencePage() {
                     <span style={{ fontSize: "11px", color: "#9A9080" }}>{t("feasibility")}</span>
                     <span style={{ fontSize: "11px", color: "#E8E0D4", fontWeight: "600" }}>{si.feasibility}/10</span>
                   </div>
-                  <div style={{ width: "100%", height: "6px", background: "#242424", borderRadius: "3px", overflow: "hidden" }}>
+                  <div style={{ width: "100%", height: "6px", background: "#333333", borderRadius: "3px", overflow: "hidden" }}>
                     <div style={{
                       width: `${(si.feasibility / 10) * 100}%`, height: "100%", borderRadius: "3px",
                       background: si.feasibility >= 7 ? "linear-gradient(90deg, #5B8C5A, #7BAF7A)" : si.feasibility >= 4 ? "linear-gradient(90deg, #C4A042, #D4B052)" : "linear-gradient(90deg, #C45C5C, #D46C6C)",
@@ -671,7 +671,7 @@ export default function ScriptIntelligencePage() {
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                   <div style={{ display: "flex", gap: "2px" }}>
                     {Array.from({ length: 5 }).map((_, i) => (
-                      <LucideIcon key={i} name="Flame" size={14} style={{ color: i < si.intensity ? "#C45C5C" : "#2A2A2A" }} />
+                      <LucideIcon key={i} name="Flame" size={14} style={{ color: i < si.intensity ? "#C45C5C" : "#3A3A3A" }} />
                     ))}
                   </div>
                   <span style={{ fontSize: "12px", color: "#9A9080" }}>~{si.estimatedShots} {t("shots")}</span>
@@ -685,7 +685,7 @@ export default function ScriptIntelligencePage() {
         {activeTab === "feasibility" && (
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }}>
             {/* Left: Ranked list */}
-            <div style={{ background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px", padding: "24px" }}>
+            <div style={{ background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px", padding: "24px" }}>
               <h3 style={{ fontSize: "18px", fontWeight: "600", color: "#E8E0D4", margin: "0 0 20px 0" }}>
                 {t("scenesRankedByFeasibility")}
               </h3>
@@ -697,8 +697,8 @@ export default function ScriptIntelligencePage() {
                       key={si.scene.id}
                       onClick={() => setSelectedFeasibilityScene(si.scene)}
                       style={{
-                        padding: "14px 16px", background: isSelected ? "#C4A88215" : "#242424",
-                        border: `1px solid ${isSelected ? "#C4A882" : "#2A2A2A"}`, borderRadius: "10px",
+                        padding: "14px 16px", background: isSelected ? "#C4A88215" : "#333333",
+                        border: `1px solid ${isSelected ? "#C4A882" : "#3A3A3A"}`, borderRadius: "10px",
                         cursor: "pointer", transition: "all 0.2s",
                       }}
                     >
@@ -717,7 +717,7 @@ export default function ScriptIntelligencePage() {
                           {si.feasibility}
                         </span>
                       </div>
-                      <div style={{ width: "100%", height: "5px", background: "#1A1A1A", borderRadius: "3px", overflow: "hidden" }}>
+                      <div style={{ width: "100%", height: "5px", background: "#262626", borderRadius: "3px", overflow: "hidden" }}>
                         <div style={{
                           width: `${(si.feasibility / 10) * 100}%`, height: "100%", borderRadius: "3px",
                           background: si.feasibility >= 7 ? "#5B8C5A" : si.feasibility >= 4 ? "#C4A042" : "#C45C5C",
@@ -730,7 +730,7 @@ export default function ScriptIntelligencePage() {
             </div>
 
             {/* Right: Breakdown */}
-            <div style={{ background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px", padding: "24px" }}>
+            <div style={{ background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px", padding: "24px" }}>
               {selectedFeasibilityScene ? (() => {
                 const breakdown = computeFeasibilityBreakdown(selectedFeasibilityScene);
                 const score = computeFeasibility(selectedFeasibilityScene);
@@ -771,7 +771,7 @@ export default function ScriptIntelligencePage() {
                             </div>
                             <span style={{ fontSize: "13px", color: "#C4A882", fontWeight: "600" }}>{f.value.toFixed(1)}</span>
                           </div>
-                          <div style={{ width: "100%", height: "8px", background: "#242424", borderRadius: "4px", overflow: "hidden" }}>
+                          <div style={{ width: "100%", height: "8px", background: "#333333", borderRadius: "4px", overflow: "hidden" }}>
                             <div style={{
                               width: `${(f.value / 10) * 100}%`, height: "100%",
                               background: f.value >= 7 ? "#5B8C5A" : f.value >= 4 ? "#C4A042" : "#C45C5C",
@@ -803,7 +803,7 @@ export default function ScriptIntelligencePage() {
                   display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
                   height: "100%", color: "#6B6560", textAlign: "center", padding: "40px",
                 }}>
-                  <LucideIcon name="Target" size={48} style={{ color: "#2A2A2A", marginBottom: "16px" }} />
+                  <LucideIcon name="Target" size={48} style={{ color: "#3A3A3A", marginBottom: "16px" }} />
                   <p style={{ fontSize: "15px", margin: 0 }}>{t("selectScenePrompt")}</p>
                 </div>
               )}
@@ -815,7 +815,7 @@ export default function ScriptIntelligencePage() {
         {activeTab === "appeal" && (
           <div>
             {/* Appeal Spectrum */}
-            <div style={{ background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px", padding: "24px", marginBottom: "24px" }}>
+            <div style={{ background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px", padding: "24px", marginBottom: "24px" }}>
               <h3 style={{ fontSize: "18px", fontWeight: "600", color: "#E8E0D4", margin: "0 0 20px 0" }}>{t("appealSpectrum")}</h3>
               <div style={{ position: "relative", height: "48px", marginBottom: "12px" }}>
                 <div style={{
@@ -840,7 +840,7 @@ export default function ScriptIntelligencePage() {
 
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px", marginBottom: "24px" }}>
               {/* Donut */}
-              <div style={{ background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px", padding: "24px" }}>
+              <div style={{ background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px", padding: "24px" }}>
                 <h3 style={{ fontSize: "18px", fontWeight: "600", color: "#E8E0D4", margin: "0 0 24px 0" }}>{t("sceneComposition")}</h3>
                 <div style={{ display: "flex", alignItems: "center", gap: "32px" }}>
                   <div style={{ position: "relative", width: "180px", height: "180px", flexShrink: 0 }}>
@@ -859,7 +859,7 @@ export default function ScriptIntelligencePage() {
                           display: "flex", alignItems: "center", justifyContent: "center",
                         }}>
                           <div style={{
-                            width: "110px", height: "110px", borderRadius: "50%", background: "#1A1A1A",
+                            width: "110px", height: "110px", borderRadius: "50%", background: "#262626",
                             display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
                           }}>
                             <div style={{ fontSize: "24px", fontWeight: "700", color: "#E8E0D4" }}>{scenes.length}</div>
@@ -885,7 +885,7 @@ export default function ScriptIntelligencePage() {
               </div>
 
               {/* Audience Predictions */}
-              <div style={{ background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px", padding: "24px" }}>
+              <div style={{ background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px", padding: "24px" }}>
                 <h3 style={{ fontSize: "18px", fontWeight: "600", color: "#E8E0D4", margin: "0 0 20px 0" }}>{t("audiencePredictions")}</h3>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px" }}>
                   {(() => {
@@ -901,13 +901,13 @@ export default function ScriptIntelligencePage() {
                       { name: t("overseasNri"), score: Math.round((overseasPull / 100 * 0.6 + vfxSpectacle * 0.4) * 90 + 10), color: "#5B8C5A", icon: "Globe" },
                     ];
                     return segments.map(seg => (
-                      <div key={seg.name} style={{ padding: "16px", background: "#242424", borderRadius: "12px", border: "1px solid #2A2A2A" }}>
+                      <div key={seg.name} style={{ padding: "16px", background: "#333333", borderRadius: "12px", border: "1px solid #3A3A3A" }}>
                         <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "10px" }}>
                           <LucideIcon name={seg.icon} size={14} style={{ color: seg.color }} />
                           <span style={{ fontSize: "12px", color: "#9A9080", fontWeight: "500" }}>{seg.name}</span>
                         </div>
                         <div style={{ fontSize: "26px", fontWeight: "700", color: seg.color, marginBottom: "8px" }}>{seg.score}%</div>
-                        <div style={{ width: "100%", height: "4px", background: "#1A1A1A", borderRadius: "2px" }}>
+                        <div style={{ width: "100%", height: "4px", background: "#262626", borderRadius: "2px" }}>
                           <div style={{ width: `${seg.score}%`, height: "100%", background: seg.color, borderRadius: "2px" }} />
                         </div>
                       </div>
@@ -922,7 +922,7 @@ export default function ScriptIntelligencePage() {
         {/* ═══════ TAB 4: NARRATIVE SIMULATOR ═══════ */}
         {activeTab === "simulator" && (
           <div>
-            <div style={{ background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px", padding: "24px", marginBottom: "24px" }}>
+            <div style={{ background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px", padding: "24px", marginBottom: "24px" }}>
               <h3 style={{ fontSize: "18px", fontWeight: "600", color: "#E8E0D4", margin: "0 0 20px 0" }}>{t("whatIfScenarios")}</h3>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))", gap: "14px" }}>
                 {[
@@ -938,8 +938,8 @@ export default function ScriptIntelligencePage() {
                       key={scenario.id}
                       onClick={() => toggleScenario(scenario.id)}
                       style={{
-                        padding: "16px", background: isActive ? "#C4A88215" : "#242424",
-                        border: `1px solid ${isActive ? "#C4A882" : "#2A2A2A"}`, borderRadius: "12px",
+                        padding: "16px", background: isActive ? "#C4A88215" : "#333333",
+                        border: `1px solid ${isActive ? "#C4A882" : "#3A3A3A"}`, borderRadius: "12px",
                         cursor: "pointer", transition: "all 0.2s",
                       }}
                     >
@@ -950,7 +950,7 @@ export default function ScriptIntelligencePage() {
                           background: isActive ? "#C4A882" : "transparent",
                           display: "flex", alignItems: "center", justifyContent: "center",
                         }}>
-                          {isActive && <span style={{ color: "#0F0F0F", fontSize: "12px", fontWeight: "700" }}>&#10003;</span>}
+                          {isActive && <span style={{ color: "#1A1A1A", fontSize: "12px", fontWeight: "700" }}>&#10003;</span>}
                         </div>
                         <LucideIcon name={scenario.icon} size={14} style={{ color: isActive ? "#C4A882" : "#9A9080" }} />
                         <span style={{ fontSize: "13px", color: isActive ? "#C4A882" : "#E8E0D4", fontWeight: "600" }}>
@@ -965,7 +965,7 @@ export default function ScriptIntelligencePage() {
             </div>
 
             {/* Custom Sliders */}
-            <div style={{ background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px", padding: "24px", marginBottom: "24px" }}>
+            <div style={{ background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px", padding: "24px", marginBottom: "24px" }}>
               <h3 style={{ fontSize: "18px", fontWeight: "600", color: "#E8E0D4", margin: "0 0 20px 0" }}>{t("customAdjustments")}</h3>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "24px" }}>
                 <div>
@@ -1002,7 +1002,7 @@ export default function ScriptIntelligencePage() {
             </div>
 
             {/* Impact Dashboard */}
-            <div style={{ background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px", padding: "24px" }}>
+            <div style={{ background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px", padding: "24px" }}>
               <h3 style={{ fontSize: "18px", fontWeight: "600", color: "#E8E0D4", margin: "0 0 20px 0" }}>
                 {t("impactDashboard")}
               </h3>
@@ -1015,7 +1015,7 @@ export default function ScriptIntelligencePage() {
                   { label: t("shootDays"), baseline: baselineResult.shootDays, simulated: simulatedResult.shootDays, isCurrency: false },
                   { label: t("vfxShots"), baseline: baselineResult.vfxShotCount, simulated: simulatedResult.vfxShotCount, isCurrency: false },
                 ].map((metric, i) => (
-                  <div key={i} style={{ padding: "18px", background: "#242424", borderRadius: "12px", border: "1px solid #2A2A2A" }}>
+                  <div key={i} style={{ padding: "18px", background: "#333333", borderRadius: "12px", border: "1px solid #3A3A3A" }}>
                     <div style={{ fontSize: "11px", color: "#6B6560", marginBottom: "8px", textTransform: "uppercase", letterSpacing: "0.5px" }}>
                       {metric.label}
                     </div>
@@ -1043,12 +1043,12 @@ export default function ScriptIntelligencePage() {
               const isExpanded = expandedScenes.has(si.scene.id);
               const shots = shotTemplates[si.scene.complexity] || shotTemplates.dialogue;
               return (
-                <div key={si.scene.id} style={{ background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "14px", overflow: "hidden" }}>
+                <div key={si.scene.id} style={{ background: "#262626", border: "1px solid #3A3A3A", borderRadius: "14px", overflow: "hidden" }}>
                   <div
                     onClick={() => toggleExpandScene(si.scene.id)}
                     style={{
                       padding: "18px 24px", display: "flex", justifyContent: "space-between", alignItems: "center",
-                      cursor: "pointer", background: isExpanded ? "#242424" : "transparent",
+                      cursor: "pointer", background: isExpanded ? "#333333" : "transparent",
                     }}
                   >
                     <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
@@ -1075,7 +1075,7 @@ export default function ScriptIntelligencePage() {
                     <div style={{ padding: "0 24px 20px" }}>
                       <table style={{ width: "100%", borderCollapse: "collapse" }}>
                         <thead>
-                          <tr style={{ borderBottom: "1px solid #2A2A2A" }}>
+                          <tr style={{ borderBottom: "1px solid #3A3A3A" }}>
                             {[t("shotNumber"), t("shotType"), t("cameraMovement"), t("estDuration"), t("lighting")].map(h => (
                               <th key={h} style={{
                                 padding: "12px 8px", textAlign: "left", fontSize: "11px",
@@ -1086,7 +1086,7 @@ export default function ScriptIntelligencePage() {
                         </thead>
                         <tbody>
                           {shots.map((shot, idx) => (
-                            <tr key={idx} style={{ borderBottom: "1px solid #242424" }}>
+                            <tr key={idx} style={{ borderBottom: "1px solid #333333" }}>
                               <td style={{ padding: "12px 8px", fontSize: "13px", color: "#C4A882", fontWeight: "600" }}>
                                 {si.scene.sceneNumber}.{shot.shotNumber}
                               </td>
@@ -1109,7 +1109,7 @@ export default function ScriptIntelligencePage() {
         {/* ═══════ TAB 6: SAFETY & CROWD ═══════ */}
         {activeTab === "safety" && (
           <div>
-            <div style={{ background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px", padding: "24px", marginBottom: "24px" }}>
+            <div style={{ background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px", padding: "24px", marginBottom: "24px" }}>
               <h3 style={{ fontSize: "18px", fontWeight: "600", color: "#E8E0D4", margin: "0 0 20px 0" }}>{t("safetyRiskHeatMap")}</h3>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "10px" }}>
                 {sceneIntelligence.map(si => {
@@ -1141,11 +1141,11 @@ export default function ScriptIntelligencePage() {
 
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }}>
               {/* Crowd Detection */}
-              <div style={{ background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px", padding: "24px" }}>
+              <div style={{ background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px", padding: "24px" }}>
                 <h3 style={{ fontSize: "18px", fontWeight: "600", color: "#E8E0D4", margin: "0 0 20px 0" }}>Crowd Detection</h3>
                 <table style={{ width: "100%", borderCollapse: "collapse" }}>
                   <thead>
-                    <tr style={{ borderBottom: "1px solid #2A2A2A" }}>
+                    <tr style={{ borderBottom: "1px solid #3A3A3A" }}>
                       {["Scene", "Est. Crowd", "Management"].map(h => (
                         <th key={h} style={{ padding: "10px 8px", textAlign: "left", fontSize: "11px", color: "#6B6560", fontWeight: "600" }}>{h}</th>
                       ))}
@@ -1153,7 +1153,7 @@ export default function ScriptIntelligencePage() {
                   </thead>
                   <tbody>
                     {crowdScenes.map(cs => (
-                      <tr key={cs.scene.id} style={{ borderBottom: "1px solid #242424" }}>
+                      <tr key={cs.scene.id} style={{ borderBottom: "1px solid #333333" }}>
                         <td style={{ padding: "12px 8px", fontSize: "13px", color: "#E8E0D4" }}>Sc. {cs.scene.sceneNumber}</td>
                         <td style={{ padding: "12px 8px", fontSize: "13px", color: "#C4A882", fontWeight: "600" }}>~{cs.estCrowdSize}</td>
                         <td style={{ padding: "12px 8px" }}>
@@ -1172,7 +1172,7 @@ export default function ScriptIntelligencePage() {
               </div>
 
               {/* Safety Protocols */}
-              <div style={{ background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px", padding: "24px" }}>
+              <div style={{ background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px", padding: "24px" }}>
                 <h3 style={{ fontSize: "18px", fontWeight: "600", color: "#E8E0D4", margin: "0 0 20px 0" }}>Safety Protocols</h3>
                 <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
                   {highRiskScenes.length === 0 && (
@@ -1198,7 +1198,7 @@ export default function ScriptIntelligencePage() {
                         <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginBottom: "10px" }}>
                           {si.safetyRisk.factors.map((f, i) => (
                             <span key={i} style={{
-                              padding: "3px 8px", background: "#242424", borderRadius: "4px",
+                              padding: "3px 8px", background: "#333333", borderRadius: "4px",
                               fontSize: "11px", color: "#9A9080",
                             }}>{f}</span>
                           ))}
@@ -1217,7 +1217,7 @@ export default function ScriptIntelligencePage() {
         )}
 
         {/* ═══════ DIRECTOR STYLE MAPPING ═══════ */}
-        <div style={{ background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px", padding: "24px", marginTop: "32px" }}>
+        <div style={{ background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px", padding: "24px", marginTop: "32px" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }}>
             <h3 style={{ fontSize: "18px", fontWeight: "600", color: "#E8E0D4", margin: 0 }}>Director Style Mapping</h3>
             <div style={{
@@ -1230,9 +1230,9 @@ export default function ScriptIntelligencePage() {
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: "14px" }}>
             {Object.entries(directorStyles).map(([type, sty]) => (
-              <div key={type} style={{ padding: "16px", background: "#242424", borderRadius: "10px", border: "1px solid #2A2A2A" }}>
+              <div key={type} style={{ padding: "16px", background: "#333333", borderRadius: "10px", border: "1px solid #3A3A3A" }}>
                 <div style={{
-                  padding: "4px 10px", background: complexityColors[type]?.bg || "#242424",
+                  padding: "4px 10px", background: complexityColors[type]?.bg || "#333333",
                   borderRadius: "6px", fontSize: "12px", fontWeight: "600",
                   color: complexityColors[type]?.text || "#9A9080", textTransform: "capitalize",
                   display: "inline-block", marginBottom: "12px",
@@ -1274,7 +1274,7 @@ export default function ScriptIntelligencePage() {
               <div
                 onClick={e => e.stopPropagation()}
                 style={{
-                  background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "20px", padding: "32px",
+                  background: "#262626", border: "1px solid #3A3A3A", borderRadius: "20px", padding: "32px",
                   maxWidth: "800px", width: "100%", maxHeight: "90vh", overflowY: "auto",
                 }}
               >
@@ -1290,7 +1290,7 @@ export default function ScriptIntelligencePage() {
                   <button
                     onClick={() => setSelectedScene(null)}
                     style={{
-                      padding: "8px", background: "#242424", border: "1px solid #2A2A2A",
+                      padding: "8px", background: "#333333", border: "1px solid #3A3A3A",
                       borderRadius: "8px", cursor: "pointer", color: "#9A9080", fontSize: "16px",
                     }}
                   >
@@ -1306,7 +1306,7 @@ export default function ScriptIntelligencePage() {
                     { label: "Action Intensity", value: `${si.intensity}/5`, color: "#C45C5C" },
                     { label: "Est. Shots", value: `${si.estimatedShots}`, color: "#5B7C8C" },
                   ].map((card, i) => (
-                    <div key={i} style={{ padding: "14px", background: "#242424", borderRadius: "10px", textAlign: "center" }}>
+                    <div key={i} style={{ padding: "14px", background: "#333333", borderRadius: "10px", textAlign: "center" }}>
                       <div style={{ fontSize: "11px", color: "#6B6560", marginBottom: "6px" }}>{card.label}</div>
                       <div style={{ fontSize: "20px", fontWeight: "700", color: card.color }}>{card.value}</div>
                     </div>
@@ -1317,15 +1317,15 @@ export default function ScriptIntelligencePage() {
                 <div style={{ marginBottom: "24px" }}>
                   <h4 style={{ fontSize: "14px", color: "#9A9080", fontWeight: "600", margin: "0 0 12px 0" }}>Cost Breakdown</h4>
                   <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "12px" }}>
-                    <div style={{ padding: "12px", background: "#242424", borderRadius: "8px" }}>
+                    <div style={{ padding: "12px", background: "#333333", borderRadius: "8px" }}>
                       <div style={{ fontSize: "11px", color: "#6B6560", marginBottom: "4px" }}>Manual Estimate</div>
                       <div style={{ fontSize: "16px", fontWeight: "600", color: "#5B7C8C" }}>{formatCrores(selectedScene.estimatedCost)}</div>
                     </div>
-                    <div style={{ padding: "12px", background: "#242424", borderRadius: "8px" }}>
+                    <div style={{ padding: "12px", background: "#333333", borderRadius: "8px" }}>
                       <div style={{ fontSize: "11px", color: "#6B6560", marginBottom: "4px" }}>AI Estimate</div>
                       <div style={{ fontSize: "16px", fontWeight: "600", color: "#C4A882" }}>{formatCrores(si.aiCost)}</div>
                     </div>
-                    <div style={{ padding: "12px", background: "#242424", borderRadius: "8px" }}>
+                    <div style={{ padding: "12px", background: "#333333", borderRadius: "8px" }}>
                       <div style={{ fontSize: "11px", color: "#6B6560", marginBottom: "4px" }}>VFX Sub-cost</div>
                       <div style={{ fontSize: "16px", fontWeight: "600", color: "#C4A882" }}>
                         {formatCrores(si.linkedVfxShots.reduce((sum, v) => sum + v.estimatedCost, 0))}
@@ -1341,7 +1341,7 @@ export default function ScriptIntelligencePage() {
                     <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
                       {si.linkedVfxShots.map(v => (
                         <div key={v.id} style={{
-                          padding: "12px", background: "#242424", borderRadius: "8px",
+                          padding: "12px", background: "#333333", borderRadius: "8px",
                           display: "flex", justifyContent: "space-between", alignItems: "center",
                         }}>
                           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
@@ -1369,7 +1369,7 @@ export default function ScriptIntelligencePage() {
                     <h4 style={{ fontSize: "14px", color: "#9A9080", fontWeight: "600", margin: "0 0 12px 0" }}>Cast & Fee Impact</h4>
                     <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
                       {si.linkedActors.map(la => (
-                        <div key={la.actor.id} style={{ padding: "12px", background: "#242424", borderRadius: "8px", minWidth: "140px" }}>
+                        <div key={la.actor.id} style={{ padding: "12px", background: "#333333", borderRadius: "8px", minWidth: "140px" }}>
                           <div style={{ fontSize: "13px", color: "#E8E0D4", fontWeight: "600" }}>{la.actor.name}</div>
                           <div style={{ fontSize: "11px", color: "#6B6560", marginBottom: "4px" }}>as {la.role}</div>
                           <div style={{ fontSize: "14px", color: "#C4A882", fontWeight: "600" }}>{formatCrores(la.actor.fee)}</div>
@@ -1402,7 +1402,7 @@ export default function ScriptIntelligencePage() {
                   <h4 style={{ fontSize: "14px", color: "#9A9080", fontWeight: "600", margin: "0 0 12px 0" }}>Preliminary Shot List</h4>
                   <table style={{ width: "100%", borderCollapse: "collapse" }}>
                     <thead>
-                      <tr style={{ borderBottom: "1px solid #2A2A2A" }}>
+                      <tr style={{ borderBottom: "1px solid #3A3A3A" }}>
                         {["Shot", "Type", "Camera", "Duration", "Lighting"].map(h => (
                           <th key={h} style={{ padding: "8px", textAlign: "left", fontSize: "11px", color: "#6B6560" }}>{h}</th>
                         ))}
@@ -1410,7 +1410,7 @@ export default function ScriptIntelligencePage() {
                     </thead>
                     <tbody>
                       {shots.slice(0, 5).map((shot, idx) => (
-                        <tr key={idx} style={{ borderBottom: "1px solid #242424" }}>
+                        <tr key={idx} style={{ borderBottom: "1px solid #333333" }}>
                           <td style={{ padding: "8px", fontSize: "12px", color: "#C4A882" }}>{selectedScene.sceneNumber}.{shot.shotNumber}</td>
                           <td style={{ padding: "8px", fontSize: "12px", color: "#E8E0D4" }}>{shot.type}</td>
                           <td style={{ padding: "8px", fontSize: "12px", color: "#9A9080" }}>{shot.cameraMovement}</td>
@@ -1439,7 +1439,7 @@ export default function ScriptIntelligencePage() {
             <div
               onClick={e => e.stopPropagation()}
               style={{
-                background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "20px", padding: "32px",
+                background: "#262626", border: "1px solid #3A3A3A", borderRadius: "20px", padding: "32px",
                 maxWidth: "500px", width: "100%",
               }}
             >
@@ -1449,11 +1449,11 @@ export default function ScriptIntelligencePage() {
                 <div
                   onClick={startUpload}
                   style={{
-                    border: "2px dashed #2A2A2A", borderRadius: "14px", padding: "48px 24px",
-                    textAlign: "center", cursor: "pointer", transition: "all 0.2s", background: "#242424",
+                    border: "2px dashed #3A3A3A", borderRadius: "14px", padding: "48px 24px",
+                    textAlign: "center", cursor: "pointer", transition: "all 0.2s", background: "#333333",
                   }}
                   onMouseEnter={e => { e.currentTarget.style.borderColor = "#C4A882"; }}
-                  onMouseLeave={e => { e.currentTarget.style.borderColor = "#2A2A2A"; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = "#3A3A3A"; }}
                 >
                   <LucideIcon name="FileText" size={40} style={{ color: "#6B6560", marginBottom: "12px" }} />
                   <p style={{ fontSize: "15px", color: "#E8E0D4", margin: "0 0 4px 0", fontWeight: "500" }}>
@@ -1472,15 +1472,15 @@ export default function ScriptIntelligencePage() {
                     }}>
                       <div style={{
                         width: "20px", height: "20px", borderRadius: "50%", flexShrink: 0,
-                        background: i < uploadStage ? "#5B8C5A" : i === uploadStage ? "#C4A882" : "#2A2A2A",
+                        background: i < uploadStage ? "#5B8C5A" : i === uploadStage ? "#C4A882" : "#3A3A3A",
                         display: "flex", alignItems: "center", justifyContent: "center",
                       }}>
                         {i < uploadStage && <span style={{ color: "#fff", fontSize: "12px" }}>{"\u2713"}</span>}
-                        {i === uploadStage && <div style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#0F0F0F" }} />}
+                        {i === uploadStage && <div style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#1A1A1A" }} />}
                       </div>
                       <span style={{ fontSize: "13px", color: i <= uploadStage ? "#E8E0D4" : "#6B6560" }}>{stage}</span>
                       {i === uploadStage && (
-                        <div style={{ flex: 1, height: "3px", background: "#242424", borderRadius: "2px", overflow: "hidden" }}>
+                        <div style={{ flex: 1, height: "3px", background: "#333333", borderRadius: "2px", overflow: "hidden" }}>
                           <div style={{ height: "100%", background: "#C4A882", borderRadius: "2px", animation: "progressBar 0.7s ease-out forwards" }} />
                         </div>
                       )}
@@ -1517,7 +1517,7 @@ export default function ScriptIntelligencePage() {
                     onClick={() => setShowUploadModal(false)}
                     style={{
                       marginTop: "20px", padding: "12px 32px", background: "#C4A882", border: "none",
-                      borderRadius: "10px", color: "#0F0F0F", fontSize: "14px", fontWeight: "600", cursor: "pointer",
+                      borderRadius: "10px", color: "#1A1A1A", fontSize: "14px", fontWeight: "600", cursor: "pointer",
                     }}
                   >
                     Continue to Analysis

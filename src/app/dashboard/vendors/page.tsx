@@ -72,7 +72,7 @@ export default function VendorsPage() {
         );
       } else {
         stars.push(
-          <LucideIcon key={i} name="Star" size={14} style={{ color: "#3A3A3A" }} />
+          <LucideIcon key={i} name="Star" size={14} style={{ color: "#4A4A4A" }} />
         );
       }
     }
@@ -80,7 +80,7 @@ export default function VendorsPage() {
   };
 
   return (
-    <div style={{ minHeight: "100vh", background: "#0F0F0F", padding: "32px" }}>
+    <div style={{ minHeight: "100vh", background: "#1A1A1A", padding: "32px" }}>
       {/* Header */}
       <div style={{ marginBottom: "32px" }}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "8px" }}>
@@ -94,7 +94,7 @@ export default function VendorsPage() {
             onClick={() => setShowAddModal(true)}
             style={{
               background: "#C4A882",
-              color: "#0F0F0F",
+              color: "#1A1A1A",
               border: "none",
               borderRadius: "12px",
               padding: "12px 24px",
@@ -119,8 +119,8 @@ export default function VendorsPage() {
       <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: "16px", marginBottom: "32px" }}>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -133,8 +133,8 @@ export default function VendorsPage() {
         </div>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -147,8 +147,8 @@ export default function VendorsPage() {
         </div>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -163,8 +163,8 @@ export default function VendorsPage() {
         </div>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -179,8 +179,8 @@ export default function VendorsPage() {
         </div>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -205,8 +205,8 @@ export default function VendorsPage() {
             <div
               key={vendor.id}
               style={{
-                background: "#1A1A1A",
-                border: "1px solid #2A2A2A",
+                background: "#262626",
+                border: "1px solid #3A3A3A",
                 borderRadius: "16px",
                 padding: "24px",
                 cursor: "pointer",
@@ -217,7 +217,7 @@ export default function VendorsPage() {
                 e.currentTarget.style.transform = "translateY(-4px)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "#2A2A2A";
+                e.currentTarget.style.borderColor = "#3A3A3A";
                 e.currentTarget.style.transform = "translateY(0)";
               }}
             >
@@ -235,7 +235,7 @@ export default function VendorsPage() {
 
               <div
                 style={{
-                  background: "#242424",
+                  background: "#333333",
                   borderRadius: "12px",
                   padding: "16px",
                   marginBottom: "16px",
@@ -275,7 +275,7 @@ export default function VendorsPage() {
                   alignItems: "center",
                   justifyContent: "space-between",
                   paddingTop: "16px",
-                  borderTop: "1px solid #2A2A2A",
+                  borderTop: "1px solid #3A3A3A",
                 }}
               >
                 <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
@@ -285,7 +285,7 @@ export default function VendorsPage() {
                 <button
                   style={{
                     background: "transparent",
-                    border: "1px solid #3A3A3A",
+                    border: "1px solid #4A4A4A",
                     borderRadius: "8px",
                     padding: "6px 12px",
                     color: "#9A9080",
@@ -307,8 +307,8 @@ export default function VendorsPage() {
         {/* Comparison Table */}
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "24px",
           }}
@@ -318,7 +318,7 @@ export default function VendorsPage() {
           </h3>
           <table style={{ width: "100%", borderCollapse: "collapse" }}>
             <thead>
-              <tr style={{ borderBottom: "1px solid #2A2A2A" }}>
+              <tr style={{ borderBottom: "1px solid #3A3A3A" }}>
                 <th style={{ padding: "12px 0", textAlign: "left", fontSize: "12px", color: "#9A9080" }}>{t("vendor")}</th>
                 <th style={{ padding: "12px 0", textAlign: "center", fontSize: "12px", color: "#9A9080" }}>{t("shots")}</th>
                 <th style={{ padding: "12px 0", textAlign: "center", fontSize: "12px", color: "#9A9080" }}>{t("quality")}</th>
@@ -327,7 +327,7 @@ export default function VendorsPage() {
             </thead>
             <tbody>
               {vendorData.map((vendor, idx) => (
-                <tr key={vendor.id} style={{ borderBottom: idx < vendorData.length - 1 ? "1px solid #2A2A2A" : "none" }}>
+                <tr key={vendor.id} style={{ borderBottom: idx < vendorData.length - 1 ? "1px solid #3A3A3A" : "none" }}>
                   <td style={{ padding: "16px 0" }}>
                     <span style={{ fontSize: "14px", color: "#E8E0D4", fontWeight: "500" }}>{vendor.name}</span>
                   </td>
@@ -351,8 +351,8 @@ export default function VendorsPage() {
         {/* Performance Metrics */}
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "24px",
           }}
@@ -380,7 +380,7 @@ export default function VendorsPage() {
                     style={{
                       width: "100%",
                       height: "8px",
-                      background: "#242424",
+                      background: "#333333",
                       borderRadius: "4px",
                       overflow: "hidden",
                     }}
@@ -417,8 +417,8 @@ export default function VendorsPage() {
         >
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "32px",
               maxWidth: "500px",
@@ -440,8 +440,8 @@ export default function VendorsPage() {
                   onChange={(e) => setNewVendor({ ...newVendor, name: e.target.value })}
                   style={{
                     width: "100%",
-                    background: "#242424",
-                    border: "1px solid #3A3A3A",
+                    background: "#333333",
+                    border: "1px solid #4A4A4A",
                     borderRadius: "8px",
                     padding: "12px",
                     color: "#E8E0D4",
@@ -460,8 +460,8 @@ export default function VendorsPage() {
                   onChange={(e) => setNewVendor({ ...newVendor, speciality: e.target.value })}
                   style={{
                     width: "100%",
-                    background: "#242424",
-                    border: "1px solid #3A3A3A",
+                    background: "#333333",
+                    border: "1px solid #4A4A4A",
                     borderRadius: "8px",
                     padding: "12px",
                     color: "#E8E0D4",
@@ -480,8 +480,8 @@ export default function VendorsPage() {
                   onChange={(e) => setNewVendor({ ...newVendor, contactPerson: e.target.value })}
                   style={{
                     width: "100%",
-                    background: "#242424",
-                    border: "1px solid #3A3A3A",
+                    background: "#333333",
+                    border: "1px solid #4A4A4A",
                     borderRadius: "8px",
                     padding: "12px",
                     color: "#E8E0D4",
@@ -500,8 +500,8 @@ export default function VendorsPage() {
                   onChange={(e) => setNewVendor({ ...newVendor, email: e.target.value })}
                   style={{
                     width: "100%",
-                    background: "#242424",
-                    border: "1px solid #3A3A3A",
+                    background: "#333333",
+                    border: "1px solid #4A4A4A",
                     borderRadius: "8px",
                     padding: "12px",
                     color: "#E8E0D4",
@@ -517,7 +517,7 @@ export default function VendorsPage() {
                 style={{
                   flex: 1,
                   background: "transparent",
-                  border: "1px solid #3A3A3A",
+                  border: "1px solid #4A4A4A",
                   borderRadius: "8px",
                   padding: "12px",
                   color: "#9A9080",
@@ -538,7 +538,7 @@ export default function VendorsPage() {
                   border: "none",
                   borderRadius: "8px",
                   padding: "12px",
-                  color: "#0F0F0F",
+                  color: "#1A1A1A",
                   fontSize: "14px",
                   fontWeight: "600",
                   cursor: "pointer",

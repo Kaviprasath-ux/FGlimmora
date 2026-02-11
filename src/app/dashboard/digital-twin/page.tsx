@@ -111,7 +111,7 @@ export default function DigitalTwinPage() {
   const vfxCompleted = vfxShots.filter((s) => s.status === "approved").length;
 
   return (
-    <div style={{ padding: "2rem", background: "#0F0F0F", minHeight: "100vh" }}>
+    <div style={{ padding: "2rem", background: "#1A1A1A", minHeight: "100vh" }}>
       {/* Header */}
       <div style={{ marginBottom: "2rem" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "0.5rem" }}>
@@ -136,8 +136,8 @@ export default function DigitalTwinPage() {
           <div
             key={twin.id}
             style={{
-              background: "#1A1A1A",
-              border: `1px solid ${twin.status === "warning" ? twin.color : "#2A2A2A"}`,
+              background: "#262626",
+              border: `1px solid ${twin.status === "warning" ? twin.color : "#3A3A3A"}`,
               borderRadius: "1rem",
               padding: "1.25rem",
               position: "relative",
@@ -203,8 +203,8 @@ export default function DigitalTwinPage() {
       {/* What-If Scenarios */}
       <div
         style={{
-          background: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          background: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "1rem",
           padding: "1.5rem",
           marginBottom: "2rem",
@@ -218,7 +218,7 @@ export default function DigitalTwinPage() {
             onClick={() => setShowNewScenario(true)}
             style={{
               background: "#C4A882",
-              color: "#0F0F0F",
+              color: "#1A1A1A",
               border: "none",
               padding: "0.625rem 1.25rem",
               borderRadius: "0.5rem",
@@ -236,15 +236,15 @@ export default function DigitalTwinPage() {
               key={scenario.id}
               onClick={() => setSelectedScenario(scenario)}
               style={{
-                background: "#242424",
-                border: "1px solid #2A2A2A",
+                background: "#333333",
+                border: "1px solid #3A3A3A",
                 borderRadius: "0.75rem",
                 padding: "1.25rem",
                 cursor: "pointer",
                 transition: "border-color 0.2s",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#3A3A3A")}
-              onMouseLeave={(e) => (e.currentTarget.style.borderColor = "#2A2A2A")}
+              onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#4A4A4A")}
+              onMouseLeave={(e) => (e.currentTarget.style.borderColor = "#3A3A3A")}
             >
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start", marginBottom: "1rem" }}>
                 <div>
@@ -263,7 +263,7 @@ export default function DigitalTwinPage() {
                   gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
                   gap: "1rem",
                   paddingTop: "1rem",
-                  borderTop: "1px solid #2A2A2A",
+                  borderTop: "1px solid #3A3A3A",
                 }}
               >
                 <div>
@@ -318,8 +318,8 @@ export default function DigitalTwinPage() {
       {/* Digital Twin Dashboard - Live Mirrors */}
       <div
         style={{
-          background: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          background: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "1rem",
           padding: "1.5rem",
         }}
@@ -381,8 +381,8 @@ export default function DigitalTwinPage() {
             <div
               key={i}
               style={{
-                background: "#242424",
-                border: "1px solid #2A2A2A",
+                background: "#333333",
+                border: "1px solid #3A3A3A",
                 borderRadius: "0.75rem",
                 padding: "1.25rem",
               }}
@@ -428,8 +428,8 @@ export default function DigitalTwinPage() {
           <div
             onClick={(e) => e.stopPropagation()}
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "1rem",
               padding: "2rem",
               maxWidth: "700px",
@@ -469,7 +469,7 @@ export default function DigitalTwinPage() {
                     style={{
                       display: "flex",
                       justifyContent: "space-between",
-                      background: "#242424",
+                      background: "#333333",
                       padding: "0.75rem 1rem",
                       borderRadius: "0.5rem",
                     }}
@@ -522,7 +522,7 @@ export default function DigitalTwinPage() {
                     <div
                       style={{
                         height: "0.5rem",
-                        background: "#242424",
+                        background: "#333333",
                         borderRadius: "0.25rem",
                         overflow: "hidden",
                         position: "relative",
@@ -535,7 +535,7 @@ export default function DigitalTwinPage() {
                           top: 0,
                           bottom: 0,
                           width: "1px",
-                          background: "#3A3A3A",
+                          background: "#4A4A4A",
                         }}
                       />
                       <div
@@ -555,8 +555,8 @@ export default function DigitalTwinPage() {
             {/* Risk Change */}
             <div
               style={{
-                background: "#242424",
-                border: "1px solid #2A2A2A",
+                background: "#333333",
+                border: "1px solid #3A3A3A",
                 borderRadius: "0.75rem",
                 padding: "1rem",
                 marginBottom: "1.5rem",
@@ -576,7 +576,7 @@ export default function DigitalTwinPage() {
               style={{
                 width: "100%",
                 background: "#C4A882",
-                color: "#0F0F0F",
+                color: "#1A1A1A",
                 border: "none",
                 padding: "0.75rem",
                 borderRadius: "0.5rem",
@@ -611,8 +611,8 @@ export default function DigitalTwinPage() {
           <div
             onClick={(e) => e.stopPropagation()}
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "1rem",
               padding: "2rem",
               maxWidth: "600px",
@@ -648,8 +648,8 @@ export default function DigitalTwinPage() {
                   placeholder={t("scenarioNamePlaceholder")}
                   style={{
                     width: "100%",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "0.5rem",
                     padding: "0.625rem",
                     color: "#E8E0D4",
@@ -668,8 +668,8 @@ export default function DigitalTwinPage() {
                   rows={3}
                   style={{
                     width: "100%",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "0.5rem",
                     padding: "0.625rem",
                     color: "#E8E0D4",
@@ -764,8 +764,8 @@ export default function DigitalTwinPage() {
                 disabled={!newScenario.name || !newScenario.description}
                 style={{
                   width: "100%",
-                  background: !newScenario.name || !newScenario.description ? "#242424" : "#C4A882",
-                  color: !newScenario.name || !newScenario.description ? "#6B6560" : "#0F0F0F",
+                  background: !newScenario.name || !newScenario.description ? "#333333" : "#C4A882",
+                  color: !newScenario.name || !newScenario.description ? "#6B6560" : "#1A1A1A",
                   border: "none",
                   padding: "0.75rem",
                   borderRadius: "0.5rem",

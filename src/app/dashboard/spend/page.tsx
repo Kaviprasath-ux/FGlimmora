@@ -108,7 +108,7 @@ export default function SpendPage() {
   };
 
   return (
-    <div style={{ padding: "32px", background: "#0F0F0F", minHeight: "100vh" }}>
+    <div style={{ padding: "32px", background: "#1A1A1A", minHeight: "100vh" }}>
       {/* Header */}
       <div style={{ marginBottom: "32px" }}>
         <h1 style={{ fontSize: "32px", fontWeight: "600", color: "#E8E0D4", marginBottom: "8px" }}>
@@ -121,19 +121,19 @@ export default function SpendPage() {
 
       {/* Summary Stats */}
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "16px", marginBottom: "32px" }}>
-        <div style={{ background: "#1A1A1A", padding: "20px", borderRadius: "16px", border: "1px solid #2A2A2A" }}>
+        <div style={{ background: "#262626", padding: "20px", borderRadius: "16px", border: "1px solid #3A3A3A" }}>
           <div style={{ color: "#9A9080", fontSize: "12px", marginBottom: "8px" }}>{t("totalBudget")}</div>
           <div style={{ color: "#C4A882", fontSize: "28px", fontWeight: "600" }}>{formatCrores(totalBudget)}</div>
         </div>
-        <div style={{ background: "#1A1A1A", padding: "20px", borderRadius: "16px", border: "1px solid #2A2A2A" }}>
+        <div style={{ background: "#262626", padding: "20px", borderRadius: "16px", border: "1px solid #3A3A3A" }}>
           <div style={{ color: "#9A9080", fontSize: "12px", marginBottom: "8px" }}>{t("spent")}</div>
           <div style={{ color: "#E8E0D4", fontSize: "28px", fontWeight: "600" }}>{formatCrores(totalSpent)}</div>
         </div>
-        <div style={{ background: "#1A1A1A", padding: "20px", borderRadius: "16px", border: "1px solid #2A2A2A" }}>
+        <div style={{ background: "#262626", padding: "20px", borderRadius: "16px", border: "1px solid #3A3A3A" }}>
           <div style={{ color: "#9A9080", fontSize: "12px", marginBottom: "8px" }}>{t("remaining")}</div>
           <div style={{ color: "#5B8C5A", fontSize: "28px", fontWeight: "600" }}>{formatCrores(remaining)}</div>
         </div>
-        <div style={{ background: "#1A1A1A", padding: "20px", borderRadius: "16px", border: "1px solid #2A2A2A" }}>
+        <div style={{ background: "#262626", padding: "20px", borderRadius: "16px", border: "1px solid #3A3A3A" }}>
           <div style={{ color: "#9A9080", fontSize: "12px", marginBottom: "8px" }}>{t("efficiencyScore")}</div>
           <div style={{ color: "#C4A882", fontSize: "28px", fontWeight: "600", display: "flex", alignItems: "center", gap: "8px" }}>
             {efficiencyScore}
@@ -143,7 +143,7 @@ export default function SpendPage() {
       </div>
 
       {/* Spend by Platform */}
-      <div style={{ background: "#1A1A1A", padding: "24px", borderRadius: "16px", border: "1px solid #2A2A2A", marginBottom: "32px" }}>
+      <div style={{ background: "#262626", padding: "24px", borderRadius: "16px", border: "1px solid #3A3A3A", marginBottom: "32px" }}>
         <h3 style={{ color: "#E8E0D4", fontSize: "20px", fontWeight: "600", marginBottom: "20px" }}>
           {t("spendByPlatform")}
         </h3>
@@ -186,7 +186,7 @@ export default function SpendPage() {
                     </div>
                   </div>
                 </div>
-                <div style={{ width: "100%", height: "10px", background: "#242424", borderRadius: "5px", overflow: "hidden" }}>
+                <div style={{ width: "100%", height: "10px", background: "#333333", borderRadius: "5px", overflow: "hidden" }}>
                   <div
                     style={{
                       width: `${Math.min(spentPct, 100)}%`,
@@ -203,7 +203,7 @@ export default function SpendPage() {
       </div>
 
       {/* ROI per Platform */}
-      <div style={{ background: "#1A1A1A", padding: "24px", borderRadius: "16px", border: "1px solid #2A2A2A", marginBottom: "32px" }}>
+      <div style={{ background: "#262626", padding: "24px", borderRadius: "16px", border: "1px solid #3A3A3A", marginBottom: "32px" }}>
         <h3 style={{ color: "#E8E0D4", fontSize: "20px", fontWeight: "600", marginBottom: "20px" }}>
           {t("roiAndEfficiency")}
         </h3>
@@ -217,10 +217,10 @@ export default function SpendPage() {
               <div
                 key={platform}
                 style={{
-                  background: "#242424",
+                  background: "#333333",
                   padding: "20px",
                   borderRadius: "12px",
-                  border: "1px solid #2A2A2A",
+                  border: "1px solid #3A3A3A",
                 }}
               >
                 <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" }}>
@@ -264,7 +264,7 @@ export default function SpendPage() {
       </div>
 
       {/* AI Recommendations */}
-      <div style={{ background: "#1A1A1A", padding: "24px", borderRadius: "16px", border: "1px solid #C4A882", marginBottom: "32px" }}>
+      <div style={{ background: "#262626", padding: "24px", borderRadius: "16px", border: "1px solid #C4A882", marginBottom: "32px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "20px" }}>
           <LucideIcon name="Sparkles" size={24} style={{ color: "#C4A882" }} />
           <h3 style={{ color: "#E8E0D4", fontSize: "20px", fontWeight: "600", margin: 0 }}>
@@ -277,10 +277,10 @@ export default function SpendPage() {
             <div
               key={rec.id}
               style={{
-                background: "#242424",
+                background: "#333333",
                 padding: "20px",
                 borderRadius: "12px",
-                border: rec.priority === "high" ? "1px solid #C4A882" : "1px solid #2A2A2A",
+                border: rec.priority === "high" ? "1px solid #C4A882" : "1px solid #3A3A3A",
               }}
             >
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "12px" }}>
@@ -314,7 +314,7 @@ export default function SpendPage() {
 
               <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                 <div style={{ color: "#6B6560", fontSize: "12px" }}>{t("confidence")}:</div>
-                <div style={{ flex: 1, height: "6px", background: "#1A1A1A", borderRadius: "3px", overflow: "hidden" }}>
+                <div style={{ flex: 1, height: "6px", background: "#262626", borderRadius: "3px", overflow: "hidden" }}>
                   <div
                     style={{
                       width: `${rec.confidence}%`,
@@ -334,7 +334,7 @@ export default function SpendPage() {
       </div>
 
       {/* Spend Allocation Optimizer */}
-      <div style={{ background: "#1A1A1A", padding: "24px", borderRadius: "16px", border: "1px solid #2A2A2A" }}>
+      <div style={{ background: "#262626", padding: "24px", borderRadius: "16px", border: "1px solid #3A3A3A" }}>
         <h3 style={{ color: "#E8E0D4", fontSize: "20px", fontWeight: "600", marginBottom: "8px" }}>
           {t("spendAllocationOptimizer")}
         </h3>
@@ -375,7 +375,7 @@ export default function SpendPage() {
                   borderRadius: "4px",
                   background: `linear-gradient(to right, ${platformColors[platform] || "#C4A882"} 0%, ${
                     platformColors[platform] || "#C4A882"
-                  } ${value * 2}%, #242424 ${value * 2}%, #242424 100%)`,
+                  } ${value * 2}%, #333333 ${value * 2}%, #333333 100%)`,
                   outline: "none",
                   cursor: "pointer",
                   appearance: "none",
@@ -385,7 +385,7 @@ export default function SpendPage() {
           ))}
         </div>
 
-        <div style={{ background: "#242424", padding: "20px", borderRadius: "12px", textAlign: "center" }}>
+        <div style={{ background: "#333333", padding: "20px", borderRadius: "12px", textAlign: "center" }}>
           <div style={{ color: "#9A9080", fontSize: "12px", marginBottom: "8px" }}>{t("projectedTotalReach")}</div>
           <div style={{ color: "#C4A882", fontSize: "32px", fontWeight: "700" }}>
             {(calculateProjectedReach() / 1000000).toFixed(0)}M

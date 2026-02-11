@@ -116,7 +116,7 @@ export default function LocationsPage() {
   const maxUsage = Math.max(...locations.map(l => l.usageCount), 1);
 
   return (
-    <div style={{ padding: "32px", background: "#0F0F0F", minHeight: "100vh" }}>
+    <div style={{ padding: "32px", background: "#1A1A1A", minHeight: "100vh" }}>
       {/* Header */}
       <div style={{ marginBottom: "32px" }}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "8px" }}>
@@ -130,7 +130,7 @@ export default function LocationsPage() {
               background: "linear-gradient(135deg, #C4A882 0%, #8C7A62 100%)",
               border: "none",
               borderRadius: "10px",
-              color: "#0F0F0F",
+              color: "#1A1A1A",
               fontSize: "14px",
               fontWeight: "600",
               cursor: "pointer",
@@ -150,7 +150,7 @@ export default function LocationsPage() {
 
       {/* Overview Stats */}
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "16px", marginBottom: "32px" }}>
-        <div style={{ background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px", padding: "20px" }}>
+        <div style={{ background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px", padding: "20px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
             <div style={{ width: "48px", height: "48px", borderRadius: "12px", background: "#C4A88222", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <LucideIcon name="MapPin" size={24} color="#C4A882" />
@@ -162,7 +162,7 @@ export default function LocationsPage() {
           </div>
         </div>
 
-        <div style={{ background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px", padding: "20px" }}>
+        <div style={{ background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px", padding: "20px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
             <div style={{ width: "48px", height: "48px", borderRadius: "12px", background: "#C4A88222", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <LucideIcon name="IndianRupee" size={24} color="#C4A882" />
@@ -174,7 +174,7 @@ export default function LocationsPage() {
           </div>
         </div>
 
-        <div style={{ background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px", padding: "20px" }}>
+        <div style={{ background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px", padding: "20px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
             <div style={{ width: "48px", height: "48px", borderRadius: "12px", background: "#5B7C8C22", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <LucideIcon name="Building" size={24} color="#5B7C8C" />
@@ -188,7 +188,7 @@ export default function LocationsPage() {
           </div>
         </div>
 
-        <div style={{ background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px", padding: "20px" }}>
+        <div style={{ background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px", padding: "20px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
             <div style={{ width: "48px", height: "48px", borderRadius: "12px", background: "#5B7C8C22", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <LucideIcon name="Sparkles" size={24} color="#5B7C8C" />
@@ -214,8 +214,8 @@ export default function LocationsPage() {
               key={location.id}
               onClick={() => setSelectedLocation(location)}
               style={{
-                background: "#1A1A1A",
-                border: "1px solid #2A2A2A",
+                background: "#262626",
+                border: "1px solid #3A3A3A",
                 borderRadius: "16px",
                 padding: "20px",
                 cursor: "pointer",
@@ -226,7 +226,7 @@ export default function LocationsPage() {
                 e.currentTarget.style.transform = "translateY(-4px)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "#2A2A2A";
+                e.currentTarget.style.borderColor = "#3A3A3A";
                 e.currentTarget.style.transform = "translateY(0)";
               }}
             >
@@ -240,7 +240,7 @@ export default function LocationsPage() {
                   alignItems: "center",
                   justifyContent: "center",
                 }}>
-                  <LucideIcon name="MapPin" size={24} color="#0F0F0F" />
+                  <LucideIcon name="MapPin" size={24} color="#1A1A1A" />
                 </div>
                 <div style={{ flex: 1 }}>
                   <h3 style={{ fontSize: "16px", fontWeight: "600", color: "#E8E0D4", marginBottom: "4px" }}>
@@ -307,8 +307,8 @@ export default function LocationsPage() {
       {/* Location Cost Breakdown */}
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px", marginBottom: "32px" }}>
         <div style={{
-          background: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          background: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "16px",
           padding: "24px",
         }}>
@@ -333,7 +333,7 @@ export default function LocationsPage() {
                   <div style={{
                     width: "100%",
                     height: "6px",
-                    background: "#0F0F0F",
+                    background: "#1A1A1A",
                     borderRadius: "3px",
                     overflow: "hidden",
                   }}>
@@ -352,8 +352,8 @@ export default function LocationsPage() {
 
         {/* Location Utilization */}
         <div style={{
-          background: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          background: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "16px",
           padding: "24px",
         }}>
@@ -397,8 +397,8 @@ export default function LocationsPage() {
 
             <div style={{
               padding: "16px",
-              background: "#0F0F0F",
-              border: "1px solid #2A2A2A",
+              background: "#1A1A1A",
+              border: "1px solid #3A3A3A",
               borderRadius: "12px",
             }}>
               <div style={{ fontSize: "12px", color: "#6B6560", marginBottom: "8px" }}>{t("utilizationInsight")}</div>
@@ -414,8 +414,8 @@ export default function LocationsPage() {
 
       {/* Map Placeholder */}
       <div style={{
-        background: "#1A1A1A",
-        border: "1px solid #2A2A2A",
+        background: "#262626",
+        border: "1px solid #3A3A3A",
         borderRadius: "16px",
         padding: "24px",
       }}>
@@ -429,15 +429,15 @@ export default function LocationsPage() {
         <div style={{
           width: "100%",
           height: "400px",
-          background: "#0F0F0F",
-          border: "2px solid #2A2A2A",
+          background: "#1A1A1A",
+          border: "2px solid #3A3A3A",
           borderRadius: "12px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           position: "relative",
         }}>
-          <LucideIcon name="MapPin" size={64} color="#3A3A3A" />
+          <LucideIcon name="MapPin" size={64} color="#4A4A4A" />
 
           {/* Location pins (positioned divs) */}
           {locations.slice(0, 5).map((location, idx) => (
@@ -448,7 +448,7 @@ export default function LocationsPage() {
                 left: `${20 + idx * 15}%`,
                 top: `${30 + idx * 10}%`,
                 padding: "8px 12px",
-                background: "#1A1A1ACC",
+                background: "#262626CC",
                 backdropFilter: "blur(10px)",
                 border: "2px solid #C4A882",
                 borderRadius: "8px",
@@ -482,7 +482,7 @@ export default function LocationsPage() {
           padding: "20px",
         }}>
           <div style={{
-            background: "#1A1A1A",
+            background: "#262626",
             border: "1px solid #C4A882",
             borderRadius: "16px",
             padding: "32px",
@@ -506,8 +506,8 @@ export default function LocationsPage() {
                   style={{
                     width: "100%",
                     padding: "12px 16px",
-                    background: "#0F0F0F",
-                    border: "1px solid #3A3A3A",
+                    background: "#1A1A1A",
+                    border: "1px solid #4A4A4A",
                     borderRadius: "10px",
                     color: "#E8E0D4",
                     fontSize: "14px",
@@ -526,8 +526,8 @@ export default function LocationsPage() {
                   style={{
                     width: "100%",
                     padding: "12px 16px",
-                    background: "#0F0F0F",
-                    border: "1px solid #3A3A3A",
+                    background: "#1A1A1A",
+                    border: "1px solid #4A4A4A",
                     borderRadius: "10px",
                     color: "#E8E0D4",
                     fontSize: "14px",
@@ -552,8 +552,8 @@ export default function LocationsPage() {
                   style={{
                     width: "100%",
                     padding: "12px 16px",
-                    background: "#0F0F0F",
-                    border: "1px solid #3A3A3A",
+                    background: "#1A1A1A",
+                    border: "1px solid #4A4A4A",
                     borderRadius: "10px",
                     color: "#E8E0D4",
                     fontSize: "14px",
@@ -574,8 +574,8 @@ export default function LocationsPage() {
                   style={{
                     width: "100%",
                     padding: "12px 16px",
-                    background: "#0F0F0F",
-                    border: "1px solid #3A3A3A",
+                    background: "#1A1A1A",
+                    border: "1px solid #4A4A4A",
                     borderRadius: "10px",
                     color: "#E8E0D4",
                     fontSize: "14px",
@@ -595,8 +595,8 @@ export default function LocationsPage() {
                     style={{
                       width: "100%",
                       padding: "12px 16px",
-                      background: "#0F0F0F",
-                      border: "1px solid #3A3A3A",
+                      background: "#1A1A1A",
+                      border: "1px solid #4A4A4A",
                       borderRadius: "10px",
                       color: "#E8E0D4",
                       fontSize: "14px",
@@ -617,8 +617,8 @@ export default function LocationsPage() {
                 onClick={() => setShowAddModal(false)}
                 style={{
                   padding: "12px 24px",
-                  background: "#242424",
-                  border: "1px solid #3A3A3A",
+                  background: "#333333",
+                  border: "1px solid #4A4A4A",
                   borderRadius: "10px",
                   color: "#9A9080",
                   fontSize: "14px",
@@ -635,7 +635,7 @@ export default function LocationsPage() {
                   background: "linear-gradient(135deg, #C4A882 0%, #8C7A62 100%)",
                   border: "none",
                   borderRadius: "10px",
-                  color: "#0F0F0F",
+                  color: "#1A1A1A",
                   fontSize: "14px",
                   fontWeight: "600",
                   cursor: "pointer",
@@ -670,7 +670,7 @@ export default function LocationsPage() {
           <div
             onClick={(e) => e.stopPropagation()}
             style={{
-              background: "#1A1A1A",
+              background: "#262626",
               border: "1px solid #C4A882",
               borderRadius: "16px",
               padding: "32px",
@@ -690,7 +690,7 @@ export default function LocationsPage() {
                 alignItems: "center",
                 justifyContent: "center",
               }}>
-                <LucideIcon name="MapPin" size={32} color="#0F0F0F" />
+                <LucideIcon name="MapPin" size={32} color="#1A1A1A" />
               </div>
               <div style={{ flex: 1 }}>
                 <h2 style={{ fontSize: "24px", fontWeight: "600", color: "#E8E0D4", marginBottom: "6px" }}>
@@ -703,8 +703,8 @@ export default function LocationsPage() {
             <div style={{ display: "grid", gap: "20px", marginBottom: "24px" }}>
               <div style={{
                 padding: "16px",
-                background: "#0F0F0F",
-                border: "1px solid #2A2A2A",
+                background: "#1A1A1A",
+                border: "1px solid #3A3A3A",
                 borderRadius: "12px",
               }}>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
@@ -765,8 +765,8 @@ export default function LocationsPage() {
                         key={idx}
                         style={{
                           padding: "6px 12px",
-                          background: "#0F0F0F",
-                          border: "1px solid #3A3A3A",
+                          background: "#1A1A1A",
+                          border: "1px solid #4A4A4A",
                           borderRadius: "6px",
                           fontSize: "12px",
                           color: "#E8E0D4",
@@ -787,8 +787,8 @@ export default function LocationsPage() {
               style={{
                 width: "100%",
                 padding: "12px 24px",
-                background: "#242424",
-                border: "1px solid #3A3A3A",
+                background: "#333333",
+                border: "1px solid #4A4A4A",
                 borderRadius: "10px",
                 color: "#9A9080",
                 fontSize: "14px",

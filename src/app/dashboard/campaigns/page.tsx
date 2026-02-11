@@ -86,7 +86,7 @@ export default function CampaignsPage() {
   };
 
   return (
-    <div style={{ padding: "32px", background: "#0F0F0F", minHeight: "100vh" }}>
+    <div style={{ padding: "32px", background: "#1A1A1A", minHeight: "100vh" }}>
       {/* Header */}
       <div style={{ marginBottom: "32px" }}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "8px" }}>
@@ -98,7 +98,7 @@ export default function CampaignsPage() {
             style={{
               padding: "12px 24px",
               background: "#C4A882",
-              color: "#0F0F0F",
+              color: "#1A1A1A",
               border: "none",
               borderRadius: "12px",
               fontSize: "14px",
@@ -116,27 +116,27 @@ export default function CampaignsPage() {
 
       {/* Stats Grid */}
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "16px", marginBottom: "32px" }}>
-        <div style={{ background: "#1A1A1A", padding: "20px", borderRadius: "16px", border: "1px solid #2A2A2A" }}>
+        <div style={{ background: "#262626", padding: "20px", borderRadius: "16px", border: "1px solid #3A3A3A" }}>
           <div style={{ color: "#9A9080", fontSize: "12px", marginBottom: "8px" }}>{t("totalCampaigns")}</div>
           <div style={{ color: "#E8E0D4", fontSize: "28px", fontWeight: "600" }}>{totalCampaigns}</div>
         </div>
-        <div style={{ background: "#1A1A1A", padding: "20px", borderRadius: "16px", border: "1px solid #2A2A2A" }}>
+        <div style={{ background: "#262626", padding: "20px", borderRadius: "16px", border: "1px solid #3A3A3A" }}>
           <div style={{ color: "#9A9080", fontSize: "12px", marginBottom: "8px" }}>{t("active")}</div>
           <div style={{ color: "#5B8C5A", fontSize: "28px", fontWeight: "600" }}>{activeCampaigns}</div>
         </div>
-        <div style={{ background: "#1A1A1A", padding: "20px", borderRadius: "16px", border: "1px solid #2A2A2A" }}>
+        <div style={{ background: "#262626", padding: "20px", borderRadius: "16px", border: "1px solid #3A3A3A" }}>
           <div style={{ color: "#9A9080", fontSize: "12px", marginBottom: "8px" }}>{t("planned")}</div>
           <div style={{ color: "#C4A042", fontSize: "28px", fontWeight: "600" }}>{plannedCampaigns}</div>
         </div>
-        <div style={{ background: "#1A1A1A", padding: "20px", borderRadius: "16px", border: "1px solid #2A2A2A" }}>
+        <div style={{ background: "#262626", padding: "20px", borderRadius: "16px", border: "1px solid #3A3A3A" }}>
           <div style={{ color: "#9A9080", fontSize: "12px", marginBottom: "8px" }}>{t("completed")}</div>
           <div style={{ color: "#5B7C8C", fontSize: "28px", fontWeight: "600" }}>{completedCampaigns}</div>
         </div>
-        <div style={{ background: "#1A1A1A", padding: "20px", borderRadius: "16px", border: "1px solid #2A2A2A" }}>
+        <div style={{ background: "#262626", padding: "20px", borderRadius: "16px", border: "1px solid #3A3A3A" }}>
           <div style={{ color: "#9A9080", fontSize: "12px", marginBottom: "8px" }}>{t("totalBudget")}</div>
           <div style={{ color: "#C4A882", fontSize: "28px", fontWeight: "600" }}>{formatCrores(totalBudget)}</div>
         </div>
-        <div style={{ background: "#1A1A1A", padding: "20px", borderRadius: "16px", border: "1px solid #2A2A2A" }}>
+        <div style={{ background: "#262626", padding: "20px", borderRadius: "16px", border: "1px solid #3A3A3A" }}>
           <div style={{ color: "#9A9080", fontSize: "12px", marginBottom: "8px" }}>{t("totalSpent")}</div>
           <div style={{ color: "#E8E0D4", fontSize: "28px", fontWeight: "600" }}>{formatCrores(totalSpent)}</div>
         </div>
@@ -149,8 +149,8 @@ export default function CampaignsPage() {
           onChange={(e) => setFilterPlatform(e.target.value)}
           style={{
             padding: "10px 16px",
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "12px",
             color: "#E8E0D4",
             fontSize: "14px",
@@ -169,8 +169,8 @@ export default function CampaignsPage() {
           onChange={(e) => setFilterStatus(e.target.value)}
           style={{
             padding: "10px 16px",
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "12px",
             color: "#E8E0D4",
             fontSize: "14px",
@@ -185,7 +185,7 @@ export default function CampaignsPage() {
       </div>
 
       {/* Platform Distribution */}
-      <div style={{ background: "#1A1A1A", padding: "24px", borderRadius: "16px", border: "1px solid #2A2A2A", marginBottom: "32px" }}>
+      <div style={{ background: "#262626", padding: "24px", borderRadius: "16px", border: "1px solid #3A3A3A", marginBottom: "32px" }}>
         <h3 style={{ color: "#E8E0D4", fontSize: "16px", fontWeight: "600", marginBottom: "20px" }}>
           {t("platformDistribution")}
         </h3>
@@ -196,7 +196,7 @@ export default function CampaignsPage() {
                 <span style={{ color: "#E8E0D4", fontSize: "14px", textTransform: "capitalize" }}>{platform}</span>
                 <span style={{ color: "#9A9080", fontSize: "14px" }}>{count} {t("campaigns")}</span>
               </div>
-              <div style={{ width: "100%", height: "8px", background: "#242424", borderRadius: "4px", overflow: "hidden" }}>
+              <div style={{ width: "100%", height: "8px", background: "#333333", borderRadius: "4px", overflow: "hidden" }}>
                 <div
                   style={{
                     width: `${(count / totalCampaigns) * 100}%`,
@@ -222,10 +222,10 @@ export default function CampaignsPage() {
               key={campaign.id}
               onClick={() => setSelectedCampaign(campaign.id)}
               style={{
-                background: "#1A1A1A",
+                background: "#262626",
                 padding: "24px",
                 borderRadius: "16px",
-                border: "1px solid #2A2A2A",
+                border: "1px solid #3A3A3A",
                 cursor: "pointer",
                 transition: "all 0.2s",
               }}
@@ -234,7 +234,7 @@ export default function CampaignsPage() {
                 e.currentTarget.style.transform = "translateY(-2px)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "#2A2A2A";
+                e.currentTarget.style.borderColor = "#3A3A3A";
                 e.currentTarget.style.transform = "translateY(0)";
               }}
             >
@@ -251,7 +251,7 @@ export default function CampaignsPage() {
                         alignItems: "center",
                         gap: "6px",
                         padding: "4px 12px",
-                        background: "#242424",
+                        background: "#333333",
                         borderRadius: "6px",
                       }}
                     >
@@ -287,7 +287,7 @@ export default function CampaignsPage() {
                     {formatCrores(campaign.spent)} / {formatCrores(campaign.budget)}
                   </span>
                 </div>
-                <div style={{ width: "100%", height: "6px", background: "#242424", borderRadius: "3px", overflow: "hidden" }}>
+                <div style={{ width: "100%", height: "6px", background: "#333333", borderRadius: "3px", overflow: "hidden" }}>
                   <div
                     style={{
                       width: `${Math.min(spentPercentage, 100)}%`,
@@ -334,7 +334,7 @@ export default function CampaignsPage() {
                         alignItems: "center",
                         justifyContent: "center",
                         position: "relative",
-                        background: "#242424",
+                        background: "#333333",
                       }}
                     >
                       <span style={{ color: getSentimentColor(campaign.sentimentScore), fontSize: "14px", fontWeight: "700" }}>
@@ -370,8 +370,8 @@ export default function CampaignsPage() {
           <div
             onClick={(e) => e.stopPropagation()}
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "20px",
               padding: "32px",
               maxWidth: "600px",
@@ -389,7 +389,7 @@ export default function CampaignsPage() {
                   <div
                     style={{
                       padding: "4px 12px",
-                      background: "#242424",
+                      background: "#333333",
                       borderRadius: "6px",
                       color: platformColors[selectedCampaignData.platform],
                       fontSize: "12px",
@@ -428,7 +428,7 @@ export default function CampaignsPage() {
             </div>
 
             <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-              <div style={{ background: "#242424", padding: "20px", borderRadius: "12px" }}>
+              <div style={{ background: "#333333", padding: "20px", borderRadius: "12px" }}>
                 <div style={{ color: "#9A9080", fontSize: "12px", marginBottom: "12px" }}>{t("budgetAndSpend")}</div>
                 <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "12px" }}>
                   <div>
@@ -450,7 +450,7 @@ export default function CampaignsPage() {
                     </div>
                   </div>
                 </div>
-                <div style={{ width: "100%", height: "8px", background: "#1A1A1A", borderRadius: "4px", overflow: "hidden" }}>
+                <div style={{ width: "100%", height: "8px", background: "#262626", borderRadius: "4px", overflow: "hidden" }}>
                   <div
                     style={{
                       width: `${(selectedCampaignData.spent / selectedCampaignData.budget) * 100}%`,
@@ -462,7 +462,7 @@ export default function CampaignsPage() {
                 </div>
               </div>
 
-              <div style={{ background: "#242424", padding: "20px", borderRadius: "12px" }}>
+              <div style={{ background: "#333333", padding: "20px", borderRadius: "12px" }}>
                 <div style={{ color: "#9A9080", fontSize: "12px", marginBottom: "16px" }}>{t("performanceMetrics")}</div>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
                   <div>
@@ -498,7 +498,7 @@ export default function CampaignsPage() {
                 </div>
               </div>
 
-              <div style={{ background: "#242424", padding: "20px", borderRadius: "12px" }}>
+              <div style={{ background: "#333333", padding: "20px", borderRadius: "12px" }}>
                 <div style={{ color: "#9A9080", fontSize: "12px", marginBottom: "8px" }}>{t("region")}</div>
                 <div style={{ color: "#E8E0D4", fontSize: "16px" }}>{selectedCampaignData.region}</div>
               </div>
@@ -528,8 +528,8 @@ export default function CampaignsPage() {
           <div
             onClick={(e) => e.stopPropagation()}
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "20px",
               padding: "32px",
               maxWidth: "500px",
@@ -552,8 +552,8 @@ export default function CampaignsPage() {
                   style={{
                     width: "100%",
                     padding: "12px",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "8px",
                     color: "#E8E0D4",
                     fontSize: "14px",
@@ -572,8 +572,8 @@ export default function CampaignsPage() {
                   style={{
                     width: "100%",
                     padding: "12px",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "8px",
                     color: "#E8E0D4",
                     fontSize: "14px",
@@ -598,8 +598,8 @@ export default function CampaignsPage() {
                   style={{
                     width: "100%",
                     padding: "12px",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "8px",
                     color: "#E8E0D4",
                     fontSize: "14px",
@@ -619,8 +619,8 @@ export default function CampaignsPage() {
                   style={{
                     width: "100%",
                     padding: "12px",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "8px",
                     color: "#E8E0D4",
                     fontSize: "14px",
@@ -641,8 +641,8 @@ export default function CampaignsPage() {
                     style={{
                       width: "100%",
                       padding: "12px",
-                      background: "#242424",
-                      border: "1px solid #2A2A2A",
+                      background: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "8px",
                       color: "#E8E0D4",
                       fontSize: "14px",
@@ -660,8 +660,8 @@ export default function CampaignsPage() {
                     style={{
                       width: "100%",
                       padding: "12px",
-                      background: "#242424",
-                      border: "1px solid #2A2A2A",
+                      background: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "8px",
                       color: "#E8E0D4",
                       fontSize: "14px",
@@ -676,8 +676,8 @@ export default function CampaignsPage() {
                   style={{
                     flex: 1,
                     padding: "12px",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "8px",
                     color: "#E8E0D4",
                     fontSize: "14px",
@@ -695,7 +695,7 @@ export default function CampaignsPage() {
                     background: "#C4A882",
                     border: "none",
                     borderRadius: "8px",
-                    color: "#0F0F0F",
+                    color: "#1A1A1A",
                     fontSize: "14px",
                     fontWeight: "600",
                     cursor: "pointer",

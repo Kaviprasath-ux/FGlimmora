@@ -223,7 +223,7 @@ export default function UsersPage() {
   };
 
   return (
-    <div style={{ padding: "32px", backgroundColor: "#0F0F0F", minHeight: "100vh" }}>
+    <div style={{ padding: "32px", backgroundColor: "#1A1A1A", minHeight: "100vh" }}>
       {/* Header */}
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "32px" }}>
         <div>
@@ -246,7 +246,7 @@ export default function UsersPage() {
           style={{
             padding: "12px 24px",
             backgroundColor: "#C4A882",
-            color: "#0F0F0F",
+            color: "#1A1A1A",
             border: "none",
             borderRadius: "12px",
             fontSize: "14px",
@@ -264,7 +264,7 @@ export default function UsersPage() {
             e.currentTarget.style.backgroundColor = "#C4A882";
           }}
         >
-          <LucideIcon name="UserPlus" size={18} color="#0F0F0F" />
+          <LucideIcon name="UserPlus" size={18} color="#1A1A1A" />
           {t("addUser")}
         </button>
       </div>
@@ -280,8 +280,8 @@ export default function UsersPage() {
       >
         <div
           style={{
-            backgroundColor: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            backgroundColor: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "24px",
           }}
@@ -313,8 +313,8 @@ export default function UsersPage() {
 
         <div
           style={{
-            backgroundColor: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            backgroundColor: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "24px",
           }}
@@ -346,8 +346,8 @@ export default function UsersPage() {
 
         <div
           style={{
-            backgroundColor: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            backgroundColor: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "24px",
           }}
@@ -382,8 +382,8 @@ export default function UsersPage() {
         {/* User Table */}
         <div
           style={{
-            backgroundColor: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            backgroundColor: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "24px",
           }}
@@ -397,8 +397,8 @@ export default function UsersPage() {
                 <button
                   style={{
                     padding: "8px 16px",
-                    backgroundColor: "#242424",
-                    border: "1px solid #2A2A2A",
+                    backgroundColor: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "8px",
                     color: "#E8E0D4",
                     fontSize: "13px",
@@ -410,8 +410,8 @@ export default function UsersPage() {
                 <button
                   style={{
                     padding: "8px 16px",
-                    backgroundColor: "#242424",
-                    border: "1px solid #2A2A2A",
+                    backgroundColor: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "8px",
                     color: "#E8E0D4",
                     fontSize: "13px",
@@ -427,7 +427,7 @@ export default function UsersPage() {
           <div style={{ overflowX: "auto" }}>
             <table style={{ width: "100%", borderCollapse: "collapse" }}>
               <thead>
-                <tr style={{ borderBottom: "1px solid #2A2A2A" }}>
+                <tr style={{ borderBottom: "1px solid #3A3A3A" }}>
                   <th style={{ padding: "12px 8px", textAlign: "left", color: "#9A9080", fontSize: "12px", fontWeight: "500" }}>
                     <input
                       type="checkbox"
@@ -466,11 +466,11 @@ export default function UsersPage() {
                   <tr
                     key={user.id}
                     style={{
-                      borderBottom: "1px solid #2A2A2A",
+                      borderBottom: "1px solid #3A3A3A",
                       transition: "background-color 0.2s",
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundColor = "#242424";
+                      e.currentTarget.style.backgroundColor = "#333333";
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.backgroundColor = "transparent";
@@ -495,7 +495,7 @@ export default function UsersPage() {
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
-                            color: "#0F0F0F",
+                            color: "#1A1A1A",
                             fontSize: "13px",
                             fontWeight: "600",
                           }}
@@ -546,7 +546,7 @@ export default function UsersPage() {
                         <button
                           style={{
                             padding: "6px",
-                            backgroundColor: "#242424",
+                            backgroundColor: "#333333",
                             border: "none",
                             borderRadius: "6px",
                             cursor: "pointer",
@@ -557,7 +557,7 @@ export default function UsersPage() {
                         <button
                           style={{
                             padding: "6px",
-                            backgroundColor: "#242424",
+                            backgroundColor: "#333333",
                             border: "none",
                             borderRadius: "6px",
                             cursor: "pointer",
@@ -577,8 +577,8 @@ export default function UsersPage() {
         {/* Role Distribution */}
         <div
           style={{
-            backgroundColor: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            backgroundColor: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "24px",
           }}
@@ -609,7 +609,7 @@ export default function UsersPage() {
                   <div
                     style={{
                       height: "6px",
-                      backgroundColor: "#242424",
+                      backgroundColor: "#333333",
                       borderRadius: "3px",
                       overflow: "hidden",
                     }}
@@ -633,8 +633,8 @@ export default function UsersPage() {
       {/* User Activity Log */}
       <div
         style={{
-          backgroundColor: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          backgroundColor: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "16px",
           padding: "24px",
         }}
@@ -649,8 +649,8 @@ export default function UsersPage() {
               key={activity.id}
               style={{
                 padding: "16px",
-                backgroundColor: "#242424",
-                border: "1px solid #2A2A2A",
+                backgroundColor: "#333333",
+                border: "1px solid #3A3A3A",
                 borderRadius: "12px",
                 display: "flex",
                 alignItems: "center",
@@ -658,17 +658,17 @@ export default function UsersPage() {
                 transition: "all 0.2s",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "#2A2A2A";
+                e.currentTarget.style.backgroundColor = "#3A3A3A";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "#242424";
+                e.currentTarget.style.backgroundColor = "#333333";
               }}
             >
               <div
                 style={{
                   width: "40px",
                   height: "40px",
-                  backgroundColor: "#1A1A1A",
+                  backgroundColor: "#262626",
                   borderRadius: "50%",
                   display: "flex",
                   alignItems: "center",
@@ -710,8 +710,8 @@ export default function UsersPage() {
         >
           <div
             style={{
-              backgroundColor: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              backgroundColor: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "32px",
               maxWidth: "500px",
@@ -728,7 +728,7 @@ export default function UsersPage() {
                 style={{
                   width: "32px",
                   height: "32px",
-                  backgroundColor: "#242424",
+                  backgroundColor: "#333333",
                   border: "none",
                   borderRadius: "8px",
                   cursor: "pointer",
@@ -753,8 +753,8 @@ export default function UsersPage() {
                   style={{
                     width: "100%",
                     padding: "12px",
-                    backgroundColor: "#242424",
-                    border: "1px solid #2A2A2A",
+                    backgroundColor: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "8px",
                     color: "#E8E0D4",
                     fontSize: "14px",
@@ -774,8 +774,8 @@ export default function UsersPage() {
                   style={{
                     width: "100%",
                     padding: "12px",
-                    backgroundColor: "#242424",
-                    border: "1px solid #2A2A2A",
+                    backgroundColor: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "8px",
                     color: "#E8E0D4",
                     fontSize: "14px",
@@ -794,8 +794,8 @@ export default function UsersPage() {
                   style={{
                     width: "100%",
                     padding: "12px",
-                    backgroundColor: "#242424",
-                    border: "1px solid #2A2A2A",
+                    backgroundColor: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "8px",
                     color: "#E8E0D4",
                     fontSize: "14px",
@@ -820,8 +820,8 @@ export default function UsersPage() {
                   style={{
                     width: "100%",
                     padding: "12px",
-                    backgroundColor: "#242424",
-                    border: "1px solid #2A2A2A",
+                    backgroundColor: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "8px",
                     color: "#E8E0D4",
                     fontSize: "14px",
@@ -836,8 +836,8 @@ export default function UsersPage() {
                   style={{
                     flex: 1,
                     padding: "14px",
-                    backgroundColor: "#242424",
-                    border: "1px solid #2A2A2A",
+                    backgroundColor: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "8px",
                     color: "#E8E0D4",
                     fontSize: "14px",
@@ -855,7 +855,7 @@ export default function UsersPage() {
                     backgroundColor: "#C4A882",
                     border: "none",
                     borderRadius: "8px",
-                    color: "#0F0F0F",
+                    color: "#1A1A1A",
                     fontSize: "14px",
                     fontWeight: "600",
                     cursor: "pointer",

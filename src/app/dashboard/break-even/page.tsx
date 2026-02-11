@@ -62,7 +62,7 @@ export default function BreakEvenPage() {
   const safetyMargin = projectedRevenue - breakEvenPoint;
 
   return (
-    <div style={{ padding: "32px", backgroundColor: "#0F0F0F", minHeight: "100vh" }}>
+    <div style={{ padding: "32px", backgroundColor: "#1A1A1A", minHeight: "100vh" }}>
       {/* Header */}
       <div style={{ marginBottom: "32px" }}>
         <h1
@@ -83,8 +83,8 @@ export default function BreakEvenPage() {
       {/* Budget vs Revenue Comparison */}
       <div
         style={{
-          backgroundColor: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          backgroundColor: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "16px",
           padding: "32px",
           marginBottom: "24px",
@@ -182,7 +182,7 @@ export default function BreakEvenPage() {
           style={{
             marginTop: "24px",
             padding: "20px",
-            backgroundColor: "#242424",
+            backgroundColor: "#333333",
             borderRadius: "12px",
             display: "flex",
             justifyContent: "space-between",
@@ -204,8 +204,8 @@ export default function BreakEvenPage() {
       {/* Break-even Point Indicator */}
       <div
         style={{
-          backgroundColor: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          backgroundColor: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "16px",
           padding: "32px",
           marginBottom: "24px",
@@ -227,7 +227,7 @@ export default function BreakEvenPage() {
           <div
             style={{
               height: "12px",
-              backgroundColor: "#242424",
+              backgroundColor: "#333333",
               borderRadius: "6px",
               position: "relative",
               overflow: "hidden",
@@ -271,7 +271,7 @@ export default function BreakEvenPage() {
                 padding: "8px 16px",
                 backgroundColor: "#C4A882",
                 borderRadius: "8px",
-                color: "#0F0F0F",
+                color: "#1A1A1A",
                 fontSize: "14px",
                 fontWeight: "600",
                 whiteSpace: "nowrap",
@@ -314,7 +314,7 @@ export default function BreakEvenPage() {
           <div
             style={{
               padding: "16px",
-              backgroundColor: "#242424",
+              backgroundColor: "#333333",
               borderRadius: "12px",
               textAlign: "center",
             }}
@@ -329,7 +329,7 @@ export default function BreakEvenPage() {
           <div
             style={{
               padding: "16px",
-              backgroundColor: "#242424",
+              backgroundColor: "#333333",
               borderRadius: "12px",
               textAlign: "center",
             }}
@@ -344,7 +344,7 @@ export default function BreakEvenPage() {
           <div
             style={{
               padding: "16px",
-              backgroundColor: "#242424",
+              backgroundColor: "#333333",
               borderRadius: "12px",
               textAlign: "center",
             }}
@@ -362,8 +362,8 @@ export default function BreakEvenPage() {
       {/* Revenue Streams to Break-even */}
       <div
         style={{
-          backgroundColor: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          backgroundColor: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "16px",
           padding: "32px",
           marginBottom: "24px",
@@ -419,7 +419,7 @@ export default function BreakEvenPage() {
                 <div
                   style={{
                     height: "32px",
-                    backgroundColor: "#242424",
+                    backgroundColor: "#333333",
                     borderRadius: "8px",
                     overflow: "hidden",
                     position: "relative",
@@ -457,7 +457,7 @@ export default function BreakEvenPage() {
                             padding: "4px 8px",
                             backgroundColor: "#C4A882",
                             borderRadius: "6px",
-                            color: "#0F0F0F",
+                            color: "#1A1A1A",
                             fontSize: "11px",
                             fontWeight: "600",
                             whiteSpace: "nowrap",
@@ -479,8 +479,8 @@ export default function BreakEvenPage() {
         {/* Scenarios Comparison */}
         <div
           style={{
-            backgroundColor: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            backgroundColor: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "24px",
           }}
@@ -506,8 +506,8 @@ export default function BreakEvenPage() {
                   padding: "8px 12px",
                   borderRadius: "8px",
                   border: "1px solid",
-                  borderColor: selectedScenario === key ? scenario.color : "#2A2A2A",
-                  backgroundColor: selectedScenario === key ? `${scenario.color}20` : "#242424",
+                  borderColor: selectedScenario === key ? scenario.color : "#3A3A3A",
+                  backgroundColor: selectedScenario === key ? `${scenario.color}20` : "#333333",
                   color: selectedScenario === key ? scenario.color : "#9A9080",
                   fontSize: "13px",
                   fontWeight: "500",
@@ -526,9 +526,9 @@ export default function BreakEvenPage() {
                 key={key}
                 style={{
                   padding: "20px",
-                  backgroundColor: selectedScenario === key ? `${scenario.color}10` : "#242424",
+                  backgroundColor: selectedScenario === key ? `${scenario.color}10` : "#333333",
                   border: "1px solid",
-                  borderColor: selectedScenario === key ? scenario.color : "#2A2A2A",
+                  borderColor: selectedScenario === key ? scenario.color : "#3A3A3A",
                   borderRadius: "12px",
                   transition: "all 0.3s",
                 }}
@@ -583,8 +583,8 @@ export default function BreakEvenPage() {
         {/* Time to Break-even */}
         <div
           style={{
-            backgroundColor: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            backgroundColor: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "24px",
           }}
@@ -638,8 +638,8 @@ export default function BreakEvenPage() {
                       left: "50%",
                       transform: "translateX(-50%)",
                       padding: "8px 12px",
-                      backgroundColor: "#242424",
-                      border: "1px solid #2A2A2A",
+                      backgroundColor: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "8px",
                       whiteSpace: "nowrap",
                       opacity: 0,

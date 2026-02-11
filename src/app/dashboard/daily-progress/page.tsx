@@ -48,7 +48,7 @@ export default function DailyProgressPage() {
   };
 
   return (
-    <div style={{ padding: "2rem", background: "#0F0F0F", minHeight: "100vh" }}>
+    <div style={{ padding: "2rem", background: "#1A1A1A", minHeight: "100vh" }}>
       {/* Header */}
       <div style={{ marginBottom: "2rem" }}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "0.5rem" }}>
@@ -60,7 +60,7 @@ export default function DailyProgressPage() {
             onClick={() => setShowAddForm(true)}
             style={{
               background: "#C4A882",
-              color: "#0F0F0F",
+              color: "#1A1A1A",
               border: "none",
               padding: "0.75rem 1.5rem",
               borderRadius: "0.5rem",
@@ -72,7 +72,7 @@ export default function DailyProgressPage() {
               gap: "0.5rem",
             }}
           >
-            <LucideIcon name="PieChart" size={16} color="#0F0F0F" />
+            <LucideIcon name="PieChart" size={16} color="#1A1A1A" />
             {t("addEntry")}
           </button>
         </div>
@@ -82,7 +82,7 @@ export default function DailyProgressPage() {
       {/* Today's Summary Card */}
       <div
         style={{
-          background: "linear-gradient(135deg, #1A1A1A 0%, #242424 100%)",
+          background: "linear-gradient(135deg, #262626 0%, #333333 100%)",
           border: "1px solid #C4A882",
           borderRadius: "1rem",
           padding: "2rem",
@@ -136,8 +136,8 @@ export default function DailyProgressPage() {
         {today.notes && (
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "0.75rem",
               padding: "1rem",
               marginBottom: "1rem",
@@ -195,8 +195,8 @@ export default function DailyProgressPage() {
           <div
             key={i}
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "1rem",
               padding: "1.25rem",
             }}
@@ -213,8 +213,8 @@ export default function DailyProgressPage() {
       {/* Progress Timeline */}
       <div
         style={{
-          background: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          background: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "1rem",
           padding: "1.5rem",
           marginBottom: "2rem",
@@ -228,8 +228,8 @@ export default function DailyProgressPage() {
             <div
               key={progress.id}
               style={{
-                background: "#242424",
-                border: "1px solid #2A2A2A",
+                background: "#333333",
+                border: "1px solid #3A3A3A",
                 borderRadius: "0.75rem",
                 padding: "1.25rem",
               }}
@@ -294,8 +294,8 @@ export default function DailyProgressPage() {
       {/* Daily Burn Rate Visual */}
       <div
         style={{
-          background: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          background: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "1rem",
           padding: "1.5rem",
         }}
@@ -321,7 +321,7 @@ export default function DailyProgressPage() {
                 <div
                   style={{
                     height: "0.75rem",
-                    background: "#242424",
+                    background: "#333333",
                     borderRadius: "0.375rem",
                     overflow: "hidden",
                   }}
@@ -343,7 +343,7 @@ export default function DailyProgressPage() {
           style={{
             marginTop: "1.5rem",
             padding: "1rem",
-            background: "#242424",
+            background: "#333333",
             borderRadius: "0.75rem",
             display: "flex",
             justifyContent: "space-between",
@@ -383,8 +383,8 @@ export default function DailyProgressPage() {
           <div
             onClick={(e) => e.stopPropagation()}
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "1rem",
               padding: "2rem",
               maxWidth: "600px",
@@ -420,8 +420,8 @@ export default function DailyProgressPage() {
                   required
                   style={{
                     width: "100%",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "0.5rem",
                     padding: "0.625rem",
                     color: "#E8E0D4",
@@ -442,8 +442,8 @@ export default function DailyProgressPage() {
                   placeholder="0"
                   style={{
                     width: "100%",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "0.5rem",
                     padding: "0.625rem",
                     color: "#E8E0D4",
@@ -465,8 +465,8 @@ export default function DailyProgressPage() {
                   placeholder="0.0"
                   style={{
                     width: "100%",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "0.5rem",
                     padding: "0.625rem",
                     color: "#E8E0D4",
@@ -485,8 +485,8 @@ export default function DailyProgressPage() {
                   rows={3}
                   style={{
                     width: "100%",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "0.5rem",
                     padding: "0.625rem",
                     color: "#E8E0D4",
@@ -506,8 +506,8 @@ export default function DailyProgressPage() {
                   rows={2}
                   style={{
                     width: "100%",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "0.5rem",
                     padding: "0.625rem",
                     color: "#E8E0D4",
@@ -521,7 +521,7 @@ export default function DailyProgressPage() {
                 style={{
                   width: "100%",
                   background: "#C4A882",
-                  color: "#0F0F0F",
+                  color: "#1A1A1A",
                   border: "none",
                   padding: "0.75rem",
                   borderRadius: "0.5rem",

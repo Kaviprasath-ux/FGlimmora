@@ -101,7 +101,7 @@ export default function DistributionPage() {
   ];
 
   return (
-    <div style={{ minHeight: "100vh", background: "#0F0F0F", color: "#E8E0D4", padding: "2rem" }}>
+    <div style={{ minHeight: "100vh", background: "#1A1A1A", color: "#E8E0D4", padding: "2rem" }}>
       {/* Header */}
       <div style={{ marginBottom: "2rem" }}>
         <h1 style={{ fontSize: "2rem", fontWeight: "700", color: "#E8E0D4", marginBottom: "0.5rem" }}>
@@ -123,8 +123,8 @@ export default function DistributionPage() {
       >
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "1rem",
             padding: "1.25rem",
           }}
@@ -138,8 +138,8 @@ export default function DistributionPage() {
 
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "1rem",
             padding: "1.25rem",
           }}
@@ -153,8 +153,8 @@ export default function DistributionPage() {
 
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "1rem",
             padding: "1.25rem",
           }}
@@ -168,8 +168,8 @@ export default function DistributionPage() {
 
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "1rem",
             padding: "1.25rem",
           }}
@@ -185,8 +185,8 @@ export default function DistributionPage() {
 
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "1rem",
             padding: "1.25rem",
           }}
@@ -202,8 +202,8 @@ export default function DistributionPage() {
 
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "1rem",
             padding: "1.25rem",
           }}
@@ -224,7 +224,7 @@ export default function DistributionPage() {
             onClick={() => setShowAddDealModal(true)}
             style={{
               background: "#C4A882",
-              color: "#0F0F0F",
+              color: "#1A1A1A",
               padding: "0.625rem 1.5rem",
               borderRadius: "0.5rem",
               border: "none",
@@ -251,8 +251,8 @@ export default function DistributionPage() {
               <div
                 key={territory.id}
                 style={{
-                  background: "#1A1A1A",
-                  border: "1px solid #2A2A2A",
+                  background: "#262626",
+                  border: "1px solid #3A3A3A",
                   borderRadius: "1rem",
                   padding: "1.5rem",
                 }}
@@ -306,7 +306,7 @@ export default function DistributionPage() {
                     style={{
                       width: "100%",
                       height: "8px",
-                      background: "#242424",
+                      background: "#333333",
                       borderRadius: "4px",
                       overflow: "hidden",
                     }}
@@ -326,7 +326,7 @@ export default function DistributionPage() {
                     style={{
                       marginTop: "1rem",
                       padding: "0.75rem",
-                      background: "#242424",
+                      background: "#333333",
                       borderRadius: "0.5rem",
                       fontSize: "0.75rem",
                       color: territory.actualDeal >= territory.mgValuation ? "#5B8C5A" : "#C45C5C",
@@ -348,8 +348,8 @@ export default function DistributionPage() {
       {/* Deal Progress Overview */}
       <div
         style={{
-          background: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          background: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "1rem",
           padding: "1.5rem",
           marginBottom: "2rem",
@@ -371,7 +371,7 @@ export default function DistributionPage() {
                 style={{
                   width: "100%",
                   height: "48px",
-                  background: "#242424",
+                  background: "#333333",
                   borderRadius: "0.5rem",
                   position: "relative",
                   overflow: "hidden",
@@ -384,7 +384,7 @@ export default function DistributionPage() {
                     top: 0,
                     bottom: 0,
                     width: "100%",
-                    background: "linear-gradient(90deg, #3A3A3A 0%, #2A2A2A 100%)",
+                    background: "linear-gradient(90deg, #4A4A4A 0%, #3A3A3A 100%)",
                     borderRadius: "0.5rem",
                   }}
                 />
@@ -402,7 +402,7 @@ export default function DistributionPage() {
                 style={{
                   width: "100%",
                   height: "48px",
-                  background: "#242424",
+                  background: "#333333",
                   borderRadius: "0.5rem",
                   position: "relative",
                   overflow: "hidden",
@@ -426,7 +426,7 @@ export default function DistributionPage() {
           <div
             style={{
               padding: "1.5rem",
-              background: "#242424",
+              background: "#333333",
               borderRadius: "1rem",
               textAlign: "center",
               minWidth: "200px",
@@ -446,8 +446,8 @@ export default function DistributionPage() {
       {/* Territory Map Visual */}
       <div
         style={{
-          background: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          background: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "1rem",
           padding: "1.5rem",
           marginBottom: "2rem",
@@ -461,9 +461,9 @@ export default function DistributionPage() {
             position: "relative",
             width: "100%",
             height: "400px",
-            background: "#242424",
+            background: "#333333",
             borderRadius: "1rem",
-            border: "2px dashed #2A2A2A",
+            border: "2px dashed #3A3A3A",
           }}
         >
           {/* Simplified India shape outline */}
@@ -474,7 +474,7 @@ export default function DistributionPage() {
               top: "10%",
               width: "60%",
               height: "80%",
-              border: "3px solid #3A3A3A",
+              border: "3px solid #4A4A4A",
               borderRadius: "20% 20% 10% 10%",
             }}
           />
@@ -536,8 +536,8 @@ export default function DistributionPage() {
         {/* OTT Deals */}
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "1rem",
             padding: "1.5rem",
           }}
@@ -553,9 +553,9 @@ export default function DistributionPage() {
                   key={idx}
                   style={{
                     padding: "1rem",
-                    background: "#242424",
+                    background: "#333333",
                     borderRadius: "0.75rem",
-                    border: "1px solid #2A2A2A",
+                    border: "1px solid #3A3A3A",
                   }}
                 >
                   <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.75rem" }}>
@@ -592,8 +592,8 @@ export default function DistributionPage() {
         {/* Satellite Deals */}
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "1rem",
             padding: "1.5rem",
           }}
@@ -609,9 +609,9 @@ export default function DistributionPage() {
                   key={idx}
                   style={{
                     padding: "1rem",
-                    background: "#242424",
+                    background: "#333333",
                     borderRadius: "0.75rem",
-                    border: "1px solid #2A2A2A",
+                    border: "1px solid #3A3A3A",
                   }}
                 >
                   <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.75rem" }}>
@@ -649,8 +649,8 @@ export default function DistributionPage() {
       {/* Negotiation Tracker */}
       <div
         style={{
-          background: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          background: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "1rem",
           padding: "1.5rem",
         }}
@@ -666,7 +666,7 @@ export default function DistributionPage() {
                   style={{
                     textAlign: "left",
                     padding: "0.75rem",
-                    borderBottom: "1px solid #2A2A2A",
+                    borderBottom: "1px solid #3A3A3A",
                     color: "#9A9080",
                     fontSize: "0.875rem",
                     fontWeight: "600",
@@ -678,7 +678,7 @@ export default function DistributionPage() {
                   style={{
                     textAlign: "left",
                     padding: "0.75rem",
-                    borderBottom: "1px solid #2A2A2A",
+                    borderBottom: "1px solid #3A3A3A",
                     color: "#9A9080",
                     fontSize: "0.875rem",
                     fontWeight: "600",
@@ -690,7 +690,7 @@ export default function DistributionPage() {
                   style={{
                     textAlign: "right",
                     padding: "0.75rem",
-                    borderBottom: "1px solid #2A2A2A",
+                    borderBottom: "1px solid #3A3A3A",
                     color: "#9A9080",
                     fontSize: "0.875rem",
                     fontWeight: "600",
@@ -702,7 +702,7 @@ export default function DistributionPage() {
                   style={{
                     textAlign: "center",
                     padding: "0.75rem",
-                    borderBottom: "1px solid #2A2A2A",
+                    borderBottom: "1px solid #3A3A3A",
                     color: "#9A9080",
                     fontSize: "0.875rem",
                     fontWeight: "600",
@@ -714,7 +714,7 @@ export default function DistributionPage() {
                   style={{
                     textAlign: "center",
                     padding: "0.75rem",
-                    borderBottom: "1px solid #2A2A2A",
+                    borderBottom: "1px solid #3A3A3A",
                     color: "#9A9080",
                     fontSize: "0.875rem",
                     fontWeight: "600",
@@ -727,18 +727,18 @@ export default function DistributionPage() {
             <tbody>
               {negotiatingDeals.map((deal) => (
                 <tr key={deal.id}>
-                  <td style={{ padding: "1rem 0.75rem", borderBottom: "1px solid #2A2A2A" }}>
+                  <td style={{ padding: "1rem 0.75rem", borderBottom: "1px solid #3A3A3A" }}>
                     <span style={{ color: "#E8E0D4", fontWeight: "600", fontSize: "0.875rem" }}>
                       {deal.territory}
                     </span>
                   </td>
-                  <td style={{ padding: "1rem 0.75rem", borderBottom: "1px solid #2A2A2A" }}>
+                  <td style={{ padding: "1rem 0.75rem", borderBottom: "1px solid #3A3A3A" }}>
                     <span style={{ color: "#9A9080", fontSize: "0.875rem" }}>{deal.distributor}</span>
                   </td>
                   <td
                     style={{
                       padding: "1rem 0.75rem",
-                      borderBottom: "1px solid #2A2A2A",
+                      borderBottom: "1px solid #3A3A3A",
                       textAlign: "right",
                     }}
                   >
@@ -749,7 +749,7 @@ export default function DistributionPage() {
                   <td
                     style={{
                       padding: "1rem 0.75rem",
-                      borderBottom: "1px solid #2A2A2A",
+                      borderBottom: "1px solid #3A3A3A",
                       textAlign: "center",
                     }}
                   >
@@ -758,7 +758,7 @@ export default function DistributionPage() {
                   <td
                     style={{
                       padding: "1rem 0.75rem",
-                      borderBottom: "1px solid #2A2A2A",
+                      borderBottom: "1px solid #3A3A3A",
                       textAlign: "center",
                     }}
                   >
@@ -800,8 +800,8 @@ export default function DistributionPage() {
           <div
             onClick={(e) => e.stopPropagation()}
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "1rem",
               padding: "2rem",
               maxWidth: "500px",
@@ -824,8 +824,8 @@ export default function DistributionPage() {
                   style={{
                     width: "100%",
                     padding: "0.625rem",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "0.5rem",
                     color: "#E8E0D4",
                     fontSize: "0.875rem",
@@ -845,8 +845,8 @@ export default function DistributionPage() {
                   style={{
                     width: "100%",
                     padding: "0.625rem",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "0.5rem",
                     color: "#E8E0D4",
                     fontSize: "0.875rem",
@@ -866,8 +866,8 @@ export default function DistributionPage() {
                   style={{
                     width: "100%",
                     padding: "0.625rem",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "0.5rem",
                     color: "#E8E0D4",
                     fontSize: "0.875rem",
@@ -891,8 +891,8 @@ export default function DistributionPage() {
                   style={{
                     width: "100%",
                     padding: "0.625rem",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "0.5rem",
                     color: "#E8E0D4",
                     fontSize: "0.875rem",
@@ -921,7 +921,7 @@ export default function DistributionPage() {
                     flex: 1,
                     padding: "0.75rem",
                     background: "#C4A882",
-                    color: "#0F0F0F",
+                    color: "#1A1A1A",
                     border: "none",
                     borderRadius: "0.5rem",
                     fontSize: "0.875rem",
@@ -936,9 +936,9 @@ export default function DistributionPage() {
                   style={{
                     flex: 1,
                     padding: "0.75rem",
-                    background: "#242424",
+                    background: "#333333",
                     color: "#E8E0D4",
-                    border: "1px solid #2A2A2A",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "0.5rem",
                     fontSize: "0.875rem",
                     fontWeight: "600",

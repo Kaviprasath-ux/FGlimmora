@@ -112,7 +112,7 @@ export default function AttributionPage() {
   };
 
   return (
-    <div style={{ padding: "32px", background: "#0F0F0F", minHeight: "100vh" }}>
+    <div style={{ padding: "32px", background: "#1A1A1A", minHeight: "100vh" }}>
       {/* Header */}
       <div style={{ marginBottom: "32px" }}>
         <h1 style={{ fontSize: "32px", fontWeight: "600", color: "#E8E0D4", marginBottom: "8px" }}>
@@ -125,26 +125,26 @@ export default function AttributionPage() {
 
       {/* Summary Stats */}
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "16px", marginBottom: "32px" }}>
-        <div style={{ background: "#1A1A1A", padding: "20px", borderRadius: "16px", border: "1px solid #2A2A2A" }}>
+        <div style={{ background: "#262626", padding: "20px", borderRadius: "16px", border: "1px solid #3A3A3A" }}>
           <div style={{ color: "#9A9080", fontSize: "12px", marginBottom: "8px" }}>{t("totalMarketingSpend")}</div>
           <div style={{ color: "#C4A882", fontSize: "28px", fontWeight: "600" }}>{formatCrores(totalMarketing)}</div>
         </div>
-        <div style={{ background: "#1A1A1A", padding: "20px", borderRadius: "16px", border: "1px solid #2A2A2A" }}>
+        <div style={{ background: "#262626", padding: "20px", borderRadius: "16px", border: "1px solid #3A3A3A" }}>
           <div style={{ color: "#9A9080", fontSize: "12px", marginBottom: "8px" }}>{t("attributedRevenue")}</div>
           <div style={{ color: "#5B8C5A", fontSize: "28px", fontWeight: "600" }}>{formatCrores(totalAttributedRevenue)}</div>
         </div>
-        <div style={{ background: "#1A1A1A", padding: "20px", borderRadius: "16px", border: "1px solid #2A2A2A" }}>
+        <div style={{ background: "#262626", padding: "20px", borderRadius: "16px", border: "1px solid #3A3A3A" }}>
           <div style={{ color: "#9A9080", fontSize: "12px", marginBottom: "8px" }}>{t("overallROI")}</div>
           <div style={{ color: "#C4A882", fontSize: "28px", fontWeight: "600" }}>{totalROI.toFixed(2)}x</div>
         </div>
-        <div style={{ background: "#1A1A1A", padding: "20px", borderRadius: "16px", border: "1px solid #2A2A2A" }}>
+        <div style={{ background: "#262626", padding: "20px", borderRadius: "16px", border: "1px solid #3A3A3A" }}>
           <div style={{ color: "#9A9080", fontSize: "12px", marginBottom: "8px" }}>{t("attributionRate")}</div>
           <div style={{ color: "#E8E0D4", fontSize: "28px", fontWeight: "600" }}>{attributionPercentage.toFixed(1)}%</div>
         </div>
       </div>
 
       {/* Attribution Model Selector */}
-      <div style={{ background: "#1A1A1A", padding: "24px", borderRadius: "16px", border: "1px solid #2A2A2A", marginBottom: "32px" }}>
+      <div style={{ background: "#262626", padding: "24px", borderRadius: "16px", border: "1px solid #3A3A3A", marginBottom: "32px" }}>
         <h3 style={{ color: "#E8E0D4", fontSize: "18px", fontWeight: "600", marginBottom: "16px" }}>
           {t("attributionModel")}
         </h3>
@@ -160,10 +160,10 @@ export default function AttributionPage() {
               style={{
                 flex: 1,
                 padding: "16px",
-                background: selectedModel === model.value ? "#C4A882" : "#242424",
-                border: selectedModel === model.value ? "1px solid #C4A882" : "1px solid #2A2A2A",
+                background: selectedModel === model.value ? "#C4A882" : "#333333",
+                border: selectedModel === model.value ? "1px solid #C4A882" : "1px solid #3A3A3A",
                 borderRadius: "12px",
-                color: selectedModel === model.value ? "#0F0F0F" : "#E8E0D4",
+                color: selectedModel === model.value ? "#1A1A1A" : "#E8E0D4",
                 cursor: "pointer",
                 textAlign: "left",
               }}
@@ -172,7 +172,7 @@ export default function AttributionPage() {
               <div
                 style={{
                   fontSize: "12px",
-                  color: selectedModel === model.value ? "#0F0F0F" : "#9A9080",
+                  color: selectedModel === model.value ? "#1A1A1A" : "#9A9080",
                   opacity: selectedModel === model.value ? 0.8 : 1,
                 }}
               >
@@ -193,10 +193,10 @@ export default function AttributionPage() {
             <div
               key={attr.id}
               style={{
-                background: "#1A1A1A",
+                background: "#262626",
                 padding: "24px",
                 borderRadius: "16px",
-                border: "1px solid #2A2A2A",
+                border: "1px solid #3A3A3A",
                 position: "relative",
                 overflow: "hidden",
               }}
@@ -226,8 +226,8 @@ export default function AttributionPage() {
               <div
                 style={{
                   padding: "12px 0",
-                  borderTop: "1px solid #2A2A2A",
-                  borderBottom: "1px solid #2A2A2A",
+                  borderTop: "1px solid #3A3A3A",
+                  borderBottom: "1px solid #3A3A3A",
                   marginBottom: "16px",
                 }}
               >
@@ -258,7 +258,7 @@ export default function AttributionPage() {
                 </div>
               </div>
 
-              <div style={{ width: "100%", height: "6px", background: "#242424", borderRadius: "3px", overflow: "hidden" }}>
+              <div style={{ width: "100%", height: "6px", background: "#333333", borderRadius: "3px", overflow: "hidden" }}>
                 <div
                   style={{
                     width: `${attr.confidence}%`,
@@ -274,14 +274,14 @@ export default function AttributionPage() {
       </div>
 
       {/* Campaign to Revenue Mapping */}
-      <div style={{ background: "#1A1A1A", padding: "24px", borderRadius: "16px", border: "1px solid #2A2A2A", marginBottom: "32px" }}>
+      <div style={{ background: "#262626", padding: "24px", borderRadius: "16px", border: "1px solid #3A3A3A", marginBottom: "32px" }}>
         <h3 style={{ color: "#E8E0D4", fontSize: "20px", fontWeight: "600", marginBottom: "20px" }}>
           {t("campaignRevenueMapping")}
         </h3>
         <div style={{ overflowX: "auto" }}>
           <table style={{ width: "100%", borderCollapse: "collapse" }}>
             <thead>
-              <tr style={{ borderBottom: "1px solid #2A2A2A" }}>
+              <tr style={{ borderBottom: "1px solid #3A3A3A" }}>
                 <th style={{ color: "#9A9080", fontSize: "12px", fontWeight: "600", textAlign: "left", padding: "12px 16px" }}>
                   {t("campaign")}
                 </th>
@@ -301,7 +301,7 @@ export default function AttributionPage() {
             </thead>
             <tbody>
               {campaignRevenueMapping.map((item, idx) => (
-                <tr key={idx} style={{ borderBottom: "1px solid #2A2A2A" }}>
+                <tr key={idx} style={{ borderBottom: "1px solid #3A3A3A" }}>
                   <td style={{ color: "#E8E0D4", fontSize: "14px", padding: "16px", fontWeight: "500" }}>
                     {item.campaign}
                   </td>
@@ -325,7 +325,7 @@ export default function AttributionPage() {
       </div>
 
       {/* ROI Visual */}
-      <div style={{ background: "#1A1A1A", padding: "32px", borderRadius: "16px", border: "1px solid #2A2A2A" }}>
+      <div style={{ background: "#262626", padding: "32px", borderRadius: "16px", border: "1px solid #3A3A3A" }}>
         <h3 style={{ color: "#E8E0D4", fontSize: "20px", fontWeight: "600", marginBottom: "24px" }}>
           {t("marketingSpendVsRevenue")}
         </h3>
@@ -343,7 +343,7 @@ export default function AttributionPage() {
                 marginBottom: "16px",
               }}
             >
-              <div style={{ color: "#0F0F0F", fontSize: "24px", fontWeight: "700" }}>
+              <div style={{ color: "#1A1A1A", fontSize: "24px", fontWeight: "700" }}>
                 {formatCrores(totalMarketing)}
               </div>
             </div>

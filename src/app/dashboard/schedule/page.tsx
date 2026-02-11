@@ -151,16 +151,16 @@ export default function SchedulePage() {
   };
 
   return (
-    <div style={{ background: "#0F0F0F", minHeight: "100vh", padding: "32px" }}>
+    <div style={{ background: "#1A1A1A", minHeight: "100vh", padding: "32px" }}>
       <div style={{ maxWidth: "1600px", margin: "0 auto" }}>
         {/* Header */}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "32px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
             <div style={{
               padding: "12px",
-              background: "#1A1A1A",
+              background: "#262626",
               borderRadius: "12px",
-              border: "1px solid #2A2A2A"
+              border: "1px solid #3A3A3A"
             }}>
               <LucideIcon name="Calendar" size={28} style={{ color: "#C4A882" }} />
             </div>
@@ -191,7 +191,7 @@ export default function SchedulePage() {
                 background: "#C4A882",
                 border: "1px solid #C4A882",
                 borderRadius: "12px",
-                color: "#0F0F0F",
+                color: "#1A1A1A",
                 fontSize: "14px",
                 fontWeight: "600",
                 cursor: "pointer",
@@ -224,8 +224,8 @@ export default function SchedulePage() {
             <div
               key={i}
               style={{
-                background: "#1A1A1A",
-                border: "1px solid #2A2A2A",
+                background: "#262626",
+                border: "1px solid #3A3A3A",
                 borderRadius: "16px",
                 padding: "20px",
               }}
@@ -247,8 +247,8 @@ export default function SchedulePage() {
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px", marginBottom: "32px" }}>
           {/* Schedule Health */}
           <div style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "24px",
           }}>
@@ -273,7 +273,7 @@ export default function SchedulePage() {
                 </div>
                 <div style={{ fontSize: "12px", color: "#9A9080" }}>{t("onTime")}</div>
               </div>
-              <div style={{ width: "1px", background: "#2A2A2A" }} />
+              <div style={{ width: "1px", background: "#3A3A3A" }} />
               <div style={{ textAlign: "center" }}>
                 <div style={{ fontSize: "24px", fontWeight: "700", color: "#C45C5C" }}>
                   {scheduleHealth.delayedCount}
@@ -285,8 +285,8 @@ export default function SchedulePage() {
 
           {/* Location Frequency */}
           <div style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "24px",
           }}>
@@ -313,7 +313,7 @@ export default function SchedulePage() {
                     <div style={{
                       width: "100%",
                       height: "8px",
-                      background: "#242424",
+                      background: "#333333",
                       borderRadius: "4px",
                       overflow: "hidden",
                     }}>
@@ -335,8 +335,8 @@ export default function SchedulePage() {
 
         {/* Upcoming Shoot Days */}
         <div style={{
-          background: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          background: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "16px",
           padding: "24px",
           marginBottom: "32px",
@@ -353,7 +353,7 @@ export default function SchedulePage() {
                 key={day.id}
                 style={{
                   padding: "16px",
-                  background: "#242424",
+                  background: "#333333",
                   border: "1px solid #C4A88240",
                   borderRadius: "12px",
                 }}
@@ -387,8 +387,8 @@ export default function SchedulePage() {
 
         {/* Status Filter Bar */}
         <div style={{
-          background: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          background: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "16px",
           padding: "20px",
           marginBottom: "24px",
@@ -400,10 +400,10 @@ export default function SchedulePage() {
                 onClick={() => setStatusFilter(status)}
                 style={{
                   padding: "10px 20px",
-                  background: statusFilter === status ? "#C4A882" : "#242424",
-                  border: `1px solid ${statusFilter === status ? "#C4A882" : "#2A2A2A"}`,
+                  background: statusFilter === status ? "#C4A882" : "#333333",
+                  border: `1px solid ${statusFilter === status ? "#C4A882" : "#3A3A3A"}`,
                   borderRadius: "8px",
-                  color: statusFilter === status ? "#0F0F0F" : "#9A9080",
+                  color: statusFilter === status ? "#1A1A1A" : "#9A9080",
                   fontSize: "14px",
                   fontWeight: "600",
                   cursor: "pointer",
@@ -439,7 +439,7 @@ export default function SchedulePage() {
                     <div
                       key={day.id}
                       style={{
-                        background: "#1A1A1A",
+                        background: "#262626",
                         border: `1px solid ${statusColors[day.status].border}`,
                         borderRadius: "16px",
                         overflow: "hidden",
@@ -475,7 +475,7 @@ export default function SchedulePage() {
                             borderRadius: "8px",
                             fontSize: "12px",
                             fontWeight: "700",
-                            color: "#0F0F0F",
+                            color: "#1A1A1A",
                             textTransform: "capitalize",
                           }}>
                             {day.status}
@@ -499,7 +499,7 @@ export default function SchedulePage() {
 
                       {/* Expanded Details */}
                       {isExpanded && (
-                        <div style={{ padding: "20px", borderTop: "1px solid #2A2A2A" }}>
+                        <div style={{ padding: "20px", borderTop: "1px solid #3A3A3A" }}>
                           {/* Scenes */}
                           {dayScenes.length > 0 && (
                             <div style={{ marginBottom: "16px" }}>
@@ -512,8 +512,8 @@ export default function SchedulePage() {
                                     key={scene.id}
                                     style={{
                                       padding: "12px",
-                                      background: "#242424",
-                                      border: "1px solid #2A2A2A",
+                                      background: "#333333",
+                                      border: "1px solid #3A3A3A",
                                       borderRadius: "8px",
                                     }}
                                   >
@@ -546,8 +546,8 @@ export default function SchedulePage() {
                           {day.notes && (
                             <div style={{
                               padding: "12px",
-                              background: "#242424",
-                              border: "1px solid #2A2A2A",
+                              background: "#333333",
+                              border: "1px solid #3A3A3A",
                               borderRadius: "8px",
                               marginTop: "12px",
                             }}>
@@ -563,8 +563,8 @@ export default function SchedulePage() {
                           {/* Mock Crew Assignment */}
                           <div style={{
                             padding: "12px",
-                            background: "#242424",
-                            border: "1px solid #2A2A2A",
+                            background: "#333333",
+                            border: "1px solid #3A3A3A",
                             borderRadius: "8px",
                             marginTop: "12px",
                           }}>
@@ -577,8 +577,8 @@ export default function SchedulePage() {
                                   key={crew}
                                   style={{
                                     padding: "4px 10px",
-                                    background: "#0F0F0F",
-                                    border: "1px solid #2A2A2A",
+                                    background: "#1A1A1A",
+                                    border: "1px solid #3A3A3A",
                                     borderRadius: "6px",
                                     fontSize: "12px",
                                     color: "#9A9080",
@@ -620,8 +620,8 @@ export default function SchedulePage() {
             <div
               onClick={(e) => e.stopPropagation()}
               style={{
-                background: "#1A1A1A",
-                border: "1px solid #2A2A2A",
+                background: "#262626",
+                border: "1px solid #3A3A3A",
                 borderRadius: "20px",
                 padding: "32px",
                 maxWidth: "700px",
@@ -647,8 +647,8 @@ export default function SchedulePage() {
                       style={{
                         width: "100%",
                         padding: "12px",
-                        background: "#242424",
-                        border: "1px solid #2A2A2A",
+                        background: "#333333",
+                        border: "1px solid #3A3A3A",
                         borderRadius: "8px",
                         color: "#E8E0D4",
                         fontSize: "14px",
@@ -666,8 +666,8 @@ export default function SchedulePage() {
                       style={{
                         width: "100%",
                         padding: "12px",
-                        background: "#242424",
-                        border: "1px solid #2A2A2A",
+                        background: "#333333",
+                        border: "1px solid #3A3A3A",
                         borderRadius: "8px",
                         color: "#E8E0D4",
                         fontSize: "14px",
@@ -687,8 +687,8 @@ export default function SchedulePage() {
                     style={{
                       width: "100%",
                       padding: "12px",
-                      background: "#242424",
-                      border: "1px solid #2A2A2A",
+                      background: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "8px",
                       color: "#E8E0D4",
                       fontSize: "14px",
@@ -704,8 +704,8 @@ export default function SchedulePage() {
                     maxHeight: "200px",
                     overflowY: "auto",
                     padding: "12px",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "8px",
                   }}>
                     {scenes.map((scene) => (
@@ -715,8 +715,8 @@ export default function SchedulePage() {
                         style={{
                           padding: "10px",
                           marginBottom: "8px",
-                          background: newShootDay.scenes.includes(scene.id) ? "#C4A88220" : "#1A1A1A",
-                          border: `1px solid ${newShootDay.scenes.includes(scene.id) ? "#C4A882" : "#2A2A2A"}`,
+                          background: newShootDay.scenes.includes(scene.id) ? "#C4A88220" : "#262626",
+                          border: `1px solid ${newShootDay.scenes.includes(scene.id) ? "#C4A882" : "#3A3A3A"}`,
                           borderRadius: "8px",
                           cursor: "pointer",
                           transition: "all 0.2s",
@@ -754,8 +754,8 @@ export default function SchedulePage() {
                     style={{
                       width: "100%",
                       padding: "12px",
-                      background: "#242424",
-                      border: "1px solid #2A2A2A",
+                      background: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "8px",
                       color: "#E8E0D4",
                       fontSize: "14px",
@@ -773,7 +773,7 @@ export default function SchedulePage() {
                       background: "#C4A882",
                       border: "1px solid #C4A882",
                       borderRadius: "8px",
-                      color: "#0F0F0F",
+                      color: "#1A1A1A",
                       fontSize: "15px",
                       fontWeight: "600",
                       cursor: "pointer",
@@ -786,8 +786,8 @@ export default function SchedulePage() {
                     style={{
                       flex: 1,
                       padding: "14px",
-                      background: "#242424",
-                      border: "1px solid #2A2A2A",
+                      background: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "8px",
                       color: "#9A9080",
                       fontSize: "15px",

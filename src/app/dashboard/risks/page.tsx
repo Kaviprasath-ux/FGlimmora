@@ -70,7 +70,7 @@ export default function RisksPage() {
   }));
 
   return (
-    <div style={{ padding: "2rem", background: "#0F0F0F", minHeight: "100vh" }}>
+    <div style={{ padding: "2rem", background: "#1A1A1A", minHeight: "100vh" }}>
       {/* Header */}
       <div style={{ marginBottom: "2rem" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "0.5rem" }}>
@@ -102,8 +102,8 @@ export default function RisksPage() {
           <div
             key={i}
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "1rem",
               padding: "1.25rem",
             }}
@@ -120,8 +120,8 @@ export default function RisksPage() {
       {/* Filters */}
       <div
         style={{
-          background: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          background: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "1rem",
           padding: "1.5rem",
           marginBottom: "2rem",
@@ -137,8 +137,8 @@ export default function RisksPage() {
               onChange={(e) => setSeverityFilter(e.target.value)}
               style={{
                 width: "100%",
-                background: "#242424",
-                border: "1px solid #2A2A2A",
+                background: "#333333",
+                border: "1px solid #3A3A3A",
                 borderRadius: "0.5rem",
                 padding: "0.625rem",
                 color: "#E8E0D4",
@@ -161,8 +161,8 @@ export default function RisksPage() {
               onChange={(e) => setTypeFilter(e.target.value)}
               style={{
                 width: "100%",
-                background: "#242424",
-                border: "1px solid #2A2A2A",
+                background: "#333333",
+                border: "1px solid #3A3A3A",
                 borderRadius: "0.5rem",
                 padding: "0.625rem",
                 color: "#E8E0D4",
@@ -186,8 +186,8 @@ export default function RisksPage() {
           <div
             key={risk.id}
             style={{
-              background: "#1A1A1A",
-              border: `1px solid ${risk.severity === "critical" ? getSeverityColor(risk.severity) : "#2A2A2A"}`,
+              background: "#262626",
+              border: `1px solid ${risk.severity === "critical" ? getSeverityColor(risk.severity) : "#3A3A3A"}`,
               borderRadius: "1rem",
               padding: "1.5rem",
               position: "relative",
@@ -235,7 +235,7 @@ export default function RisksPage() {
                   </span>
                   <span
                     style={{
-                      background: "#242424",
+                      background: "#333333",
                       color: "#9A9080",
                       padding: "0.25rem 0.75rem",
                       borderRadius: "0.5rem",
@@ -276,7 +276,7 @@ export default function RisksPage() {
                     style={{
                       background: risk.mitigated ? "#5B8C5A" : "transparent",
                       color: risk.mitigated ? "#E8E0D4" : "#9A9080",
-                      border: `1px solid ${risk.mitigated ? "#5B8C5A" : "#2A2A2A"}`,
+                      border: `1px solid ${risk.mitigated ? "#5B8C5A" : "#3A3A3A"}`,
                       padding: "0.5rem 1rem",
                       borderRadius: "0.5rem",
                       fontSize: "0.875rem",
@@ -298,8 +298,8 @@ export default function RisksPage() {
         {/* Risk Heat Map */}
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "1rem",
             padding: "1.5rem",
           }}
@@ -350,7 +350,7 @@ export default function RisksPage() {
                         background:
                           cell.count > 0
                             ? getSeverityColor(cell.severity) + Math.min(20 + cell.count * 20, 80).toString(16)
-                            : "#242424",
+                            : "#333333",
                         borderRadius: "0.5rem",
                         padding: "1rem",
                         display: "flex",
@@ -372,8 +372,8 @@ export default function RisksPage() {
         {/* Total Risk Exposure */}
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "1rem",
             padding: "1.5rem",
           }}
@@ -406,7 +406,7 @@ export default function RisksPage() {
                 <div
                   style={{
                     height: "0.5rem",
-                    background: "#242424",
+                    background: "#333333",
                     borderRadius: "0.25rem",
                     overflow: "hidden",
                   }}
@@ -427,7 +427,7 @@ export default function RisksPage() {
             style={{
               marginTop: "2rem",
               padding: "1rem",
-              background: "#242424",
+              background: "#333333",
               borderRadius: "0.75rem",
               borderLeft: `4px solid #C4A882`,
             }}

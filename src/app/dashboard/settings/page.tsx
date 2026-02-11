@@ -73,7 +73,7 @@ export default function SettingsPage() {
   };
 
   return (
-    <div style={{ padding: "32px", backgroundColor: "#0F0F0F", minHeight: "100vh" }}>
+    <div style={{ padding: "32px", backgroundColor: "#1A1A1A", minHeight: "100vh" }}>
       {/* Header */}
       <div style={{ marginBottom: "32px" }}>
         <h1
@@ -119,8 +119,8 @@ export default function SettingsPage() {
         {/* General Settings */}
         <div
           style={{
-            backgroundColor: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            backgroundColor: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             overflow: "hidden",
           }}
@@ -139,7 +139,7 @@ export default function SettingsPage() {
               transition: "background-color 0.2s",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = "#242424";
+              e.currentTarget.style.backgroundColor = "#333333";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.backgroundColor = "transparent";
@@ -164,7 +164,7 @@ export default function SettingsPage() {
           </button>
 
           {expandedSection === "general" && (
-            <div style={{ padding: "0 24px 24px", borderTop: "1px solid #2A2A2A" }}>
+            <div style={{ padding: "0 24px 24px", borderTop: "1px solid #3A3A3A" }}>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", marginTop: "24px" }}>
                 <div>
                   <label style={{ color: "#9A9080", fontSize: "13px", marginBottom: "8px", display: "block" }}>
@@ -177,8 +177,8 @@ export default function SettingsPage() {
                     style={{
                       width: "100%",
                       padding: "12px",
-                      backgroundColor: "#242424",
-                      border: "1px solid #2A2A2A",
+                      backgroundColor: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "8px",
                       color: "#E8E0D4",
                       fontSize: "14px",
@@ -196,8 +196,8 @@ export default function SettingsPage() {
                     style={{
                       width: "100%",
                       padding: "12px",
-                      backgroundColor: "#242424",
-                      border: "1px solid #2A2A2A",
+                      backgroundColor: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "8px",
                       color: "#E8E0D4",
                       fontSize: "14px",
@@ -220,8 +220,8 @@ export default function SettingsPage() {
                     style={{
                       width: "100%",
                       padding: "12px",
-                      backgroundColor: "#242424",
-                      border: "1px solid #2A2A2A",
+                      backgroundColor: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "8px",
                       color: "#E8E0D4",
                       fontSize: "14px",
@@ -244,8 +244,8 @@ export default function SettingsPage() {
                     style={{
                       width: "100%",
                       padding: "12px",
-                      backgroundColor: "#242424",
-                      border: "1px solid #2A2A2A",
+                      backgroundColor: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "8px",
                       color: "#E8E0D4",
                       fontSize: "14px",
@@ -265,8 +265,8 @@ export default function SettingsPage() {
         {/* Notifications */}
         <div
           style={{
-            backgroundColor: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            backgroundColor: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             overflow: "hidden",
           }}
@@ -285,7 +285,7 @@ export default function SettingsPage() {
               transition: "background-color 0.2s",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = "#242424";
+              e.currentTarget.style.backgroundColor = "#333333";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.backgroundColor = "transparent";
@@ -310,7 +310,7 @@ export default function SettingsPage() {
           </button>
 
           {expandedSection === "notifications" && (
-            <div style={{ padding: "0 24px 24px", borderTop: "1px solid #2A2A2A" }}>
+            <div style={{ padding: "0 24px 24px", borderTop: "1px solid #3A3A3A" }}>
               <div style={{ display: "flex", flexDirection: "column", gap: "16px", marginTop: "24px" }}>
                 {Object.entries(notifications).map(([key, value]) => (
                   <div
@@ -320,7 +320,7 @@ export default function SettingsPage() {
                       justifyContent: "space-between",
                       alignItems: "center",
                       padding: "16px",
-                      backgroundColor: "#242424",
+                      backgroundColor: "#333333",
                       borderRadius: "12px",
                     }}
                   >
@@ -361,7 +361,7 @@ export default function SettingsPage() {
                           left: 0,
                           right: 0,
                           bottom: 0,
-                          backgroundColor: value ? "#C4A882" : "#2A2A2A",
+                          backgroundColor: value ? "#C4A882" : "#3A3A3A",
                           transition: "0.3s",
                           borderRadius: "13px",
                         }}
@@ -391,8 +391,8 @@ export default function SettingsPage() {
         {/* Security */}
         <div
           style={{
-            backgroundColor: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            backgroundColor: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             overflow: "hidden",
           }}
@@ -411,7 +411,7 @@ export default function SettingsPage() {
               transition: "background-color 0.2s",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = "#242424";
+              e.currentTarget.style.backgroundColor = "#333333";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.backgroundColor = "transparent";
@@ -436,7 +436,7 @@ export default function SettingsPage() {
           </button>
 
           {expandedSection === "security" && (
-            <div style={{ padding: "0 24px 24px", borderTop: "1px solid #2A2A2A" }}>
+            <div style={{ padding: "0 24px 24px", borderTop: "1px solid #3A3A3A" }}>
               <div style={{ display: "flex", flexDirection: "column", gap: "20px", marginTop: "24px" }}>
                 <div>
                   <label style={{ color: "#9A9080", fontSize: "13px", marginBottom: "8px", display: "block" }}>
@@ -451,8 +451,8 @@ export default function SettingsPage() {
                     style={{
                       width: "100%",
                       padding: "12px",
-                      backgroundColor: "#242424",
-                      border: "1px solid #2A2A2A",
+                      backgroundColor: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "8px",
                       color: "#E8E0D4",
                       fontSize: "14px",
@@ -468,7 +468,7 @@ export default function SettingsPage() {
                     justifyContent: "space-between",
                     alignItems: "center",
                     padding: "16px",
-                    backgroundColor: "#242424",
+                    backgroundColor: "#333333",
                     borderRadius: "12px",
                   }}
                 >
@@ -498,7 +498,7 @@ export default function SettingsPage() {
                         left: 0,
                         right: 0,
                         bottom: 0,
-                        backgroundColor: security.requireUppercase ? "#C4A882" : "#2A2A2A",
+                        backgroundColor: security.requireUppercase ? "#C4A882" : "#3A3A3A",
                         transition: "0.3s",
                         borderRadius: "13px",
                       }}
@@ -525,7 +525,7 @@ export default function SettingsPage() {
                     justifyContent: "space-between",
                     alignItems: "center",
                     padding: "16px",
-                    backgroundColor: "#242424",
+                    backgroundColor: "#333333",
                     borderRadius: "12px",
                   }}
                 >
@@ -555,7 +555,7 @@ export default function SettingsPage() {
                         left: 0,
                         right: 0,
                         bottom: 0,
-                        backgroundColor: security.requireNumbers ? "#C4A882" : "#2A2A2A",
+                        backgroundColor: security.requireNumbers ? "#C4A882" : "#3A3A3A",
                         transition: "0.3s",
                         borderRadius: "13px",
                       }}
@@ -582,7 +582,7 @@ export default function SettingsPage() {
                     justifyContent: "space-between",
                     alignItems: "center",
                     padding: "16px",
-                    backgroundColor: "#242424",
+                    backgroundColor: "#333333",
                     borderRadius: "12px",
                   }}
                 >
@@ -612,7 +612,7 @@ export default function SettingsPage() {
                         left: 0,
                         right: 0,
                         bottom: 0,
-                        backgroundColor: security.requireSpecialChars ? "#C4A882" : "#2A2A2A",
+                        backgroundColor: security.requireSpecialChars ? "#C4A882" : "#3A3A3A",
                         transition: "0.3s",
                         borderRadius: "13px",
                       }}
@@ -639,7 +639,7 @@ export default function SettingsPage() {
                     justifyContent: "space-between",
                     alignItems: "center",
                     padding: "16px",
-                    backgroundColor: "#242424",
+                    backgroundColor: "#333333",
                     borderRadius: "12px",
                   }}
                 >
@@ -676,7 +676,7 @@ export default function SettingsPage() {
                         left: 0,
                         right: 0,
                         bottom: 0,
-                        backgroundColor: security.twoFactorAuth ? "#C4A882" : "#2A2A2A",
+                        backgroundColor: security.twoFactorAuth ? "#C4A882" : "#3A3A3A",
                         transition: "0.3s",
                         borderRadius: "13px",
                       }}
@@ -710,8 +710,8 @@ export default function SettingsPage() {
                     style={{
                       width: "100%",
                       padding: "12px",
-                      backgroundColor: "#242424",
-                      border: "1px solid #2A2A2A",
+                      backgroundColor: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "8px",
                       color: "#E8E0D4",
                       fontSize: "14px",
@@ -728,8 +728,8 @@ export default function SettingsPage() {
         {/* Integrations */}
         <div
           style={{
-            backgroundColor: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            backgroundColor: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             overflow: "hidden",
           }}
@@ -748,7 +748,7 @@ export default function SettingsPage() {
               transition: "background-color 0.2s",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = "#242424";
+              e.currentTarget.style.backgroundColor = "#333333";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.backgroundColor = "transparent";
@@ -773,7 +773,7 @@ export default function SettingsPage() {
           </button>
 
           {expandedSection === "integrations" && (
-            <div style={{ padding: "0 24px 24px", borderTop: "1px solid #2A2A2A" }}>
+            <div style={{ padding: "0 24px 24px", borderTop: "1px solid #3A3A3A" }}>
               <div style={{ display: "flex", flexDirection: "column", gap: "12px", marginTop: "24px" }}>
                 {integrations.map((integration, idx) => (
                   <div
@@ -783,7 +783,7 @@ export default function SettingsPage() {
                       justifyContent: "space-between",
                       alignItems: "center",
                       padding: "16px",
-                      backgroundColor: "#242424",
+                      backgroundColor: "#333333",
                       borderRadius: "12px",
                     }}
                   >
@@ -834,8 +834,8 @@ export default function SettingsPage() {
         {/* Data */}
         <div
           style={{
-            backgroundColor: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            backgroundColor: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             overflow: "hidden",
           }}
@@ -854,7 +854,7 @@ export default function SettingsPage() {
               transition: "background-color 0.2s",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = "#242424";
+              e.currentTarget.style.backgroundColor = "#333333";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.backgroundColor = "transparent";
@@ -879,13 +879,13 @@ export default function SettingsPage() {
           </button>
 
           {expandedSection === "data" && (
-            <div style={{ padding: "0 24px 24px", borderTop: "1px solid #2A2A2A" }}>
+            <div style={{ padding: "0 24px 24px", borderTop: "1px solid #3A3A3A" }}>
               <div style={{ display: "flex", flexDirection: "column", gap: "20px", marginTop: "24px" }}>
                 {/* Storage Usage */}
                 <div
                   style={{
                     padding: "20px",
-                    backgroundColor: "#242424",
+                    backgroundColor: "#333333",
                     borderRadius: "12px",
                   }}
                 >
@@ -906,7 +906,7 @@ export default function SettingsPage() {
                   <div
                     style={{
                       height: "8px",
-                      backgroundColor: "#1A1A1A",
+                      backgroundColor: "#262626",
                       borderRadius: "4px",
                       overflow: "hidden",
                     }}
@@ -926,7 +926,7 @@ export default function SettingsPage() {
                 <div
                   style={{
                     padding: "16px",
-                    backgroundColor: "#242424",
+                    backgroundColor: "#333333",
                     borderRadius: "12px",
                     display: "flex",
                     justifyContent: "space-between",
@@ -961,7 +961,7 @@ export default function SettingsPage() {
                 <div
                   style={{
                     padding: "16px",
-                    backgroundColor: "#242424",
+                    backgroundColor: "#333333",
                     borderRadius: "12px",
                     display: "flex",
                     justifyContent: "space-between",
@@ -1016,7 +1016,7 @@ export default function SettingsPage() {
           style={{
             padding: "14px 32px",
             backgroundColor: "#C4A882",
-            color: "#0F0F0F",
+            color: "#1A1A1A",
             border: "none",
             borderRadius: "12px",
             fontSize: "15px",
@@ -1037,7 +1037,7 @@ export default function SettingsPage() {
             e.currentTarget.style.transform = "translateY(0)";
           }}
         >
-          <LucideIcon name="Save" size={18} color="#0F0F0F" />
+          <LucideIcon name="Save" size={18} color="#1A1A1A" />
           {t("saveChanges")}
         </button>
       </div>

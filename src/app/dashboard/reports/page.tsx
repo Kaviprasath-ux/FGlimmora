@@ -164,7 +164,7 @@ export default function ReportsPage() {
   };
 
   return (
-    <div style={{ padding: "2rem", background: "#0F0F0F", minHeight: "100vh" }}>
+    <div style={{ padding: "2rem", background: "#1A1A1A", minHeight: "100vh" }}>
       {/* Header */}
       <div style={{ marginBottom: "2rem" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "0.5rem" }}>
@@ -190,8 +190,8 @@ export default function ReportsPage() {
             key={report.id}
             onClick={() => setSelectedReport(report.id)}
             style={{
-              background: "#1A1A1A",
-              border: `1px solid ${selectedReport === report.id ? report.color : "#2A2A2A"}`,
+              background: "#262626",
+              border: `1px solid ${selectedReport === report.id ? report.color : "#3A3A3A"}`,
               borderRadius: "1rem",
               padding: "1.5rem",
               cursor: "pointer",
@@ -199,12 +199,12 @@ export default function ReportsPage() {
             }}
             onMouseEnter={(e) => {
               if (selectedReport !== report.id) {
-                e.currentTarget.style.borderColor = "#3A3A3A";
+                e.currentTarget.style.borderColor = "#4A4A4A";
               }
             }}
             onMouseLeave={(e) => {
               if (selectedReport !== report.id) {
-                e.currentTarget.style.borderColor = "#2A2A2A";
+                e.currentTarget.style.borderColor = "#3A3A3A";
               }
             }}
           >
@@ -233,7 +233,7 @@ export default function ReportsPage() {
                 justifyContent: "space-between",
                 alignItems: "center",
                 paddingTop: "1rem",
-                borderTop: "1px solid #2A2A2A",
+                borderTop: "1px solid #3A3A3A",
               }}
             >
               <div>
@@ -249,7 +249,7 @@ export default function ReportsPage() {
                 }}
                 style={{
                   background: report.color,
-                  color: "#0F0F0F",
+                  color: "#1A1A1A",
                   border: "none",
                   padding: "0.5rem 1rem",
                   borderRadius: "0.5rem",
@@ -269,8 +269,8 @@ export default function ReportsPage() {
       {selectedReport && (
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "1rem",
             padding: "1.5rem",
             marginBottom: "2rem",
@@ -286,9 +286,9 @@ export default function ReportsPage() {
                   key={format}
                   onClick={() => console.log(`Download ${format}`)}
                   style={{
-                    background: "#242424",
+                    background: "#333333",
                     color: "#C4A882",
-                    border: "1px solid #2A2A2A",
+                    border: "1px solid #3A3A3A",
                     padding: "0.5rem 1rem",
                     borderRadius: "0.5rem",
                     fontSize: "0.875rem",
@@ -312,8 +312,8 @@ export default function ReportsPage() {
               <div
                 key={i}
                 style={{
-                  background: "#242424",
-                  border: "1px solid #2A2A2A",
+                  background: "#333333",
+                  border: "1px solid #3A3A3A",
                   borderRadius: "0.75rem",
                   padding: "1rem",
                 }}
@@ -329,8 +329,8 @@ export default function ReportsPage() {
       {/* Custom Report Builder */}
       <div
         style={{
-          background: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          background: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "1rem",
           padding: "1.5rem",
         }}
@@ -369,8 +369,8 @@ export default function ReportsPage() {
                     key={module.id}
                     onClick={() => toggleModule(module.id)}
                     style={{
-                      background: selectedModules.includes(module.id) ? "#C4A88220" : "#242424",
-                      border: `1px solid ${selectedModules.includes(module.id) ? "#C4A882" : "#2A2A2A"}`,
+                      background: selectedModules.includes(module.id) ? "#C4A88220" : "#333333",
+                      border: `1px solid ${selectedModules.includes(module.id) ? "#C4A882" : "#3A3A3A"}`,
                       borderRadius: "0.5rem",
                       padding: "0.75rem 1rem",
                       cursor: "pointer",
@@ -393,7 +393,7 @@ export default function ReportsPage() {
                       }}
                     >
                       {selectedModules.includes(module.id) && (
-                        <LucideIcon name="CheckCircle" size={12} color="#0F0F0F" />
+                        <LucideIcon name="CheckCircle" size={12} color="#1A1A1A" />
                       )}
                     </div>
                     <span
@@ -426,8 +426,8 @@ export default function ReportsPage() {
                     onChange={(e) => setDateRange({ ...dateRange, from: e.target.value })}
                     style={{
                       width: "100%",
-                      background: "#242424",
-                      border: "1px solid #2A2A2A",
+                      background: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "0.5rem",
                       padding: "0.625rem",
                       color: "#E8E0D4",
@@ -445,8 +445,8 @@ export default function ReportsPage() {
                     onChange={(e) => setDateRange({ ...dateRange, to: e.target.value })}
                     style={{
                       width: "100%",
-                      background: "#242424",
-                      border: "1px solid #2A2A2A",
+                      background: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "0.5rem",
                       padding: "0.625rem",
                       color: "#E8E0D4",
@@ -462,8 +462,8 @@ export default function ReportsPage() {
               onClick={() => console.log("Generating custom report", { selectedModules, dateRange })}
               disabled={selectedModules.length === 0}
               style={{
-                background: selectedModules.length === 0 ? "#242424" : "#C4A882",
-                color: selectedModules.length === 0 ? "#6B6560" : "#0F0F0F",
+                background: selectedModules.length === 0 ? "#333333" : "#C4A882",
+                color: selectedModules.length === 0 ? "#6B6560" : "#1A1A1A",
                 border: "none",
                 padding: "0.75rem",
                 borderRadius: "0.5rem",

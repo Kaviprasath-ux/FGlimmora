@@ -67,18 +67,18 @@ const StatCard = ({ stat }: StatCardProps) => {
   return (
     <div
       style={{
-        background: "#1A1A1A",
-        border: "1px solid #2A2A2A",
+        background: "#262626",
+        border: "1px solid #3A3A3A",
         borderRadius: "16px",
         padding: "24px",
         transition: "all 0.2s",
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.borderColor = "#3A3A3A";
+        e.currentTarget.style.borderColor = "#4A4A4A";
         e.currentTarget.style.transform = "translateY(-2px)";
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.borderColor = "#2A2A2A";
+        e.currentTarget.style.borderColor = "#3A3A3A";
         e.currentTarget.style.transform = "translateY(0)";
       }}
     >
@@ -174,8 +174,8 @@ const ProducerDashboard = () => {
         <SectionHeader title={t("budgetOverview")} icon="PieChart" />
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "24px",
           }}
@@ -214,7 +214,7 @@ const ProducerDashboard = () => {
                     style={{
                       width: "100%",
                       height: "8px",
-                      background: "#242424",
+                      background: "#333333",
                       borderRadius: "4px",
                       overflow: "hidden",
                       position: "relative",
@@ -258,8 +258,8 @@ const ProducerDashboard = () => {
           <SectionHeader title={t("pendingApprovals")} icon="Clock" />
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "24px",
             }}
@@ -270,9 +270,9 @@ const ProducerDashboard = () => {
                   key={approval.id}
                   style={{
                     padding: "16px",
-                    background: "#242424",
+                    background: "#333333",
                     borderRadius: "12px",
-                    border: "1px solid #2A2A2A",
+                    border: "1px solid #3A3A3A",
                   }}
                 >
                   <div
@@ -349,8 +349,8 @@ const ProducerDashboard = () => {
                       style={{
                         flex: 1,
                         padding: "8px 16px",
-                        background: "#242424",
-                        border: "1px solid #3A3A3A",
+                        background: "#333333",
+                        border: "1px solid #4A4A4A",
                         borderRadius: "8px",
                         color: "#9A9080",
                         fontSize: "13px",
@@ -363,7 +363,7 @@ const ProducerDashboard = () => {
                         e.currentTarget.style.color = "#C45C5C";
                       }}
                       onMouseLeave={(e) => {
-                        e.currentTarget.style.borderColor = "#3A3A3A";
+                        e.currentTarget.style.borderColor = "#4A4A4A";
                         e.currentTarget.style.color = "#9A9080";
                       }}
                     >
@@ -381,8 +381,8 @@ const ProducerDashboard = () => {
           <SectionHeader title={t("riskAlerts")} icon="AlertTriangle" />
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "24px",
             }}
@@ -402,7 +402,7 @@ const ProducerDashboard = () => {
                     key={risk.id}
                     style={{
                       padding: "16px",
-                      background: "#242424",
+                      background: "#333333",
                       borderRadius: "12px",
                       border: `1px solid ${severityColor}30`,
                     }}
@@ -462,8 +462,8 @@ const ProducerDashboard = () => {
         <SectionHeader title={t("upcomingShootDays")} icon="Calendar" />
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "24px",
           }}
@@ -474,9 +474,9 @@ const ProducerDashboard = () => {
                 key={day.id}
                 style={{
                   padding: "16px",
-                  background: "#242424",
+                  background: "#333333",
                   borderRadius: "12px",
-                  border: "1px solid #2A2A2A",
+                  border: "1px solid #3A3A3A",
                 }}
               >
                 <div
@@ -551,8 +551,8 @@ const DirectorDashboard = () => {
         <SectionHeader title={t("todaysShotList")} icon="Camera" />
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "24px",
           }}
@@ -563,9 +563,9 @@ const DirectorDashboard = () => {
                 key={scene.id}
                 style={{
                   padding: "20px",
-                  background: "#242424",
+                  background: "#333333",
                   borderRadius: "12px",
-                  border: "1px solid #2A2A2A",
+                  border: "1px solid #3A3A3A",
                 }}
               >
                 <div
@@ -660,7 +660,7 @@ const DirectorDashboard = () => {
                       key={idx}
                       style={{
                         padding: "4px 12px",
-                        background: "#1A1A1A",
+                        background: "#262626",
                         borderRadius: "6px",
                         fontSize: "12px",
                         color: "#E8E0D4",
@@ -681,8 +681,8 @@ const DirectorDashboard = () => {
         <SectionHeader title={t("sceneCompletionProgress")} icon="CheckCircle" />
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "24px",
           }}
@@ -709,7 +709,7 @@ const DirectorDashboard = () => {
             style={{
               width: "100%",
               height: "12px",
-              background: "#242424",
+              background: "#333333",
               borderRadius: "6px",
               overflow: "hidden",
               marginTop: "16px",
@@ -734,8 +734,8 @@ const DirectorDashboard = () => {
           <SectionHeader title={t("vfxReviewQueue")} icon="Sparkles" />
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "24px",
             }}
@@ -746,9 +746,9 @@ const DirectorDashboard = () => {
                   key={shot.id}
                   style={{
                     padding: "16px",
-                    background: "#242424",
+                    background: "#333333",
                     borderRadius: "12px",
-                    border: "1px solid #2A2A2A",
+                    border: "1px solid #3A3A3A",
                   }}
                 >
                   <div
@@ -791,7 +791,7 @@ const DirectorDashboard = () => {
                       background: "linear-gradient(135deg, #C4A882 0%, #D4B892 100%)",
                       border: "none",
                       borderRadius: "8px",
-                      color: "#0F0F0F",
+                      color: "#1A1A1A",
                       fontSize: "13px",
                       fontWeight: "600",
                       cursor: "pointer",
@@ -819,8 +819,8 @@ const DirectorDashboard = () => {
           <SectionHeader title={t("upcomingScenes")} icon="Calendar" />
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "24px",
             }}
@@ -831,9 +831,9 @@ const DirectorDashboard = () => {
                   key={scene.id}
                   style={{
                     padding: "16px",
-                    background: "#242424",
+                    background: "#333333",
                     borderRadius: "12px",
-                    border: "1px solid #2A2A2A",
+                    border: "1px solid #3A3A3A",
                   }}
                 >
                   <div
@@ -905,8 +905,8 @@ const ProductionHeadDashboard = () => {
         <SectionHeader title={t("todaysProgressSummary")} icon="Activity" />
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "24px",
           }}
@@ -965,7 +965,7 @@ const ProductionHeadDashboard = () => {
             style={{
               marginTop: "20px",
               padding: "16px",
-              background: "#242424",
+              background: "#333333",
               borderRadius: "12px",
             }}
           >
@@ -984,8 +984,8 @@ const ProductionHeadDashboard = () => {
         <SectionHeader title={t("upcomingSchedule")} icon="Calendar" />
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "24px",
           }}
@@ -996,9 +996,9 @@ const ProductionHeadDashboard = () => {
                 key={day.id}
                 style={{
                   padding: "16px",
-                  background: "#242424",
+                  background: "#333333",
                   borderRadius: "12px",
-                  border: "1px solid #2A2A2A",
+                  border: "1px solid #3A3A3A",
                   display: "flex",
                   alignItems: "center",
                   gap: "16px",
@@ -1017,10 +1017,10 @@ const ProductionHeadDashboard = () => {
                     flexShrink: 0,
                   }}
                 >
-                  <div style={{ fontSize: "20px", fontWeight: "700", color: "#0F0F0F" }}>
+                  <div style={{ fontSize: "20px", fontWeight: "700", color: "#1A1A1A" }}>
                     {day.dayNumber}
                   </div>
-                  <div style={{ fontSize: "10px", color: "#0F0F0F", opacity: 0.7 }}>{t("day").toUpperCase()}</div>
+                  <div style={{ fontSize: "10px", color: "#1A1A1A", opacity: 0.7 }}>{t("day").toUpperCase()}</div>
                 </div>
                 <div style={{ flex: 1 }}>
                   <div
@@ -1062,8 +1062,8 @@ const ProductionHeadDashboard = () => {
           <SectionHeader title={t("crewAllocation")} icon="Users" />
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "24px",
             }}
@@ -1074,7 +1074,7 @@ const ProductionHeadDashboard = () => {
                   key={crew.id}
                   style={{
                     padding: "12px",
-                    background: "#242424",
+                    background: "#333333",
                     borderRadius: "12px",
                     display: "flex",
                     justifyContent: "space-between",
@@ -1103,8 +1103,8 @@ const ProductionHeadDashboard = () => {
           <SectionHeader title={t("currentIssues")} icon="AlertTriangle" />
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "24px",
             }}
@@ -1116,7 +1116,7 @@ const ProductionHeadDashboard = () => {
                     key={idx}
                     style={{
                       padding: "16px",
-                      background: "#242424",
+                      background: "#333333",
                       borderRadius: "12px",
                       border: "1px solid #C4A04220",
                     }}
@@ -1199,8 +1199,8 @@ const VfxHeadDashboard = () => {
         <SectionHeader title={t("vfxShotPipeline")} icon="GitBranch" />
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "24px",
           }}
@@ -1216,7 +1216,7 @@ const VfxHeadDashboard = () => {
                 key={idx}
                 style={{
                   padding: "24px",
-                  background: "#242424",
+                  background: "#333333",
                   borderRadius: "12px",
                   border: `1px solid ${stage.color}30`,
                   textAlign: "center",
@@ -1238,7 +1238,7 @@ const VfxHeadDashboard = () => {
                     marginTop: "12px",
                     width: "100%",
                     height: "4px",
-                    background: "#1A1A1A",
+                    background: "#262626",
                     borderRadius: "2px",
                     overflow: "hidden",
                   }}
@@ -1264,8 +1264,8 @@ const VfxHeadDashboard = () => {
           <SectionHeader title={t("vendorDistribution")} icon="Building" />
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "24px",
             }}
@@ -1291,7 +1291,7 @@ const VfxHeadDashboard = () => {
                     style={{
                       width: "100%",
                       height: "8px",
-                      background: "#242424",
+                      background: "#333333",
                       borderRadius: "4px",
                       overflow: "hidden",
                       position: "relative",
@@ -1360,8 +1360,8 @@ const VfxHeadDashboard = () => {
           <SectionHeader title={t("reworkQueue")} icon="RotateCcw" />
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "24px",
             }}
@@ -1375,7 +1375,7 @@ const VfxHeadDashboard = () => {
                       key={shot.id}
                       style={{
                         padding: "16px",
-                        background: "#242424",
+                        background: "#333333",
                         borderRadius: "12px",
                         border: "1px solid #C4A04220",
                       }}
@@ -1480,8 +1480,8 @@ const FinancierDashboard = () => {
         <SectionHeader title={t("revenueBreakdownByStream")} icon="TrendingUp" />
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "24px",
           }}
@@ -1516,7 +1516,7 @@ const FinancierDashboard = () => {
                       style={{
                         width: "100%",
                         height: "10px",
-                        background: "#242424",
+                        background: "#333333",
                         borderRadius: "5px",
                         overflow: "hidden",
                       }}
@@ -1543,8 +1543,8 @@ const FinancierDashboard = () => {
           <SectionHeader title={t("riskScorecard")} icon="Shield" />
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "24px",
             }}
@@ -1562,7 +1562,7 @@ const FinancierDashboard = () => {
                     key={risk.id}
                     style={{
                       padding: "16px",
-                      background: "#242424",
+                      background: "#333333",
                       borderRadius: "12px",
                       border: `1px solid ${severityColor}30`,
                     }}
@@ -1614,8 +1614,8 @@ const FinancierDashboard = () => {
           <SectionHeader title={t("capitalDeployment")} icon="IndianRupee" />
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "24px",
             }}
@@ -1628,7 +1628,7 @@ const FinancierDashboard = () => {
                 style={{
                   width: "100%",
                   height: "20px",
-                  background: "#242424",
+                  background: "#333333",
                   borderRadius: "10px",
                   overflow: "hidden",
                   position: "relative",
@@ -1660,7 +1660,7 @@ const FinancierDashboard = () => {
             <div
               style={{
                 padding: "20px",
-                background: "#242424",
+                background: "#333333",
                 borderRadius: "12px",
                 marginBottom: "16px",
               }}
@@ -1764,8 +1764,8 @@ const MarketingHeadDashboard = () => {
               <div
                 key={campaign.id}
                 style={{
-                  background: "#1A1A1A",
-                  border: "1px solid #2A2A2A",
+                  background: "#262626",
+                  border: "1px solid #3A3A3A",
                   borderRadius: "16px",
                   padding: "24px",
                 }}
@@ -1816,7 +1816,7 @@ const MarketingHeadDashboard = () => {
                     style={{
                       width: "100%",
                       height: "6px",
-                      background: "#242424",
+                      background: "#333333",
                       borderRadius: "3px",
                       overflow: "hidden",
                     }}
@@ -1871,7 +1871,7 @@ const MarketingHeadDashboard = () => {
                     display: "flex",
                     justifyContent: "space-between",
                     padding: "12px",
-                    background: "#242424",
+                    background: "#333333",
                     borderRadius: "8px",
                   }}
                 >
@@ -1905,8 +1905,8 @@ const MarketingHeadDashboard = () => {
           <SectionHeader title={t("platformDistribution")} icon="Globe" />
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "24px",
             }}
@@ -1936,7 +1936,7 @@ const MarketingHeadDashboard = () => {
                         style={{
                           width: "100%",
                           height: "8px",
-                          background: "#242424",
+                          background: "#333333",
                           borderRadius: "4px",
                           overflow: "hidden",
                         }}
@@ -1964,8 +1964,8 @@ const MarketingHeadDashboard = () => {
           <SectionHeader title={t("upcomingCampaigns")} icon="Calendar" />
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "24px",
             }}
@@ -1976,9 +1976,9 @@ const MarketingHeadDashboard = () => {
                   key={campaign.id}
                   style={{
                     padding: "16px",
-                    background: "#242424",
+                    background: "#333333",
                     borderRadius: "12px",
-                    border: "1px solid #2A2A2A",
+                    border: "1px solid #3A3A3A",
                   }}
                 >
                   <div
@@ -2046,8 +2046,8 @@ const AdminDashboard = () => {
     <div>
       <div
         style={{
-          background: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          background: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "16px",
           padding: "40px",
           textAlign: "center",
@@ -2077,7 +2077,7 @@ const AdminDashboard = () => {
             marginBottom: "32px",
           }}
         >
-          <div style={{ padding: "24px", background: "#242424", borderRadius: "12px" }}>
+          <div style={{ padding: "24px", background: "#333333", borderRadius: "12px" }}>
             <div style={{ fontSize: "32px", fontWeight: "700", color: "#C4A882" }}>
               {formatCrores(totalBudget)}
             </div>
@@ -2085,7 +2085,7 @@ const AdminDashboard = () => {
               {t("totalBudget")}
             </div>
           </div>
-          <div style={{ padding: "24px", background: "#242424", borderRadius: "12px" }}>
+          <div style={{ padding: "24px", background: "#333333", borderRadius: "12px" }}>
             <div style={{ fontSize: "32px", fontWeight: "700", color: "#5B8C5A" }}>
               {completedScenes}/{totalScenes}
             </div>
@@ -2093,7 +2093,7 @@ const AdminDashboard = () => {
               {t("scenesCompleted")}
             </div>
           </div>
-          <div style={{ padding: "24px", background: "#242424", borderRadius: "12px" }}>
+          <div style={{ padding: "24px", background: "#333333", borderRadius: "12px" }}>
             <div style={{ fontSize: "32px", fontWeight: "700", color: "#5B7C8C" }}>
               {campaigns.length}
             </div>
@@ -2101,7 +2101,7 @@ const AdminDashboard = () => {
               {t("campaigns")}
             </div>
           </div>
-          <div style={{ padding: "24px", background: "#242424", borderRadius: "12px" }}>
+          <div style={{ padding: "24px", background: "#333333", borderRadius: "12px" }}>
             <div style={{ fontSize: "32px", fontWeight: "700", color: "#C4A042" }}>78</div>
             <div style={{ fontSize: "14px", color: "#9A9080", marginTop: "8px" }}>
               {t("healthScore")}
@@ -2130,8 +2130,8 @@ const AdminDashboard = () => {
               href={link.href}
               style={{
                 padding: "20px",
-                background: "#242424",
-                border: "1px solid #2A2A2A",
+                background: "#333333",
+                border: "1px solid #3A3A3A",
                 borderRadius: "12px",
                 textDecoration: "none",
                 display: "flex",
@@ -2144,7 +2144,7 @@ const AdminDashboard = () => {
                 e.currentTarget.style.transform = "translateY(-2px)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "#2A2A2A";
+                e.currentTarget.style.borderColor = "#3A3A3A";
                 e.currentTarget.style.transform = "translateY(0)";
               }}
             >

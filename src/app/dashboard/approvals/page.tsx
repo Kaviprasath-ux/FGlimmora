@@ -76,7 +76,7 @@ export default function ApprovalsPage() {
   };
 
   return (
-    <div style={{ padding: "2rem", background: "#0F0F0F", minHeight: "100vh" }}>
+    <div style={{ padding: "2rem", background: "#1A1A1A", minHeight: "100vh" }}>
       {/* Header */}
       <div style={{ marginBottom: "2rem" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "0.5rem" }}>
@@ -124,8 +124,8 @@ export default function ApprovalsPage() {
           <div
             key={i}
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "1rem",
               padding: "1.25rem",
             }}
@@ -152,9 +152,9 @@ export default function ApprovalsPage() {
               key={tab.value}
               onClick={() => setFilter(tab.value)}
               style={{
-                background: filter === tab.value ? "#C4A882" : "#1A1A1A",
-                color: filter === tab.value ? "#0F0F0F" : "#E8E0D4",
-                border: `1px solid ${filter === tab.value ? "#C4A882" : "#2A2A2A"}`,
+                background: filter === tab.value ? "#C4A882" : "#262626",
+                color: filter === tab.value ? "#1A1A1A" : "#E8E0D4",
+                border: `1px solid ${filter === tab.value ? "#C4A882" : "#3A3A3A"}`,
                 padding: "0.625rem 1.25rem",
                 borderRadius: "0.5rem",
                 fontSize: "0.875rem",
@@ -175,16 +175,16 @@ export default function ApprovalsPage() {
           <div
             key={approval.id}
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "1rem",
               padding: "1.5rem",
               cursor: "pointer",
               transition: "border-color 0.2s",
             }}
             onClick={() => setSelectedApproval(approval)}
-            onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#3A3A3A")}
-            onMouseLeave={(e) => (e.currentTarget.style.borderColor = "#2A2A2A")}
+            onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#4A4A4A")}
+            onMouseLeave={(e) => (e.currentTarget.style.borderColor = "#3A3A3A")}
           >
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start", marginBottom: "1rem" }}>
               <div style={{ display: "flex", gap: "1rem", alignItems: "start", flex: 1 }}>
@@ -309,8 +309,8 @@ export default function ApprovalsPage() {
       {/* Approval History Timeline */}
       <div
         style={{
-          background: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          background: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "1rem",
           padding: "1.5rem",
         }}
@@ -327,7 +327,7 @@ export default function ApprovalsPage() {
               top: "0.5rem",
               bottom: "0.5rem",
               width: "2px",
-              background: "#2A2A2A",
+              background: "#3A3A3A",
             }}
           />
           {sortedApprovals.slice(0, 5).map((approval, i) => (
@@ -346,7 +346,7 @@ export default function ApprovalsPage() {
                       : approval.status === "rejected"
                         ? "#C45C5C"
                         : "#C4A042",
-                  border: "2px solid #1A1A1A",
+                  border: "2px solid #262626",
                 }}
               />
               <div>
@@ -398,8 +398,8 @@ export default function ApprovalsPage() {
           <div
             onClick={(e) => e.stopPropagation()}
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "1rem",
               padding: "2rem",
               maxWidth: "600px",
@@ -546,8 +546,8 @@ export default function ApprovalsPage() {
           <div
             onClick={(e) => e.stopPropagation()}
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "1rem",
               padding: "2rem",
               maxWidth: "400px",
@@ -583,7 +583,7 @@ export default function ApprovalsPage() {
                   flex: 1,
                   background: "transparent",
                   color: "#9A9080",
-                  border: "1px solid #2A2A2A",
+                  border: "1px solid #3A3A3A",
                   padding: "0.75rem",
                   borderRadius: "0.5rem",
                   fontSize: "0.875rem",

@@ -119,7 +119,7 @@ export default function DeliveryPage() {
   });
 
   return (
-    <div style={{ minHeight: "100vh", background: "#0F0F0F", padding: "32px" }}>
+    <div style={{ minHeight: "100vh", background: "#1A1A1A", padding: "32px" }}>
       {/* Header */}
       <div style={{ marginBottom: "32px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "8px" }}>
@@ -137,8 +137,8 @@ export default function DeliveryPage() {
       <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: "16px", marginBottom: "32px" }}>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -151,8 +151,8 @@ export default function DeliveryPage() {
         </div>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -165,8 +165,8 @@ export default function DeliveryPage() {
         </div>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -179,8 +179,8 @@ export default function DeliveryPage() {
         </div>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -193,8 +193,8 @@ export default function DeliveryPage() {
         </div>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -240,8 +240,8 @@ export default function DeliveryPage() {
           </h2>
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "24px",
               maxHeight: "600px",
@@ -257,19 +257,19 @@ export default function DeliveryPage() {
                     <div
                       key={shot.id}
                       style={{
-                        background: "#242424",
-                        border: "1px solid #2A2A2A",
+                        background: "#333333",
+                        border: "1px solid #3A3A3A",
                         borderRadius: "12px",
                         padding: "16px",
                         transition: "all 0.2s ease",
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.borderColor = "#3A3A3A";
-                        e.currentTarget.style.background = "#2A2A2A";
+                        e.currentTarget.style.borderColor = "#4A4A4A";
+                        e.currentTarget.style.background = "#3A3A3A";
                       }}
                       onMouseLeave={(e) => {
-                        e.currentTarget.style.borderColor = "#2A2A2A";
-                        e.currentTarget.style.background = "#242424";
+                        e.currentTarget.style.borderColor = "#3A3A3A";
+                        e.currentTarget.style.background = "#333333";
                       }}
                     >
                       <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "12px" }}>
@@ -333,8 +333,8 @@ export default function DeliveryPage() {
           {/* Key Milestones */}
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "24px",
             }}
@@ -355,8 +355,8 @@ export default function DeliveryPage() {
                   <div
                     key={milestone.id}
                     style={{
-                      background: "#242424",
-                      border: `1px solid ${isUpcoming ? "#C4A88240" : "#2A2A2A"}`,
+                      background: "#333333",
+                      border: `1px solid ${isUpcoming ? "#C4A88240" : "#3A3A3A"}`,
                       borderRadius: "8px",
                       padding: "12px",
                     }}
@@ -367,7 +367,7 @@ export default function DeliveryPage() {
                           width: "28px",
                           height: "28px",
                           borderRadius: "50%",
-                          background: isUpcoming ? "#C4A882" : "#3A3A3A",
+                          background: isUpcoming ? "#C4A882" : "#4A4A4A",
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
@@ -377,7 +377,7 @@ export default function DeliveryPage() {
                         <LucideIcon
                           name="Flag"
                           size={14}
-                          style={{ color: isUpcoming ? "#0F0F0F" : "#6B6560" }}
+                          style={{ color: isUpcoming ? "#1A1A1A" : "#6B6560" }}
                         />
                       </div>
                       <div style={{ flex: 1 }}>
@@ -406,8 +406,8 @@ export default function DeliveryPage() {
           {/* Vendor Performance */}
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "24px",
             }}
@@ -444,7 +444,7 @@ export default function DeliveryPage() {
                     style={{
                       width: "100%",
                       height: "8px",
-                      background: "#242424",
+                      background: "#333333",
                       borderRadius: "4px",
                       overflow: "hidden",
                     }}
@@ -473,8 +473,8 @@ export default function DeliveryPage() {
       {/* Delivery Summary Chart */}
       <div
         style={{
-          background: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          background: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "16px",
           padding: "24px",
         }}
@@ -494,8 +494,8 @@ export default function DeliveryPage() {
               <div
                 key={item.status}
                 style={{
-                  background: "#242424",
-                  border: "1px solid #2A2A2A",
+                  background: "#333333",
+                  border: "1px solid #3A3A3A",
                   borderRadius: "12px",
                   padding: "20px",
                   textAlign: "center",
@@ -510,7 +510,7 @@ export default function DeliveryPage() {
                   }}
                 >
                   <svg width="80" height="80" viewBox="0 0 80 80">
-                    <circle cx="40" cy="40" r="30" fill="none" stroke="#2A2A2A" strokeWidth="8" />
+                    <circle cx="40" cy="40" r="30" fill="none" stroke="#3A3A3A" strokeWidth="8" />
                     <circle
                       cx="40"
                       cy="40"

@@ -65,7 +65,7 @@ export default function SetsPage() {
   };
 
   return (
-    <div style={{ minHeight: "100vh", background: "#0F0F0F", padding: "32px" }}>
+    <div style={{ minHeight: "100vh", background: "#1A1A1A", padding: "32px" }}>
       {/* Header */}
       <div style={{ marginBottom: "32px" }}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "8px" }}>
@@ -79,7 +79,7 @@ export default function SetsPage() {
             onClick={() => setShowAddModal(true)}
             style={{
               background: "#C4A882",
-              color: "#0F0F0F",
+              color: "#1A1A1A",
               border: "none",
               borderRadius: "12px",
               padding: "12px 24px",
@@ -104,8 +104,8 @@ export default function SetsPage() {
       <div style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: "16px", marginBottom: "32px" }}>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -118,8 +118,8 @@ export default function SetsPage() {
         </div>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -132,8 +132,8 @@ export default function SetsPage() {
         </div>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -146,8 +146,8 @@ export default function SetsPage() {
         </div>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -160,8 +160,8 @@ export default function SetsPage() {
         </div>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -176,8 +176,8 @@ export default function SetsPage() {
         </div>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -202,19 +202,19 @@ export default function SetsPage() {
             <div
               key={set.id}
               style={{
-                background: "#1A1A1A",
-                border: "1px solid #2A2A2A",
+                background: "#262626",
+                border: "1px solid #3A3A3A",
                 borderRadius: "16px",
                 padding: "24px",
                 cursor: "pointer",
                 transition: "all 0.2s ease",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = "#3A3A3A";
+                e.currentTarget.style.borderColor = "#4A4A4A";
                 e.currentTarget.style.transform = "translateY(-2px)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "#2A2A2A";
+                e.currentTarget.style.borderColor = "#3A3A3A";
                 e.currentTarget.style.transform = "translateY(0)";
               }}
             >
@@ -257,7 +257,7 @@ export default function SetsPage() {
                   style={{
                     width: "100%",
                     height: "8px",
-                    background: "#242424",
+                    background: "#333333",
                     borderRadius: "4px",
                     overflow: "hidden",
                   }}
@@ -298,8 +298,8 @@ export default function SetsPage() {
         {/* Timeline */}
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "24px",
           }}
@@ -316,7 +316,7 @@ export default function SetsPage() {
                       width: "32px",
                       height: "32px",
                       borderRadius: "50%",
-                      background: "#242424",
+                      background: "#333333",
                       border: "2px solid #C4A882",
                       display: "flex",
                       alignItems: "center",
@@ -354,7 +354,7 @@ export default function SetsPage() {
                     style={{
                       width: "2px",
                       height: "20px",
-                      background: "#2A2A2A",
+                      background: "#3A3A3A",
                       marginLeft: "15px",
                     }}
                   />
@@ -367,8 +367,8 @@ export default function SetsPage() {
         {/* Budget Overview */}
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "24px",
           }}
@@ -396,7 +396,7 @@ export default function SetsPage() {
                       style={{
                         width: "100%",
                         height: "6px",
-                        background: "#242424",
+                        background: "#333333",
                         borderRadius: "3px",
                         overflow: "hidden",
                       }}
@@ -433,8 +433,8 @@ export default function SetsPage() {
         >
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "32px",
               maxWidth: "500px",
@@ -456,8 +456,8 @@ export default function SetsPage() {
                   onChange={(e) => setNewSet({ ...newSet, name: e.target.value })}
                   style={{
                     width: "100%",
-                    background: "#242424",
-                    border: "1px solid #3A3A3A",
+                    background: "#333333",
+                    border: "1px solid #4A4A4A",
                     borderRadius: "8px",
                     padding: "12px",
                     color: "#E8E0D4",
@@ -475,8 +475,8 @@ export default function SetsPage() {
                   onChange={(e) => setNewSet({ ...newSet, status: e.target.value })}
                   style={{
                     width: "100%",
-                    background: "#242424",
-                    border: "1px solid #3A3A3A",
+                    background: "#333333",
+                    border: "1px solid #4A4A4A",
                     borderRadius: "8px",
                     padding: "12px",
                     color: "#E8E0D4",
@@ -498,8 +498,8 @@ export default function SetsPage() {
                   onChange={(e) => setNewSet({ ...newSet, budget: e.target.value })}
                   style={{
                     width: "100%",
-                    background: "#242424",
-                    border: "1px solid #3A3A3A",
+                    background: "#333333",
+                    border: "1px solid #4A4A4A",
                     borderRadius: "8px",
                     padding: "12px",
                     color: "#E8E0D4",
@@ -516,7 +516,7 @@ export default function SetsPage() {
                 style={{
                   flex: 1,
                   background: "transparent",
-                  border: "1px solid #3A3A3A",
+                  border: "1px solid #4A4A4A",
                   borderRadius: "8px",
                   padding: "12px",
                   color: "#9A9080",
@@ -537,7 +537,7 @@ export default function SetsPage() {
                   border: "none",
                   borderRadius: "8px",
                   padding: "12px",
-                  color: "#0F0F0F",
+                  color: "#1A1A1A",
                   fontSize: "14px",
                   fontWeight: "600",
                   cursor: "pointer",

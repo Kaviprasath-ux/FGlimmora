@@ -85,7 +85,7 @@ export default function VFXReviewPage() {
   };
 
   return (
-    <div style={{ padding: "32px", background: "#0F0F0F", minHeight: "100vh" }}>
+    <div style={{ padding: "32px", background: "#1A1A1A", minHeight: "100vh" }}>
       {/* Header */}
       <div style={{ marginBottom: "32px" }}>
         <h1 style={{ fontSize: "32px", fontWeight: "700", color: "#E8E0D4", marginBottom: "8px", letterSpacing: "-0.02em" }}>
@@ -98,7 +98,7 @@ export default function VFXReviewPage() {
 
       {/* Review Statistics */}
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "16px", marginBottom: "32px" }}>
-        <div style={{ background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px", padding: "20px" }}>
+        <div style={{ background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px", padding: "20px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
             <div style={{ width: "48px", height: "48px", borderRadius: "12px", background: "#5B7C8C22", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <LucideIcon name="Layers" size={24} color="#5B7C8C" />
@@ -112,7 +112,7 @@ export default function VFXReviewPage() {
           </div>
         </div>
 
-        <div style={{ background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px", padding: "20px" }}>
+        <div style={{ background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px", padding: "20px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
             <div style={{ width: "48px", height: "48px", borderRadius: "12px", background: "#5B8C5A22", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <LucideIcon name="CheckCircle" size={24} color="#5B8C5A" />
@@ -124,7 +124,7 @@ export default function VFXReviewPage() {
           </div>
         </div>
 
-        <div style={{ background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px", padding: "20px" }}>
+        <div style={{ background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px", padding: "20px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
             <div style={{ width: "48px", height: "48px", borderRadius: "12px", background: "#C4A04222", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <LucideIcon name="RotateCcw" size={24} color="#C4A042" />
@@ -136,7 +136,7 @@ export default function VFXReviewPage() {
           </div>
         </div>
 
-        <div style={{ background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px", padding: "20px" }}>
+        <div style={{ background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px", padding: "20px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
             <div style={{ width: "48px", height: "48px", borderRadius: "12px", background: "#C4A88222", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <LucideIcon name="Clock" size={24} color="#C4A882" />
@@ -155,8 +155,8 @@ export default function VFXReviewPage() {
 
         {reviewQueue.length === 0 ? (
           <div style={{
-            background: "#1A1A1A",
-            border: "1px dashed #3A3A3A",
+            background: "#262626",
+            border: "1px dashed #4A4A4A",
             borderRadius: "16px",
             padding: "48px",
             textAlign: "center",
@@ -177,8 +177,8 @@ export default function VFXReviewPage() {
                 <div
                   key={shot.id}
                   style={{
-                    background: "#1A1A1A",
-                    border: "1px solid #2A2A2A",
+                    background: "#262626",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "16px",
                     padding: "24px",
                   }}
@@ -191,8 +191,8 @@ export default function VFXReviewPage() {
                           minWidth: "80px",
                           height: "80px",
                           borderRadius: "12px",
-                          background: "#0F0F0F",
-                          border: "2px solid #2A2A2A",
+                          background: "#1A1A1A",
+                          border: "2px solid #3A3A3A",
                           display: "flex",
                           flexDirection: "column",
                           alignItems: "center",
@@ -255,8 +255,8 @@ export default function VFXReviewPage() {
 
                       {/* Cost Info */}
                       <div style={{
-                        background: "#0F0F0F",
-                        border: "1px solid #2A2A2A",
+                        background: "#1A1A1A",
+                        border: "1px solid #3A3A3A",
                         borderRadius: "12px",
                         padding: "16px",
                         marginBottom: "16px",
@@ -291,8 +291,8 @@ export default function VFXReviewPage() {
                             width: "100%",
                             minHeight: "100px",
                             padding: "12px 16px",
-                            background: "#0F0F0F",
-                            border: `1px solid ${isNoteActive ? "#C4A882" : "#3A3A3A"}`,
+                            background: "#1A1A1A",
+                            border: `1px solid ${isNoteActive ? "#C4A882" : "#4A4A4A"}`,
                             borderRadius: "10px",
                             color: "#E8E0D4",
                             fontSize: "14px",
@@ -313,8 +313,8 @@ export default function VFXReviewPage() {
                         <div style={{
                           width: "100%",
                           height: "160px",
-                          background: "#0F0F0F",
-                          border: "2px solid #2A2A2A",
+                          background: "#1A1A1A",
+                          border: "2px solid #3A3A3A",
                           borderRadius: "12px",
                           display: "flex",
                           flexDirection: "column",
@@ -322,15 +322,15 @@ export default function VFXReviewPage() {
                           justifyContent: "center",
                           marginBottom: "8px",
                         }}>
-                          <LucideIcon name="Film" size={40} color="#3A3A3A" />
+                          <LucideIcon name="Film" size={40} color="#4A4A4A" />
                           <span style={{ fontSize: "12px", color: "#6B6560", marginTop: "8px" }}>{t("before")}</span>
                         </div>
 
                         <div style={{
                           width: "100%",
                           height: "160px",
-                          background: "#0F0F0F",
-                          border: "2px solid #2A2A2A",
+                          background: "#1A1A1A",
+                          border: "2px solid #3A3A3A",
                           borderRadius: "12px",
                           display: "flex",
                           flexDirection: "column",
@@ -424,13 +424,13 @@ export default function VFXReviewPage() {
 
         {approvedShots.length === 0 ? (
           <div style={{
-            background: "#1A1A1A",
-            border: "1px dashed #3A3A3A",
+            background: "#262626",
+            border: "1px dashed #4A4A4A",
             borderRadius: "16px",
             padding: "48px",
             textAlign: "center",
           }}>
-            <LucideIcon name="Layers" size={48} color="#3A3A3A" style={{ margin: "0 auto 16px" }} />
+            <LucideIcon name="Layers" size={48} color="#4A4A4A" style={{ margin: "0 auto 16px" }} />
             <p style={{ fontSize: "15px", color: "#6B6560" }}>{t("noApprovedShots")}</p>
           </div>
         ) : (
@@ -443,7 +443,7 @@ export default function VFXReviewPage() {
                 <div
                   key={shot.id}
                   style={{
-                    background: "#1A1A1A",
+                    background: "#262626",
                     border: "1px solid #5B8C5A",
                     borderRadius: "16px",
                     padding: "16px",
@@ -452,8 +452,8 @@ export default function VFXReviewPage() {
                   <div style={{
                     width: "100%",
                     height: "160px",
-                    background: "#0F0F0F",
-                    border: "2px solid #2A2A2A",
+                    background: "#1A1A1A",
+                    border: "2px solid #3A3A3A",
                     borderRadius: "12px",
                     display: "flex",
                     flexDirection: "column",
@@ -470,7 +470,7 @@ export default function VFXReviewPage() {
                       top: "12px",
                       left: "12px",
                       padding: "6px 10px",
-                      background: "#1A1A1ACC",
+                      background: "#262626CC",
                       backdropFilter: "blur(10px)",
                       borderRadius: "6px",
                       fontSize: "13px",

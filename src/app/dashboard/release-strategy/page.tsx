@@ -93,7 +93,7 @@ export default function ReleaseStrategyPage() {
   };
 
   return (
-    <div style={{ padding: "32px", background: "#0F0F0F", minHeight: "100vh" }}>
+    <div style={{ padding: "32px", background: "#1A1A1A", minHeight: "100vh" }}>
       {/* Header */}
       <div style={{ marginBottom: "32px" }}>
         <h1 style={{ fontSize: "32px", fontWeight: "600", color: "#E8E0D4", marginBottom: "8px" }}>
@@ -108,7 +108,7 @@ export default function ReleaseStrategyPage() {
       {currentPlan && (
         <div
           style={{
-            background: "#1A1A1A",
+            background: "#262626",
             padding: "32px",
             borderRadius: "16px",
             border: "2px solid #C4A882",
@@ -142,7 +142,7 @@ export default function ReleaseStrategyPage() {
             </div>
           </div>
 
-          <div style={{ background: "#242424", padding: "20px", borderRadius: "12px" }}>
+          <div style={{ background: "#333333", padding: "20px", borderRadius: "12px" }}>
             <div style={{ color: "#9A9080", fontSize: "12px", marginBottom: "12px" }}>{t("projectedRevenue")}</div>
             <div style={{ color: "#5B8C5A", fontSize: "36px", fontWeight: "700" }}>
               {formatCrores(currentPlan.projectedRevenue)}
@@ -162,21 +162,21 @@ export default function ReleaseStrategyPage() {
               key={window.id}
               onClick={() => setSelectedWindow(window.id)}
               style={{
-                background: "#1A1A1A",
+                background: "#262626",
                 padding: "24px",
                 borderRadius: "16px",
-                border: selectedWindow === window.id ? "2px solid #C4A882" : "1px solid #2A2A2A",
+                border: selectedWindow === window.id ? "2px solid #C4A882" : "1px solid #3A3A3A",
                 cursor: "pointer",
                 transition: "all 0.2s",
               }}
               onMouseEnter={(e) => {
                 if (selectedWindow !== window.id) {
-                  e.currentTarget.style.borderColor = "#3A3A3A";
+                  e.currentTarget.style.borderColor = "#4A4A4A";
                 }
               }}
               onMouseLeave={(e) => {
                 if (selectedWindow !== window.id) {
-                  e.currentTarget.style.borderColor = "#2A2A2A";
+                  e.currentTarget.style.borderColor = "#3A3A3A";
                 }
               }}
             >
@@ -244,7 +244,7 @@ export default function ReleaseStrategyPage() {
       </div>
 
       {/* Competition Analysis */}
-      <div style={{ background: "#1A1A1A", padding: "24px", borderRadius: "16px", border: "1px solid #2A2A2A", marginBottom: "32px" }}>
+      <div style={{ background: "#262626", padding: "24px", borderRadius: "16px", border: "1px solid #3A3A3A", marginBottom: "32px" }}>
         <h3 style={{ color: "#E8E0D4", fontSize: "20px", fontWeight: "600", marginBottom: "20px" }}>
           {t("competitionInSankrantiWindow")}
         </h3>
@@ -253,10 +253,10 @@ export default function ReleaseStrategyPage() {
             <div
               key={idx}
               style={{
-                background: "#242424",
+                background: "#333333",
                 padding: "20px",
                 borderRadius: "12px",
-                border: "1px solid #2A2A2A",
+                border: "1px solid #3A3A3A",
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
@@ -292,7 +292,7 @@ export default function ReleaseStrategyPage() {
       {/* Optimal Window Recommendation */}
       <div
         style={{
-          background: "#1A1A1A",
+          background: "#262626",
           padding: "24px",
           borderRadius: "16px",
           border: "2px solid #5B8C5A",
@@ -305,7 +305,7 @@ export default function ReleaseStrategyPage() {
             {t("aiRecommendation")}
           </h3>
         </div>
-        <div style={{ background: "#242424", padding: "20px", borderRadius: "12px" }}>
+        <div style={{ background: "#333333", padding: "20px", borderRadius: "12px" }}>
           <div style={{ color: "#5B8C5A", fontSize: "18px", fontWeight: "600", marginBottom: "12px" }}>
             {t("stickWithSankranti")}
           </div>
@@ -313,11 +313,11 @@ export default function ReleaseStrategyPage() {
             {t("recommendationText")}
           </p>
           <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
-            <div style={{ background: "#1A1A1A", padding: "12px 16px", borderRadius: "8px" }}>
+            <div style={{ background: "#262626", padding: "12px 16px", borderRadius: "8px" }}>
               <div style={{ color: "#6B6560", fontSize: "11px", marginBottom: "4px" }}>{t("revenueUpside")}</div>
               <div style={{ color: "#5B8C5A", fontSize: "18px", fontWeight: "700" }}>+₹76 Cr</div>
             </div>
-            <div style={{ background: "#1A1A1A", padding: "12px 16px", borderRadius: "8px" }}>
+            <div style={{ background: "#262626", padding: "12px 16px", borderRadius: "8px" }}>
               <div style={{ color: "#6B6560", fontSize: "11px", marginBottom: "4px" }}>{t("confidence")}</div>
               <div style={{ color: "#C4A882", fontSize: "18px", fontWeight: "700" }}>88%</div>
             </div>
@@ -326,7 +326,7 @@ export default function ReleaseStrategyPage() {
       </div>
 
       {/* Territory-wise Release Sequence */}
-      <div style={{ background: "#1A1A1A", padding: "24px", borderRadius: "16px", border: "1px solid #2A2A2A", marginBottom: "32px" }}>
+      <div style={{ background: "#262626", padding: "24px", borderRadius: "16px", border: "1px solid #3A3A3A", marginBottom: "32px" }}>
         <h3 style={{ color: "#E8E0D4", fontSize: "20px", fontWeight: "600", marginBottom: "20px" }}>
           {t("territoryReleaseSequence")}
         </h3>
@@ -339,7 +339,7 @@ export default function ReleaseStrategyPage() {
               left: "40px",
               right: "40px",
               height: "2px",
-              background: "#2A2A2A",
+              background: "#3A3A3A",
               transform: "translateY(-50%)",
             }}
           />
@@ -358,14 +358,14 @@ export default function ReleaseStrategyPage() {
                       height: "16px",
                       borderRadius: "50%",
                       background: dayOffset === 0 ? "#C4A882" : dayOffset < 0 ? "#5B7C8C" : "#5B8C5A",
-                      border: "3px solid #1A1A1A",
+                      border: "3px solid #262626",
                       position: "relative",
                       zIndex: 1,
                     }}
                   />
 
                   {/* Content */}
-                  <div style={{ flex: 1, background: "#242424", padding: "12px 16px", borderRadius: "8px" }}>
+                  <div style={{ flex: 1, background: "#333333", padding: "12px 16px", borderRadius: "8px" }}>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                       <div>
                         <div style={{ color: "#E8E0D4", fontSize: "14px", fontWeight: "600", marginBottom: "2px" }}>
@@ -391,7 +391,7 @@ export default function ReleaseStrategyPage() {
       </div>
 
       {/* Revenue Impact Simulator */}
-      <div style={{ background: "#1A1A1A", padding: "24px", borderRadius: "16px", border: "1px solid #2A2A2A" }}>
+      <div style={{ background: "#262626", padding: "24px", borderRadius: "16px", border: "1px solid #3A3A3A" }}>
         <h3 style={{ color: "#E8E0D4", fontSize: "20px", fontWeight: "600", marginBottom: "8px" }}>
           {t("releaseDateSimulator")}
         </h3>
@@ -410,8 +410,8 @@ export default function ReleaseStrategyPage() {
             style={{
               width: "100%",
               padding: "12px",
-              background: "#242424",
-              border: "1px solid #2A2A2A",
+              background: "#333333",
+              border: "1px solid #3A3A3A",
               borderRadius: "8px",
               color: "#E8E0D4",
               fontSize: "14px",
@@ -419,7 +419,7 @@ export default function ReleaseStrategyPage() {
           />
         </div>
 
-        <div style={{ background: "#242424", padding: "24px", borderRadius: "12px", textAlign: "center" }}>
+        <div style={{ background: "#333333", padding: "24px", borderRadius: "12px", textAlign: "center" }}>
           <div style={{ color: "#9A9080", fontSize: "12px", marginBottom: "8px" }}>{t("projectedRevenue")}</div>
           <div style={{ color: "#C4A882", fontSize: "48px", fontWeight: "700", marginBottom: "8px" }}>
             {formatCrores(simulatedRevenue)}

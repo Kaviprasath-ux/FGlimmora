@@ -103,7 +103,7 @@ export default function CastingPage() {
   };
 
   return (
-    <div style={{ minHeight: "100vh", background: "#0F0F0F", color: "#E8E0D4", padding: "2rem" }}>
+    <div style={{ minHeight: "100vh", background: "#1A1A1A", color: "#E8E0D4", padding: "2rem" }}>
       {/* Header */}
       <div style={{ marginBottom: "2rem" }}>
         <h1 style={{ fontSize: "2rem", fontWeight: "700", color: "#E8E0D4", marginBottom: "0.5rem" }}>
@@ -125,8 +125,8 @@ export default function CastingPage() {
       >
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "1rem",
             padding: "1.25rem",
           }}
@@ -140,8 +140,8 @@ export default function CastingPage() {
 
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "1rem",
             padding: "1.25rem",
           }}
@@ -155,8 +155,8 @@ export default function CastingPage() {
 
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "1rem",
             padding: "1.25rem",
           }}
@@ -170,8 +170,8 @@ export default function CastingPage() {
 
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "1rem",
             padding: "1.25rem",
           }}
@@ -187,8 +187,8 @@ export default function CastingPage() {
 
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "1rem",
             padding: "1.25rem",
           }}
@@ -204,8 +204,8 @@ export default function CastingPage() {
 
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "1rem",
             padding: "1.25rem",
           }}
@@ -238,8 +238,8 @@ export default function CastingPage() {
               value={filterTier}
               onChange={(e) => setFilterTier(e.target.value as any)}
               style={{
-                background: "#1A1A1A",
-                border: "1px solid #2A2A2A",
+                background: "#262626",
+                border: "1px solid #3A3A3A",
                 color: "#E8E0D4",
                 padding: "0.5rem 1rem",
                 borderRadius: "0.5rem",
@@ -259,8 +259,8 @@ export default function CastingPage() {
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as any)}
               style={{
-                background: "#1A1A1A",
-                border: "1px solid #2A2A2A",
+                background: "#262626",
+                border: "1px solid #3A3A3A",
                 color: "#E8E0D4",
                 padding: "0.5rem 1rem",
                 borderRadius: "0.5rem",
@@ -278,7 +278,7 @@ export default function CastingPage() {
           onClick={() => setShowAddModal(true)}
           style={{
             background: "#C4A882",
-            color: "#0F0F0F",
+            color: "#1A1A1A",
             padding: "0.625rem 1.5rem",
             borderRadius: "0.5rem",
             border: "none",
@@ -308,8 +308,8 @@ export default function CastingPage() {
               key={actor.id}
               onClick={() => toggleActorSelection(actor.id)}
               style={{
-                background: selectedActors.includes(actor.id) ? "#242424" : "#1A1A1A",
-                border: selectedActors.includes(actor.id) ? "2px solid #C4A882" : "1px solid #2A2A2A",
+                background: selectedActors.includes(actor.id) ? "#333333" : "#262626",
+                border: selectedActors.includes(actor.id) ? "2px solid #C4A882" : "1px solid #3A3A3A",
                 borderRadius: "1rem",
                 padding: "1.5rem",
                 cursor: "pointer",
@@ -329,7 +329,7 @@ export default function CastingPage() {
                     justifyContent: "center",
                     fontSize: "1.5rem",
                     fontWeight: "700",
-                    color: "#0F0F0F",
+                    color: "#1A1A1A",
                   }}
                 >
                   {getInitials(actor.name)}
@@ -373,7 +373,7 @@ export default function CastingPage() {
                     <span style={{ color: "#9A9080" }}>{t("fanBaseScoreLabel")}</span>
                     <span style={{ color: "#E8E0D4", fontWeight: "600" }}>{actor.fanBaseScore}/100</span>
                   </div>
-                  <div style={{ width: "100%", height: "6px", background: "#242424", borderRadius: "3px", overflow: "hidden" }}>
+                  <div style={{ width: "100%", height: "6px", background: "#333333", borderRadius: "3px", overflow: "hidden" }}>
                     <div
                       style={{
                         width: `${actor.fanBaseScore}%`,
@@ -396,7 +396,7 @@ export default function CastingPage() {
                     <span style={{ color: "#9A9080" }}>{t("overseasPullLabel")}</span>
                     <span style={{ color: "#E8E0D4", fontWeight: "600" }}>{actor.overseasPull}%</span>
                   </div>
-                  <div style={{ width: "100%", height: "6px", background: "#242424", borderRadius: "3px", overflow: "hidden" }}>
+                  <div style={{ width: "100%", height: "6px", background: "#333333", borderRadius: "3px", overflow: "hidden" }}>
                     <div
                       style={{
                         width: `${actor.overseasPull}%`,
@@ -420,7 +420,7 @@ export default function CastingPage() {
               <div
                 style={{
                   padding: "0.5rem",
-                  background: "#242424",
+                  background: "#333333",
                   borderRadius: "0.5rem",
                   fontSize: "0.75rem",
                   textAlign: "center",
@@ -442,8 +442,8 @@ export default function CastingPage() {
           </h2>
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "1rem",
               padding: "1.5rem",
             }}
@@ -463,7 +463,7 @@ export default function CastingPage() {
                         justifyContent: "center",
                         fontSize: "1.125rem",
                         fontWeight: "700",
-                        color: "#0F0F0F",
+                        color: "#1A1A1A",
                       }}
                     >
                       {getInitials(actor.name)}
@@ -514,8 +514,8 @@ export default function CastingPage() {
         </h2>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "1rem",
             padding: "1.5rem",
           }}
@@ -548,7 +548,7 @@ export default function CastingPage() {
                       style={{
                         flex: 1,
                         height: "32px",
-                        background: "#242424",
+                        background: "#333333",
                         borderRadius: "0.5rem",
                         position: "relative",
                         overflow: "hidden",
@@ -570,7 +570,7 @@ export default function CastingPage() {
                       style={{
                         flex: 1,
                         height: "32px",
-                        background: "#242424",
+                        background: "#333333",
                         borderRadius: "0.5rem",
                         position: "relative",
                         overflow: "hidden",
@@ -603,8 +603,8 @@ export default function CastingPage() {
         </h2>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "1rem",
             padding: "1.5rem",
             overflowX: "auto",
@@ -617,7 +617,7 @@ export default function CastingPage() {
                   style={{
                     textAlign: "left",
                     padding: "0.75rem",
-                    borderBottom: "1px solid #2A2A2A",
+                    borderBottom: "1px solid #3A3A3A",
                     color: "#9A9080",
                     fontSize: "0.875rem",
                     fontWeight: "600",
@@ -629,7 +629,7 @@ export default function CastingPage() {
                   style={{
                     textAlign: "center",
                     padding: "0.75rem",
-                    borderBottom: "1px solid #2A2A2A",
+                    borderBottom: "1px solid #3A3A3A",
                     color: "#9A9080",
                     fontSize: "0.875rem",
                     fontWeight: "600",
@@ -641,7 +641,7 @@ export default function CastingPage() {
                   style={{
                     textAlign: "left",
                     padding: "0.75rem",
-                    borderBottom: "1px solid #2A2A2A",
+                    borderBottom: "1px solid #3A3A3A",
                     color: "#9A9080",
                     fontSize: "0.875rem",
                     fontWeight: "600",
@@ -656,7 +656,7 @@ export default function CastingPage() {
                 const actorScenes = getCastScenes(actor.name);
                 return (
                   <tr key={actor.id}>
-                    <td style={{ padding: "0.75rem", borderBottom: "1px solid #2A2A2A" }}>
+                    <td style={{ padding: "0.75rem", borderBottom: "1px solid #3A3A3A" }}>
                       <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
                         <div
                           style={{
@@ -669,7 +669,7 @@ export default function CastingPage() {
                             justifyContent: "center",
                             fontSize: "0.875rem",
                             fontWeight: "700",
-                            color: "#0F0F0F",
+                            color: "#1A1A1A",
                           }}
                         >
                           {getInitials(actor.name)}
@@ -682,7 +682,7 @@ export default function CastingPage() {
                     <td
                       style={{
                         padding: "0.75rem",
-                        borderBottom: "1px solid #2A2A2A",
+                        borderBottom: "1px solid #3A3A3A",
                         textAlign: "center",
                         color: "#E8E0D4",
                         fontWeight: "700",
@@ -690,7 +690,7 @@ export default function CastingPage() {
                     >
                       {actorScenes.length}
                     </td>
-                    <td style={{ padding: "0.75rem", borderBottom: "1px solid #2A2A2A" }}>
+                    <td style={{ padding: "0.75rem", borderBottom: "1px solid #3A3A3A" }}>
                       <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
                         {actorScenes.map((scene) => (
                           <span
@@ -698,7 +698,7 @@ export default function CastingPage() {
                             style={{
                               display: "inline-block",
                               padding: "0.25rem 0.5rem",
-                              background: "#242424",
+                              background: "#333333",
                               borderRadius: "0.25rem",
                               fontSize: "0.75rem",
                               color: "#C4A882",
@@ -735,8 +735,8 @@ export default function CastingPage() {
           <div
             onClick={(e) => e.stopPropagation()}
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "1rem",
               padding: "2rem",
               maxWidth: "500px",
@@ -759,8 +759,8 @@ export default function CastingPage() {
                   style={{
                     width: "100%",
                     padding: "0.625rem",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "0.5rem",
                     color: "#E8E0D4",
                     fontSize: "0.875rem",
@@ -780,8 +780,8 @@ export default function CastingPage() {
                   style={{
                     width: "100%",
                     padding: "0.625rem",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "0.5rem",
                     color: "#E8E0D4",
                     fontSize: "0.875rem",
@@ -800,8 +800,8 @@ export default function CastingPage() {
                   style={{
                     width: "100%",
                     padding: "0.625rem",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "0.5rem",
                     color: "#E8E0D4",
                     fontSize: "0.875rem",
@@ -852,8 +852,8 @@ export default function CastingPage() {
                   style={{
                     width: "100%",
                     padding: "0.625rem",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "0.5rem",
                     color: "#E8E0D4",
                     fontSize: "0.875rem",
@@ -880,7 +880,7 @@ export default function CastingPage() {
                     flex: 1,
                     padding: "0.75rem",
                     background: "#C4A882",
-                    color: "#0F0F0F",
+                    color: "#1A1A1A",
                     border: "none",
                     borderRadius: "0.5rem",
                     fontSize: "0.875rem",
@@ -895,9 +895,9 @@ export default function CastingPage() {
                   style={{
                     flex: 1,
                     padding: "0.75rem",
-                    background: "#242424",
+                    background: "#333333",
                     color: "#E8E0D4",
-                    border: "1px solid #2A2A2A",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "0.5rem",
                     fontSize: "0.875rem",
                     fontWeight: "600",

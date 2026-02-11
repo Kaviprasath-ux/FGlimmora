@@ -153,16 +153,16 @@ export default function BudgetPage() {
   };
 
   return (
-    <div style={{ background: "#0F0F0F", minHeight: "100vh", padding: "32px" }}>
+    <div style={{ background: "#1A1A1A", minHeight: "100vh", padding: "32px" }}>
       <div style={{ maxWidth: "1600px", margin: "0 auto" }}>
         {/* Header */}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "32px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
             <div style={{
               padding: "12px",
-              background: "#1A1A1A",
+              background: "#262626",
               borderRadius: "12px",
-              border: "1px solid #2A2A2A"
+              border: "1px solid #3A3A3A"
             }}>
               <LucideIcon name="IndianRupee" size={28} style={{ color: "#C4A882" }} />
             </div>
@@ -182,7 +182,7 @@ export default function BudgetPage() {
               background: "#C4A882",
               border: "1px solid #C4A882",
               borderRadius: "12px",
-              color: "#0F0F0F",
+              color: "#1A1A1A",
               fontSize: "14px",
               fontWeight: "600",
               cursor: "pointer",
@@ -198,8 +198,8 @@ export default function BudgetPage() {
 
         {/* Budget Health Bar */}
         <div style={{
-          background: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          background: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "16px",
           padding: "24px",
           marginBottom: "24px",
@@ -227,7 +227,7 @@ export default function BudgetPage() {
           <div style={{
             width: "100%",
             height: "32px",
-            background: "#242424",
+            background: "#333333",
             borderRadius: "8px",
             overflow: "hidden",
             position: "relative",
@@ -311,8 +311,8 @@ export default function BudgetPage() {
             <div
               key={i}
               style={{
-                background: "#1A1A1A",
-                border: "1px solid #2A2A2A",
+                background: "#262626",
+                border: "1px solid #3A3A3A",
                 borderRadius: "16px",
                 padding: "20px",
               }}
@@ -338,8 +338,8 @@ export default function BudgetPage() {
         {/* Budget Alerts */}
         {costAlerts.length > 0 && (
           <div style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "24px",
             marginBottom: "24px",
@@ -371,7 +371,7 @@ export default function BudgetPage() {
                       borderRadius: "6px",
                       fontSize: "11px",
                       fontWeight: "700",
-                      color: "#0F0F0F",
+                      color: "#1A1A1A",
                       textTransform: "uppercase",
                     }}>
                       {alert.severity}
@@ -402,13 +402,13 @@ export default function BudgetPage() {
 
         {/* Budget Categories */}
         <div style={{
-          background: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          background: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "16px",
           overflow: "hidden",
           marginBottom: "32px",
         }}>
-          <div style={{ padding: "24px", borderBottom: "1px solid #2A2A2A" }}>
+          <div style={{ padding: "24px", borderBottom: "1px solid #3A3A3A" }}>
             <h3 style={{ fontSize: "18px", fontWeight: "600", color: "#E8E0D4", margin: 0 }}>
               {t("budgetCategories")}
             </h3>
@@ -426,7 +426,7 @@ export default function BudgetPage() {
               <div
                 key={category.id}
                 style={{
-                  borderBottom: "1px solid #2A2A2A",
+                  borderBottom: "1px solid #3A3A3A",
                 }}
               >
                 {/* Category Header */}
@@ -438,7 +438,7 @@ export default function BudgetPage() {
                     transition: "background 0.2s",
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.background = "#242424";
+                    e.currentTarget.style.background = "#333333";
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.background = "transparent";
@@ -491,7 +491,7 @@ export default function BudgetPage() {
                   <div style={{
                     width: "100%",
                     height: "8px",
-                    background: "#242424",
+                    background: "#333333",
                     borderRadius: "4px",
                     overflow: "hidden",
                   }}>
@@ -509,12 +509,12 @@ export default function BudgetPage() {
                 {/* Expanded Line Items */}
                 {isExpanded && (
                   <div style={{
-                    background: "#0F0F0F",
+                    background: "#1A1A1A",
                     padding: "0 24px 24px 64px",
                   }}>
                     <table style={{ width: "100%", borderCollapse: "collapse" }}>
                       <thead>
-                        <tr style={{ borderBottom: "1px solid #2A2A2A" }}>
+                        <tr style={{ borderBottom: "1px solid #3A3A3A" }}>
                           {[t("description"), t("planned"), t("actual"), t("utilizationHeader"), t("status"), t("vendorHeader")].map((header) => (
                             <th
                               key={header}
@@ -545,7 +545,7 @@ export default function BudgetPage() {
                             <tr
                               key={item.id}
                               style={{
-                                borderBottom: "1px solid #242424",
+                                borderBottom: "1px solid #333333",
                               }}
                             >
                               <td style={{ padding: "16px", fontSize: "14px", color: "#E8E0D4" }}>
@@ -562,7 +562,7 @@ export default function BudgetPage() {
                                   <div style={{
                                     flex: 1,
                                     height: "6px",
-                                    background: "#242424",
+                                    background: "#333333",
                                     borderRadius: "3px",
                                     overflow: "hidden",
                                   }}>
@@ -615,8 +615,8 @@ export default function BudgetPage() {
 
         {/* Cost Comparison Chart */}
         <div style={{
-          background: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          background: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "16px",
           padding: "24px",
         }}>
@@ -653,8 +653,8 @@ export default function BudgetPage() {
                         left: 0,
                         width: `${plannedWidth}%`,
                         height: "16px",
-                        background: "#242424",
-                        border: "1px solid #3A3A3A",
+                        background: "#333333",
+                        border: "1px solid #4A4A4A",
                         borderRadius: "8px",
                       }}
                     />
@@ -677,9 +677,9 @@ export default function BudgetPage() {
           </div>
 
           {/* Legend */}
-          <div style={{ display: "flex", gap: "24px", marginTop: "24px", paddingTop: "20px", borderTop: "1px solid #2A2A2A" }}>
+          <div style={{ display: "flex", gap: "24px", marginTop: "24px", paddingTop: "20px", borderTop: "1px solid #3A3A3A" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-              <div style={{ width: "16px", height: "16px", background: "#242424", border: "1px solid #3A3A3A", borderRadius: "4px" }} />
+              <div style={{ width: "16px", height: "16px", background: "#333333", border: "1px solid #4A4A4A", borderRadius: "4px" }} />
               <span style={{ fontSize: "13px", color: "#9A9080" }}>{t("plannedBudget")}</span>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
@@ -710,8 +710,8 @@ export default function BudgetPage() {
             <div
               onClick={(e) => e.stopPropagation()}
               style={{
-                background: "#1A1A1A",
-                border: "1px solid #2A2A2A",
+                background: "#262626",
+                border: "1px solid #3A3A3A",
                 borderRadius: "20px",
                 padding: "32px",
                 maxWidth: "600px",
@@ -733,8 +733,8 @@ export default function BudgetPage() {
                     style={{
                       width: "100%",
                       padding: "12px",
-                      background: "#242424",
-                      border: "1px solid #2A2A2A",
+                      background: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "8px",
                       color: "#E8E0D4",
                       fontSize: "14px",
@@ -760,8 +760,8 @@ export default function BudgetPage() {
                     style={{
                       width: "100%",
                       padding: "12px",
-                      background: "#242424",
-                      border: "1px solid #2A2A2A",
+                      background: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "8px",
                       color: "#E8E0D4",
                       fontSize: "14px",
@@ -781,8 +781,8 @@ export default function BudgetPage() {
                     style={{
                       width: "100%",
                       padding: "12px",
-                      background: "#242424",
-                      border: "1px solid #2A2A2A",
+                      background: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "8px",
                       color: "#E8E0D4",
                       fontSize: "14px",
@@ -801,8 +801,8 @@ export default function BudgetPage() {
                     style={{
                       width: "100%",
                       padding: "12px",
-                      background: "#242424",
-                      border: "1px solid #2A2A2A",
+                      background: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "8px",
                       color: "#E8E0D4",
                       fontSize: "14px",
@@ -819,7 +819,7 @@ export default function BudgetPage() {
                       background: "#C4A882",
                       border: "1px solid #C4A882",
                       borderRadius: "8px",
-                      color: "#0F0F0F",
+                      color: "#1A1A1A",
                       fontSize: "15px",
                       fontWeight: "600",
                       cursor: "pointer",
@@ -832,8 +832,8 @@ export default function BudgetPage() {
                     style={{
                       flex: 1,
                       padding: "14px",
-                      background: "#242424",
-                      border: "1px solid #2A2A2A",
+                      background: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "8px",
                       color: "#9A9080",
                       fontSize: "15px",

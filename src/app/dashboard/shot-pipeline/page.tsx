@@ -70,7 +70,7 @@ export default function ShotPipelinePage() {
   };
 
   return (
-    <div style={{ minHeight: "100vh", background: "#0F0F0F", padding: "32px" }}>
+    <div style={{ minHeight: "100vh", background: "#1A1A1A", padding: "32px" }}>
       {/* Header */}
       <div style={{ marginBottom: "32px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "8px" }}>
@@ -90,7 +90,7 @@ export default function ShotPipelinePage() {
           <div
             key={stat.key}
             style={{
-              background: "#1A1A1A",
+              background: "#262626",
               border: `1px solid ${stat.color}20`,
               borderRadius: "16px",
               padding: "20px",
@@ -151,7 +151,7 @@ export default function ShotPipelinePage() {
               {/* Column Header */}
               <div
                 style={{
-                  background: "#1A1A1A",
+                  background: "#262626",
                   border: `2px solid ${stage.color}40`,
                   borderRadius: "12px 12px 0 0",
                   padding: "16px",
@@ -180,8 +180,8 @@ export default function ShotPipelinePage() {
               {/* Column Content */}
               <div
                 style={{
-                  background: "#1A1A1A",
-                  border: "1px solid #2A2A2A",
+                  background: "#262626",
+                  border: "1px solid #3A3A3A",
                   borderTop: "none",
                   borderRadius: "0 0 12px 12px",
                   padding: "12px",
@@ -195,8 +195,8 @@ export default function ShotPipelinePage() {
                     <div
                       key={shot.id}
                       style={{
-                        background: "#242424",
-                        border: "1px solid #2A2A2A",
+                        background: "#333333",
+                        border: "1px solid #3A3A3A",
                         borderRadius: "8px",
                         padding: "12px",
                         cursor: "grab",
@@ -207,7 +207,7 @@ export default function ShotPipelinePage() {
                         e.currentTarget.style.transform = "scale(1.02)";
                       }}
                       onMouseLeave={(e) => {
-                        e.currentTarget.style.borderColor = "#2A2A2A";
+                        e.currentTarget.style.borderColor = "#3A3A3A";
                         e.currentTarget.style.transform = "scale(1)";
                       }}
                     >
@@ -242,7 +242,7 @@ export default function ShotPipelinePage() {
                           justifyContent: "space-between",
                           alignItems: "center",
                           paddingTop: "8px",
-                          borderTop: "1px solid #2A2A2A",
+                          borderTop: "1px solid #3A3A3A",
                         }}
                       >
                         <div style={{ fontSize: "13px", fontWeight: "600", color: "#C4A882" }}>
@@ -277,7 +277,7 @@ export default function ShotPipelinePage() {
                             style={{
                               flex: 1,
                               background: "transparent",
-                              border: "1px solid #3A3A3A",
+                              border: "1px solid #4A4A4A",
                               borderRadius: "4px",
                               padding: "4px",
                               color: "#9A9080",
@@ -302,7 +302,7 @@ export default function ShotPipelinePage() {
                               border: "none",
                               borderRadius: "4px",
                               padding: "4px",
-                              color: "#0F0F0F",
+                              color: "#1A1A1A",
                               fontSize: "10px",
                               fontWeight: "600",
                               cursor: "pointer",
@@ -324,8 +324,8 @@ export default function ShotPipelinePage() {
       {/* Legend */}
       <div
         style={{
-          background: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          background: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "12px",
           padding: "20px",
           marginTop: "24px",

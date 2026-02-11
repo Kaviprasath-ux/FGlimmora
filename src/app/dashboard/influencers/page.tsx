@@ -168,7 +168,7 @@ export default function InfluencersPage() {
   const selectedInfluencerData = influencers.find((inf) => inf.id === selectedInfluencer);
 
   return (
-    <div style={{ padding: "32px", background: "#0F0F0F", minHeight: "100vh" }}>
+    <div style={{ padding: "32px", background: "#1A1A1A", minHeight: "100vh" }}>
       {/* Header */}
       <div style={{ marginBottom: "32px" }}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "8px" }}>
@@ -180,7 +180,7 @@ export default function InfluencersPage() {
             style={{
               padding: "12px 24px",
               background: "#C4A882",
-              color: "#0F0F0F",
+              color: "#1A1A1A",
               border: "none",
               borderRadius: "12px",
               fontSize: "14px",
@@ -198,19 +198,19 @@ export default function InfluencersPage() {
 
       {/* Summary Stats */}
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "16px", marginBottom: "32px" }}>
-        <div style={{ background: "#1A1A1A", padding: "20px", borderRadius: "16px", border: "1px solid #2A2A2A" }}>
+        <div style={{ background: "#262626", padding: "20px", borderRadius: "16px", border: "1px solid #3A3A3A" }}>
           <div style={{ color: "#9A9080", fontSize: "12px", marginBottom: "8px" }}>{t("totalInfluencers")}</div>
           <div style={{ color: "#E8E0D4", fontSize: "28px", fontWeight: "600" }}>{influencers.length}</div>
         </div>
-        <div style={{ background: "#1A1A1A", padding: "20px", borderRadius: "16px", border: "1px solid #2A2A2A" }}>
+        <div style={{ background: "#262626", padding: "20px", borderRadius: "16px", border: "1px solid #3A3A3A" }}>
           <div style={{ color: "#9A9080", fontSize: "12px", marginBottom: "8px" }}>{t("totalSpend")}</div>
           <div style={{ color: "#C4A882", fontSize: "28px", fontWeight: "600" }}>{formatCrores(totalSpend)}</div>
         </div>
-        <div style={{ background: "#1A1A1A", padding: "20px", borderRadius: "16px", border: "1px solid #2A2A2A" }}>
+        <div style={{ background: "#262626", padding: "20px", borderRadius: "16px", border: "1px solid #3A3A3A" }}>
           <div style={{ color: "#9A9080", fontSize: "12px", marginBottom: "8px" }}>{t("revenueImpact")}</div>
           <div style={{ color: "#5B8C5A", fontSize: "28px", fontWeight: "600" }}>{formatCrores(totalRevenueImpact)}</div>
         </div>
-        <div style={{ background: "#1A1A1A", padding: "20px", borderRadius: "16px", border: "1px solid #2A2A2A" }}>
+        <div style={{ background: "#262626", padding: "20px", borderRadius: "16px", border: "1px solid #3A3A3A" }}>
           <div style={{ color: "#9A9080", fontSize: "12px", marginBottom: "8px" }}>{t("avgROI")}</div>
           <div style={{ color: "#C4A882", fontSize: "28px", fontWeight: "600" }}>{avgROI.toFixed(1)}x</div>
         </div>
@@ -229,10 +229,10 @@ export default function InfluencersPage() {
             onClick={() => setSelectedTier(tier.value)}
             style={{
               padding: "10px 20px",
-              background: selectedTier === tier.value ? "#C4A882" : "#1A1A1A",
-              border: selectedTier === tier.value ? "1px solid #C4A882" : "1px solid #2A2A2A",
+              background: selectedTier === tier.value ? "#C4A882" : "#262626",
+              border: selectedTier === tier.value ? "1px solid #C4A882" : "1px solid #3A3A3A",
               borderRadius: "12px",
-              color: selectedTier === tier.value ? "#0F0F0F" : "#E8E0D4",
+              color: selectedTier === tier.value ? "#1A1A1A" : "#E8E0D4",
               fontSize: "14px",
               fontWeight: "600",
               cursor: "pointer",
@@ -250,10 +250,10 @@ export default function InfluencersPage() {
             key={influencer.id}
             onClick={() => setSelectedInfluencer(influencer.id)}
             style={{
-              background: "#1A1A1A",
+              background: "#262626",
               padding: "24px",
               borderRadius: "16px",
-              border: "1px solid #2A2A2A",
+              border: "1px solid #3A3A3A",
               cursor: "pointer",
               transition: "all 0.2s",
             }}
@@ -262,7 +262,7 @@ export default function InfluencersPage() {
               e.currentTarget.style.transform = "translateY(-2px)";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = "#2A2A2A";
+              e.currentTarget.style.borderColor = "#3A3A3A";
               e.currentTarget.style.transform = "translateY(0)";
             }}
           >
@@ -276,7 +276,7 @@ export default function InfluencersPage() {
                   <div
                     style={{
                       padding: "4px 12px",
-                      background: "#242424",
+                      background: "#333333",
                       borderRadius: "6px",
                       color: platformColors[influencer.platform],
                       fontSize: "12px",
@@ -340,7 +340,7 @@ export default function InfluencersPage() {
                   {influencer.roi >= 25 ? t("excellent") : influencer.roi >= 18 ? t("good") : t("average")}
                 </span>
               </div>
-              <div style={{ width: "100%", height: "6px", background: "#242424", borderRadius: "3px", overflow: "hidden" }}>
+              <div style={{ width: "100%", height: "6px", background: "#333333", borderRadius: "3px", overflow: "hidden" }}>
                 <div
                   style={{
                     width: `${Math.min((influencer.roi / 35) * 100, 100)}%`,
@@ -362,7 +362,7 @@ export default function InfluencersPage() {
                     key={idx}
                     style={{
                       padding: "4px 10px",
-                      background: "#242424",
+                      background: "#333333",
                       borderRadius: "6px",
                       color: "#9A9080",
                       fontSize: "11px",
@@ -378,7 +378,7 @@ export default function InfluencersPage() {
       </div>
 
       {/* Top Performers */}
-      <div style={{ background: "#1A1A1A", padding: "24px", borderRadius: "16px", border: "1px solid #C4A882" }}>
+      <div style={{ background: "#262626", padding: "24px", borderRadius: "16px", border: "1px solid #C4A882" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "20px" }}>
           <LucideIcon name="Star" size={24} style={{ color: "#C4A882" }} />
           <h3 style={{ color: "#E8E0D4", fontSize: "20px", fontWeight: "600", margin: 0 }}>
@@ -391,10 +391,10 @@ export default function InfluencersPage() {
             <div
               key={influencer.id}
               style={{
-                background: "#242424",
+                background: "#333333",
                 padding: "16px 20px",
                 borderRadius: "12px",
-                border: "1px solid #2A2A2A",
+                border: "1px solid #3A3A3A",
                 display: "flex",
                 alignItems: "center",
                 gap: "16px",
@@ -406,12 +406,12 @@ export default function InfluencersPage() {
                   width: "36px",
                   height: "36px",
                   borderRadius: "50%",
-                  background: idx === 0 ? "#C4A882" : idx === 1 ? "#5B7C8C" : idx === 2 ? "#5B8C5A" : "#242424",
-                  border: idx >= 3 ? "2px solid #2A2A2A" : "none",
+                  background: idx === 0 ? "#C4A882" : idx === 1 ? "#5B7C8C" : idx === 2 ? "#5B8C5A" : "#333333",
+                  border: idx >= 3 ? "2px solid #3A3A3A" : "none",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  color: idx < 3 ? "#0F0F0F" : "#9A9080",
+                  color: idx < 3 ? "#1A1A1A" : "#9A9080",
                   fontSize: "16px",
                   fontWeight: "700",
                 }}
@@ -481,8 +481,8 @@ export default function InfluencersPage() {
           <div
             onClick={(e) => e.stopPropagation()}
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "20px",
               padding: "32px",
               maxWidth: "600px",
@@ -498,7 +498,7 @@ export default function InfluencersPage() {
                   <div
                     style={{
                       padding: "4px 12px",
-                      background: "#242424",
+                      background: "#333333",
                       borderRadius: "6px",
                       color: platformColors[selectedInfluencerData.platform],
                       fontSize: "12px",
@@ -538,25 +538,25 @@ export default function InfluencersPage() {
             </div>
 
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "20px" }}>
-              <div style={{ background: "#242424", padding: "16px", borderRadius: "12px" }}>
+              <div style={{ background: "#333333", padding: "16px", borderRadius: "12px" }}>
                 <div style={{ color: "#6B6560", fontSize: "11px", marginBottom: "4px" }}>{t("followers")}</div>
                 <div style={{ color: "#E8E0D4", fontSize: "24px", fontWeight: "700" }}>
                   {selectedInfluencerData.followers.toLocaleString()}
                 </div>
               </div>
-              <div style={{ background: "#242424", padding: "16px", borderRadius: "12px" }}>
+              <div style={{ background: "#333333", padding: "16px", borderRadius: "12px" }}>
                 <div style={{ color: "#6B6560", fontSize: "11px", marginBottom: "4px" }}>{t("engagementRate")}</div>
                 <div style={{ color: "#5B8C5A", fontSize: "24px", fontWeight: "700" }}>
                   {selectedInfluencerData.engagementRate}%
                 </div>
               </div>
-              <div style={{ background: "#242424", padding: "16px", borderRadius: "12px" }}>
+              <div style={{ background: "#333333", padding: "16px", borderRadius: "12px" }}>
                 <div style={{ color: "#6B6560", fontSize: "11px", marginBottom: "4px" }}>{t("cost")}</div>
                 <div style={{ color: "#C4A882", fontSize: "24px", fontWeight: "700" }}>
                   {formatCrores(selectedInfluencerData.cost)}
                 </div>
               </div>
-              <div style={{ background: "#242424", padding: "16px", borderRadius: "12px" }}>
+              <div style={{ background: "#333333", padding: "16px", borderRadius: "12px" }}>
                 <div style={{ color: "#6B6560", fontSize: "11px", marginBottom: "4px" }}>{t("roi")}</div>
                 <div style={{ color: "#C4A882", fontSize: "24px", fontWeight: "700" }}>
                   {selectedInfluencerData.roi.toFixed(1)}x
@@ -564,7 +564,7 @@ export default function InfluencersPage() {
               </div>
             </div>
 
-            <div style={{ background: "#242424", padding: "20px", borderRadius: "12px", marginBottom: "20px" }}>
+            <div style={{ background: "#333333", padding: "20px", borderRadius: "12px", marginBottom: "20px" }}>
               <div style={{ color: "#9A9080", fontSize: "12px", marginBottom: "12px" }}>{t("performance")}</div>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
                 <div>
@@ -590,8 +590,8 @@ export default function InfluencersPage() {
                     key={idx}
                     style={{
                       padding: "8px 16px",
-                      background: "#242424",
-                      border: "1px solid #2A2A2A",
+                      background: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "8px",
                       color: "#E8E0D4",
                       fontSize: "13px",
@@ -627,8 +627,8 @@ export default function InfluencersPage() {
           <div
             onClick={(e) => e.stopPropagation()}
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "20px",
               padding: "32px",
               maxWidth: "500px",
@@ -651,8 +651,8 @@ export default function InfluencersPage() {
                   style={{
                     width: "100%",
                     padding: "12px",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "8px",
                     color: "#E8E0D4",
                     fontSize: "14px",
@@ -672,8 +672,8 @@ export default function InfluencersPage() {
                     style={{
                       width: "100%",
                       padding: "12px",
-                      background: "#242424",
-                      border: "1px solid #2A2A2A",
+                      background: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "8px",
                       color: "#E8E0D4",
                       fontSize: "14px",
@@ -697,8 +697,8 @@ export default function InfluencersPage() {
                     style={{
                       width: "100%",
                       padding: "12px",
-                      background: "#242424",
-                      border: "1px solid #2A2A2A",
+                      background: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "8px",
                       color: "#E8E0D4",
                       fontSize: "14px",
@@ -723,8 +723,8 @@ export default function InfluencersPage() {
                   style={{
                     width: "100%",
                     padding: "12px",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "8px",
                     color: "#E8E0D4",
                     fontSize: "14px",
@@ -746,8 +746,8 @@ export default function InfluencersPage() {
                     style={{
                       width: "100%",
                       padding: "12px",
-                      background: "#242424",
-                      border: "1px solid #2A2A2A",
+                      background: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "8px",
                       color: "#E8E0D4",
                       fontSize: "14px",
@@ -768,8 +768,8 @@ export default function InfluencersPage() {
                     style={{
                       width: "100%",
                       padding: "12px",
-                      background: "#242424",
-                      border: "1px solid #2A2A2A",
+                      background: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "8px",
                       color: "#E8E0D4",
                       fontSize: "14px",
@@ -785,8 +785,8 @@ export default function InfluencersPage() {
                   style={{
                     flex: 1,
                     padding: "12px",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "8px",
                     color: "#E8E0D4",
                     fontSize: "14px",
@@ -804,7 +804,7 @@ export default function InfluencersPage() {
                     background: "#C4A882",
                     border: "none",
                     borderRadius: "8px",
-                    color: "#0F0F0F",
+                    color: "#1A1A1A",
                     fontSize: "14px",
                     fontWeight: "600",
                     cursor: "pointer",

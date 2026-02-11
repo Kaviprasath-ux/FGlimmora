@@ -27,14 +27,14 @@ export default function DashboardLayout({
 
   if (!mounted || !isAuthenticated || !user) {
     return (
-      <div className="min-h-screen flex items-center justify-center" style={{ background: "#0F0F0F" }}>
+      <div className="min-h-screen flex items-center justify-center" style={{ background: "#1A1A1A" }}>
         <div className="w-8 h-8 rounded-full border-2 border-t-transparent animate-spin" style={{ borderColor: "#C4A882", borderTopColor: "transparent" }} />
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen" style={{ background: "#0F0F0F" }}>
+    <div className="min-h-screen" style={{ background: "#1A1A1A" }}>
       <Sidebar />
       <Topbar />
       <main

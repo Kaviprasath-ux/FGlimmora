@@ -32,7 +32,7 @@ export default function PrevisualizationPage() {
   };
 
   return (
-    <div style={{ padding: "32px", background: "#0F0F0F", minHeight: "100vh" }}>
+    <div style={{ padding: "32px", background: "#1A1A1A", minHeight: "100vh" }}>
       {/* Header */}
       <div style={{ marginBottom: "32px" }}>
         <h1 style={{ fontSize: "32px", fontWeight: "700", color: "#E8E0D4", marginBottom: "8px", letterSpacing: "-0.02em" }}>
@@ -51,8 +51,8 @@ export default function PrevisualizationPage() {
               key={scene.id}
               onClick={() => setSelectedSceneId(scene.id)}
               style={{
-                background: "#1A1A1A",
-                border: "1px solid #2A2A2A",
+                background: "#262626",
+                border: "1px solid #3A3A3A",
                 borderRadius: "16px",
                 padding: "20px",
                 cursor: "pointer",
@@ -63,7 +63,7 @@ export default function PrevisualizationPage() {
                 e.currentTarget.style.transform = "translateY(-4px)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "#2A2A2A";
+                e.currentTarget.style.borderColor = "#3A3A3A";
                 e.currentTarget.style.transform = "translateY(0)";
               }}
             >
@@ -71,8 +71,8 @@ export default function PrevisualizationPage() {
               <div style={{
                 width: "100%",
                 height: "180px",
-                background: "#0F0F0F",
-                border: "2px solid #2A2A2A",
+                background: "#1A1A1A",
+                border: "2px solid #3A3A3A",
                 borderRadius: "12px",
                 display: "flex",
                 flexDirection: "column",
@@ -81,7 +81,7 @@ export default function PrevisualizationPage() {
                 marginBottom: "16px",
                 position: "relative",
               }}>
-                <LucideIcon name="Camera" size={48} color="#3A3A3A" />
+                <LucideIcon name="Camera" size={48} color="#4A4A4A" />
                 <span style={{ fontSize: "13px", color: "#6B6560", marginTop: "8px" }}>{t("preview3d")}</span>
                 {scene.vfxRequired && (
                   <div style={{
@@ -117,7 +117,7 @@ export default function PrevisualizationPage() {
                   justifyContent: "center",
                   fontSize: "16px",
                   fontWeight: "700",
-                  color: "#0F0F0F",
+                  color: "#1A1A1A",
                 }}>
                   {scene.sceneNumber}
                 </div>
@@ -168,8 +168,8 @@ export default function PrevisualizationPage() {
             onClick={() => setSelectedSceneId(null)}
             style={{
               padding: "10px 20px",
-              background: "#242424",
-              border: "1px solid #3A3A3A",
+              background: "#333333",
+              border: "1px solid #4A4A4A",
               borderRadius: "10px",
               color: "#9A9080",
               fontSize: "14px",
@@ -190,8 +190,8 @@ export default function PrevisualizationPage() {
             <div>
               {/* Large Preview Area */}
               <div style={{
-                background: "#1A1A1A",
-                border: "1px solid #2A2A2A",
+                background: "#262626",
+                border: "1px solid #3A3A3A",
                 borderRadius: "16px",
                 padding: "24px",
                 marginBottom: "24px",
@@ -204,8 +204,8 @@ export default function PrevisualizationPage() {
                     onClick={() => setShowCostOverlay(!showCostOverlay)}
                     style={{
                       padding: "8px 16px",
-                      background: showCostOverlay ? "#C4A88244" : "#242424",
-                      border: `1px solid ${showCostOverlay ? "#C4A882" : "#3A3A3A"}`,
+                      background: showCostOverlay ? "#C4A88244" : "#333333",
+                      border: `1px solid ${showCostOverlay ? "#C4A882" : "#4A4A4A"}`,
                       borderRadius: "8px",
                       color: showCostOverlay ? "#C4A882" : "#9A9080",
                       fontSize: "13px",
@@ -220,8 +220,8 @@ export default function PrevisualizationPage() {
                 <div style={{
                   width: "100%",
                   height: "400px",
-                  background: "#0F0F0F",
-                  border: "2px solid #2A2A2A",
+                  background: "#1A1A1A",
+                  border: "2px solid #3A3A3A",
                   borderRadius: "12px",
                   display: "flex",
                   flexDirection: "column",
@@ -229,7 +229,7 @@ export default function PrevisualizationPage() {
                   justifyContent: "center",
                   position: "relative",
                 }}>
-                  <LucideIcon name="Camera" size={64} color="#3A3A3A" />
+                  <LucideIcon name="Camera" size={64} color="#4A4A4A" />
                   <span style={{ fontSize: "15px", color: "#6B6560", marginTop: "12px" }}>{t("preview3dArea")}</span>
                   <span style={{ fontSize: "13px", color: "#6B6560", marginTop: "4px" }}>
                     {t("scene")}: {selectedScene.description}
@@ -242,7 +242,7 @@ export default function PrevisualizationPage() {
                       bottom: "16px",
                       right: "16px",
                       padding: "16px",
-                      background: "#1A1A1ACC",
+                      background: "#262626CC",
                       backdropFilter: "blur(10px)",
                       border: "1px solid #C4A882",
                       borderRadius: "10px",
@@ -265,7 +265,7 @@ export default function PrevisualizationPage() {
                     top: "16px",
                     left: "16px",
                     padding: "10px 16px",
-                    background: "#1A1A1ACC",
+                    background: "#262626CC",
                     backdropFilter: "blur(10px)",
                     border: `2px solid ${getTimeColor(timeOfDay)}`,
                     borderRadius: "10px",
@@ -287,8 +287,8 @@ export default function PrevisualizationPage() {
 
               {/* Camera Position Controls */}
               <div style={{
-                background: "#1A1A1A",
-                border: "1px solid #2A2A2A",
+                background: "#262626",
+                border: "1px solid #3A3A3A",
                 borderRadius: "16px",
                 padding: "24px",
                 marginBottom: "24px",
@@ -317,7 +317,7 @@ export default function PrevisualizationPage() {
                         width: "100%",
                         height: "6px",
                         borderRadius: "3px",
-                        background: "#0F0F0F",
+                        background: "#1A1A1A",
                         outline: "none",
                         accentColor: "#C4A882",
                       }}
@@ -340,7 +340,7 @@ export default function PrevisualizationPage() {
                         width: "100%",
                         height: "6px",
                         borderRadius: "3px",
-                        background: "#0F0F0F",
+                        background: "#1A1A1A",
                         outline: "none",
                         accentColor: "#C4A882",
                       }}
@@ -363,7 +363,7 @@ export default function PrevisualizationPage() {
                         width: "100%",
                         height: "6px",
                         borderRadius: "3px",
-                        background: "#0F0F0F",
+                        background: "#1A1A1A",
                         outline: "none",
                         accentColor: "#C4A882",
                       }}
@@ -376,8 +376,8 @@ export default function PrevisualizationPage() {
                   style={{
                     marginTop: "16px",
                     padding: "10px 20px",
-                    background: "#242424",
-                    border: "1px solid #3A3A3A",
+                    background: "#333333",
+                    border: "1px solid #4A4A4A",
                     borderRadius: "10px",
                     color: "#9A9080",
                     fontSize: "13px",
@@ -392,8 +392,8 @@ export default function PrevisualizationPage() {
 
               {/* Lighting Controls */}
               <div style={{
-                background: "#1A1A1A",
-                border: "1px solid #2A2A2A",
+                background: "#262626",
+                border: "1px solid #3A3A3A",
                 borderRadius: "16px",
                 padding: "24px",
               }}>
@@ -411,8 +411,8 @@ export default function PrevisualizationPage() {
                       onClick={() => setTimeOfDay(time)}
                       style={{
                         padding: "12px 20px",
-                        background: timeOfDay === time ? `${getTimeColor(time)}22` : "#242424",
-                        border: `2px solid ${timeOfDay === time ? getTimeColor(time) : "#3A3A3A"}`,
+                        background: timeOfDay === time ? `${getTimeColor(time)}22` : "#333333",
+                        border: `2px solid ${timeOfDay === time ? getTimeColor(time) : "#4A4A4A"}`,
                         borderRadius: "10px",
                         color: timeOfDay === time ? getTimeColor(time) : "#9A9080",
                         fontSize: "13px",
@@ -432,8 +432,8 @@ export default function PrevisualizationPage() {
             <div>
               {/* Scene Metadata */}
               <div style={{
-                background: "#1A1A1A",
-                border: "1px solid #2A2A2A",
+                background: "#262626",
+                border: "1px solid #3A3A3A",
                 borderRadius: "16px",
                 padding: "24px",
                 marginBottom: "24px",
@@ -498,7 +498,7 @@ export default function PrevisualizationPage() {
               {/* VFX Overlays Info */}
               {selectedScene.vfxRequired && (
                 <div style={{
-                  background: "#1A1A1A",
+                  background: "#262626",
                   border: "1px solid #C4A882",
                   borderRadius: "16px",
                   padding: "24px",
@@ -530,8 +530,8 @@ export default function PrevisualizationPage() {
 
               {/* Director Notes */}
               <div style={{
-                background: "#1A1A1A",
-                border: "1px solid #2A2A2A",
+                background: "#262626",
+                border: "1px solid #3A3A3A",
                 borderRadius: "16px",
                 padding: "24px",
               }}>
@@ -550,8 +550,8 @@ export default function PrevisualizationPage() {
                     width: "100%",
                     minHeight: "200px",
                     padding: "16px",
-                    background: "#0F0F0F",
-                    border: "1px solid #3A3A3A",
+                    background: "#1A1A1A",
+                    border: "1px solid #4A4A4A",
                     borderRadius: "12px",
                     color: "#E8E0D4",
                     fontSize: "14px",

@@ -96,7 +96,7 @@ export default function ShotPlanningPage() {
   };
 
   return (
-    <div style={{ padding: "32px", background: "#0F0F0F", minHeight: "100vh" }}>
+    <div style={{ padding: "32px", background: "#1A1A1A", minHeight: "100vh" }}>
       {/* Header */}
       <div style={{ marginBottom: "32px" }}>
         <h1 style={{ fontSize: "32px", fontWeight: "700", color: "#E8E0D4", marginBottom: "8px", letterSpacing: "-0.02em" }}>
@@ -108,7 +108,7 @@ export default function ShotPlanningPage() {
       </div>
 
       {/* Scene Selector */}
-      <div style={{ marginBottom: "32px", background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px", padding: "24px" }}>
+      <div style={{ marginBottom: "32px", background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px", padding: "24px" }}>
         <label style={{ display: "block", fontSize: "13px", fontWeight: "600", color: "#C4A882", marginBottom: "12px", letterSpacing: "0.05em", textTransform: "uppercase" }}>
           {t("selectScene")}
         </label>
@@ -118,8 +118,8 @@ export default function ShotPlanningPage() {
           style={{
             width: "100%",
             padding: "12px 16px",
-            background: "#0F0F0F",
-            border: "1px solid #3A3A3A",
+            background: "#1A1A1A",
+            border: "1px solid #4A4A4A",
             borderRadius: "12px",
             color: "#E8E0D4",
             fontSize: "15px",
@@ -137,10 +137,10 @@ export default function ShotPlanningPage() {
 
       {/* Selected Scene Details */}
       {selectedScene && (
-        <div style={{ marginBottom: "32px", background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px", padding: "24px" }}>
+        <div style={{ marginBottom: "32px", background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px", padding: "24px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "16px" }}>
             <div style={{ width: "48px", height: "48px", borderRadius: "12px", background: "linear-gradient(135deg, #C4A882 0%, #8C7A62 100%)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <LucideIcon name="Camera" size={24} color="#0F0F0F" />
+              <LucideIcon name="Camera" size={24} color="#1A1A1A" />
             </div>
             <div>
               <h2 style={{ fontSize: "20px", fontWeight: "600", color: "#E8E0D4", marginBottom: "4px" }}>
@@ -199,7 +199,7 @@ export default function ShotPlanningPage() {
 
       {/* Stats Row */}
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "16px", marginBottom: "32px" }}>
-        <div style={{ background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px", padding: "20px" }}>
+        <div style={{ background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px", padding: "20px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "8px" }}>
             <div style={{ width: "40px", height: "40px", borderRadius: "10px", background: "#C4A88222", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <LucideIcon name="Layers" size={20} color="#C4A882" />
@@ -211,7 +211,7 @@ export default function ShotPlanningPage() {
           </div>
         </div>
 
-        <div style={{ background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px", padding: "20px" }}>
+        <div style={{ background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px", padding: "20px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "8px" }}>
             <div style={{ width: "40px", height: "40px", borderRadius: "10px", background: "#5B7C8C22", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <LucideIcon name="Clock" size={20} color="#5B7C8C" />
@@ -223,7 +223,7 @@ export default function ShotPlanningPage() {
           </div>
         </div>
 
-        <div style={{ background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px", padding: "20px" }}>
+        <div style={{ background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px", padding: "20px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "8px" }}>
             <div style={{ width: "40px", height: "40px", borderRadius: "10px", background: "#5B8C5A22", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <LucideIcon name="Film" size={20} color="#5B8C5A" />
@@ -249,7 +249,7 @@ export default function ShotPlanningPage() {
               background: "linear-gradient(135deg, #C4A882 0%, #8C7A62 100%)",
               border: "none",
               borderRadius: "10px",
-              color: "#0F0F0F",
+              color: "#1A1A1A",
               fontSize: "14px",
               fontWeight: "600",
               cursor: "pointer",
@@ -265,7 +265,7 @@ export default function ShotPlanningPage() {
 
         {/* Add Shot Form */}
         {showAddForm && (
-          <div style={{ background: "#1A1A1A", border: "1px solid #C4A882", borderRadius: "16px", padding: "24px", marginBottom: "16px" }}>
+          <div style={{ background: "#262626", border: "1px solid #C4A882", borderRadius: "16px", padding: "24px", marginBottom: "16px" }}>
             <h4 style={{ fontSize: "16px", fontWeight: "600", color: "#E8E0D4", marginBottom: "16px" }}>{t("newShot")}</h4>
             <div style={{ display: "grid", gap: "16px" }}>
               <div>
@@ -280,8 +280,8 @@ export default function ShotPlanningPage() {
                   style={{
                     width: "100%",
                     padding: "12px 16px",
-                    background: "#0F0F0F",
-                    border: "1px solid #3A3A3A",
+                    background: "#1A1A1A",
+                    border: "1px solid #4A4A4A",
                     borderRadius: "10px",
                     color: "#E8E0D4",
                     fontSize: "14px",
@@ -300,8 +300,8 @@ export default function ShotPlanningPage() {
                     style={{
                       width: "100%",
                       padding: "12px 16px",
-                      background: "#0F0F0F",
-                      border: "1px solid #3A3A3A",
+                      background: "#1A1A1A",
+                      border: "1px solid #4A4A4A",
                       borderRadius: "10px",
                       color: "#E8E0D4",
                       fontSize: "14px",
@@ -326,8 +326,8 @@ export default function ShotPlanningPage() {
                     style={{
                       width: "100%",
                       padding: "12px 16px",
-                      background: "#0F0F0F",
-                      border: "1px solid #3A3A3A",
+                      background: "#1A1A1A",
+                      border: "1px solid #4A4A4A",
                       borderRadius: "10px",
                       color: "#E8E0D4",
                       fontSize: "14px",
@@ -341,8 +341,8 @@ export default function ShotPlanningPage() {
                   onClick={() => setShowAddForm(false)}
                   style={{
                     padding: "10px 20px",
-                    background: "#242424",
-                    border: "1px solid #3A3A3A",
+                    background: "#333333",
+                    border: "1px solid #4A4A4A",
                     borderRadius: "10px",
                     color: "#9A9080",
                     fontSize: "14px",
@@ -359,7 +359,7 @@ export default function ShotPlanningPage() {
                     background: "linear-gradient(135deg, #C4A882 0%, #8C7A62 100%)",
                     border: "none",
                     borderRadius: "10px",
-                    color: "#0F0F0F",
+                    color: "#1A1A1A",
                     fontSize: "14px",
                     fontWeight: "600",
                     cursor: "pointer",
@@ -378,8 +378,8 @@ export default function ShotPlanningPage() {
             <div
               key={shot.id}
               style={{
-                background: "#1A1A1A",
-                border: "1px solid #2A2A2A",
+                background: "#262626",
+                border: "1px solid #3A3A3A",
                 borderRadius: "16px",
                 padding: "20px",
                 cursor: "move",
@@ -390,7 +390,7 @@ export default function ShotPlanningPage() {
                 e.currentTarget.style.transform = "translateY(-2px)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "#2A2A2A";
+                e.currentTarget.style.borderColor = "#3A3A3A";
                 e.currentTarget.style.transform = "translateY(0)";
               }}
             >
@@ -405,7 +405,7 @@ export default function ShotPlanningPage() {
                   justifyContent: "center",
                   fontSize: "20px",
                   fontWeight: "700",
-                  color: "#0F0F0F",
+                  color: "#1A1A1A",
                 }}>
                   {shot.shotNumber}
                 </div>
@@ -439,8 +439,8 @@ export default function ShotPlanningPage() {
                         style={{
                           width: "100%",
                           padding: "8px 12px",
-                          background: "#0F0F0F",
-                          border: "1px solid #3A3A3A",
+                          background: "#1A1A1A",
+                          border: "1px solid #4A4A4A",
                           borderRadius: "8px",
                           color: "#E8E0D4",
                           fontSize: "13px",
@@ -466,8 +466,8 @@ export default function ShotPlanningPage() {
                         style={{
                           width: "100%",
                           padding: "8px 12px",
-                          background: "#0F0F0F",
-                          border: "1px solid #3A3A3A",
+                          background: "#1A1A1A",
+                          border: "1px solid #4A4A4A",
                           borderRadius: "8px",
                           color: "#E8E0D4",
                           fontSize: "13px",
@@ -500,13 +500,13 @@ export default function ShotPlanningPage() {
 
           {sceneShots.length === 0 && (
             <div style={{
-              background: "#1A1A1A",
-              border: "1px dashed #3A3A3A",
+              background: "#262626",
+              border: "1px dashed #4A4A4A",
               borderRadius: "16px",
               padding: "48px",
               textAlign: "center",
             }}>
-              <LucideIcon name="Camera" size={48} color="#3A3A3A" style={{ margin: "0 auto 16px" }} />
+              <LucideIcon name="Camera" size={48} color="#4A4A4A" style={{ margin: "0 auto 16px" }} />
               <p style={{ fontSize: "15px", color: "#6B6560", marginBottom: "8px" }}>{t("noShotsPlanned")}</p>
               <p style={{ fontSize: "13px", color: "#6B6560" }}>{t("clickAddShot")}</p>
             </div>
@@ -515,7 +515,7 @@ export default function ShotPlanningPage() {
       </div>
 
       {/* Camera Equipment Suggestions */}
-      <div style={{ background: "#1A1A1A", border: "1px solid #2A2A2A", borderRadius: "16px", padding: "24px" }}>
+      <div style={{ background: "#262626", border: "1px solid #3A3A3A", borderRadius: "16px", padding: "24px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "16px" }}>
           <div style={{ width: "40px", height: "40px", borderRadius: "10px", background: "#5B7C8C22", display: "flex", alignItems: "center", justifyContent: "center" }}>
             <LucideIcon name="Film" size={20} color="#5B7C8C" />
@@ -542,7 +542,7 @@ export default function ShotPlanningPage() {
           ))}
         </div>
 
-        <div style={{ marginTop: "16px", padding: "16px", background: "#0F0F0F", borderRadius: "12px", border: "1px solid #2A2A2A" }}>
+        <div style={{ marginTop: "16px", padding: "16px", background: "#1A1A1A", borderRadius: "12px", border: "1px solid #3A3A3A" }}>
           <div style={{ fontSize: "12px", color: "#6B6560", marginBottom: "4px" }}>{t("equipmentNote")}</div>
           <p style={{ fontSize: "14px", color: "#9A9080" }}>
             {t("equipmentNoteText")}

@@ -72,7 +72,7 @@ export default function ProjectsPage() {
   };
 
   return (
-    <div style={{ padding: "32px", backgroundColor: "#0F0F0F", minHeight: "100vh" }}>
+    <div style={{ padding: "32px", backgroundColor: "#1A1A1A", minHeight: "100vh" }}>
       {/* Header */}
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "32px" }}>
         <div>
@@ -95,7 +95,7 @@ export default function ProjectsPage() {
           style={{
             padding: "12px 24px",
             backgroundColor: "#C4A882",
-            color: "#0F0F0F",
+            color: "#1A1A1A",
             border: "none",
             borderRadius: "12px",
             fontSize: "14px",
@@ -113,7 +113,7 @@ export default function ProjectsPage() {
             e.currentTarget.style.backgroundColor = "#C4A882";
           }}
         >
-          <LucideIcon name="Plus" size={18} color="#0F0F0F" />
+          <LucideIcon name="Plus" size={18} color="#1A1A1A" />
           {t("addNewProject")}
         </button>
       </div>
@@ -129,8 +129,8 @@ export default function ProjectsPage() {
       >
         <div
           style={{
-            backgroundColor: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            backgroundColor: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "24px",
           }}
@@ -162,8 +162,8 @@ export default function ProjectsPage() {
 
         <div
           style={{
-            backgroundColor: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            backgroundColor: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "24px",
           }}
@@ -195,8 +195,8 @@ export default function ProjectsPage() {
 
         <div
           style={{
-            backgroundColor: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            backgroundColor: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "24px",
           }}
@@ -237,8 +237,8 @@ export default function ProjectsPage() {
               padding: "10px 20px",
               borderRadius: "12px",
               border: "1px solid",
-              borderColor: selectedStatus === status ? "#C4A882" : "#2A2A2A",
-              backgroundColor: selectedStatus === status ? "#C4A88220" : "#1A1A1A",
+              borderColor: selectedStatus === status ? "#C4A882" : "#3A3A3A",
+              backgroundColor: selectedStatus === status ? "#C4A88220" : "#262626",
               color: selectedStatus === status ? "#C4A882" : "#9A9080",
               fontSize: "14px",
               fontWeight: "500",
@@ -251,8 +251,8 @@ export default function ProjectsPage() {
               style={{
                 marginLeft: "8px",
                 padding: "2px 8px",
-                backgroundColor: selectedStatus === status ? "#C4A882" : "#242424",
-                color: selectedStatus === status ? "#0F0F0F" : "#9A9080",
+                backgroundColor: selectedStatus === status ? "#C4A882" : "#333333",
+                color: selectedStatus === status ? "#1A1A1A" : "#9A9080",
                 borderRadius: "6px",
                 fontSize: "12px",
                 fontWeight: "600",
@@ -276,8 +276,8 @@ export default function ProjectsPage() {
           <div
             key={project.id}
             style={{
-              backgroundColor: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              backgroundColor: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "24px",
               transition: "all 0.3s",
@@ -288,7 +288,7 @@ export default function ProjectsPage() {
               e.currentTarget.style.transform = "translateY(-4px)";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = "#2A2A2A";
+              e.currentTarget.style.borderColor = "#3A3A3A";
               e.currentTarget.style.transform = "translateY(0)";
             }}
           >
@@ -323,7 +323,7 @@ export default function ProjectsPage() {
                 <span
                   style={{
                     padding: "4px 10px",
-                    backgroundColor: "#242424",
+                    backgroundColor: "#333333",
                     color: "#9A9080",
                     borderRadius: "6px",
                     fontSize: "12px",
@@ -335,7 +335,7 @@ export default function ProjectsPage() {
                 <span
                   style={{
                     padding: "4px 10px",
-                    backgroundColor: "#242424",
+                    backgroundColor: "#333333",
                     color: "#9A9080",
                     borderRadius: "6px",
                     fontSize: "12px",
@@ -391,7 +391,7 @@ export default function ProjectsPage() {
               <div
                 style={{
                   height: "6px",
-                  backgroundColor: "#242424",
+                  backgroundColor: "#333333",
                   borderRadius: "3px",
                   overflow: "hidden",
                 }}
@@ -426,7 +426,7 @@ export default function ProjectsPage() {
                     style={{
                       width: "80px",
                       height: "6px",
-                      backgroundColor: "#242424",
+                      backgroundColor: "#333333",
                       borderRadius: "3px",
                       overflow: "hidden",
                     }}
@@ -461,7 +461,7 @@ export default function ProjectsPage() {
                 gap: "8px",
                 marginBottom: "16px",
                 padding: "10px",
-                backgroundColor: "#242424",
+                backgroundColor: "#333333",
                 borderRadius: "8px",
               }}
             >
@@ -478,8 +478,8 @@ export default function ProjectsPage() {
                 style={{
                   flex: 1,
                   padding: "10px",
-                  backgroundColor: "#242424",
-                  border: "1px solid #2A2A2A",
+                  backgroundColor: "#333333",
+                  border: "1px solid #3A3A3A",
                   borderRadius: "8px",
                   color: "#E8E0D4",
                   fontSize: "13px",
@@ -492,10 +492,10 @@ export default function ProjectsPage() {
                   gap: "6px",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "#2A2A2A";
+                  e.currentTarget.style.backgroundColor = "#3A3A3A";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "#242424";
+                  e.currentTarget.style.backgroundColor = "#333333";
                 }}
               >
                 <LucideIcon name="Eye" size={16} color="#E8E0D4" />
@@ -553,8 +553,8 @@ export default function ProjectsPage() {
         >
           <div
             style={{
-              backgroundColor: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              backgroundColor: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "32px",
               maxWidth: "600px",
@@ -573,7 +573,7 @@ export default function ProjectsPage() {
                 style={{
                   width: "32px",
                   height: "32px",
-                  backgroundColor: "#242424",
+                  backgroundColor: "#333333",
                   border: "none",
                   borderRadius: "8px",
                   cursor: "pointer",
@@ -598,8 +598,8 @@ export default function ProjectsPage() {
                   style={{
                     width: "100%",
                     padding: "12px",
-                    backgroundColor: "#242424",
-                    border: "1px solid #2A2A2A",
+                    backgroundColor: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "8px",
                     color: "#E8E0D4",
                     fontSize: "14px",
@@ -618,8 +618,8 @@ export default function ProjectsPage() {
                   style={{
                     width: "100%",
                     padding: "12px",
-                    backgroundColor: "#242424",
-                    border: "1px solid #2A2A2A",
+                    backgroundColor: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "8px",
                     color: "#E8E0D4",
                     fontSize: "14px",
@@ -642,8 +642,8 @@ export default function ProjectsPage() {
                     style={{
                       width: "100%",
                       padding: "12px",
-                      backgroundColor: "#242424",
-                      border: "1px solid #2A2A2A",
+                      backgroundColor: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "8px",
                       color: "#E8E0D4",
                       fontSize: "14px",
@@ -663,8 +663,8 @@ export default function ProjectsPage() {
                     style={{
                       width: "100%",
                       padding: "12px",
-                      backgroundColor: "#242424",
-                      border: "1px solid #2A2A2A",
+                      backgroundColor: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "8px",
                       color: "#E8E0D4",
                       fontSize: "14px",
@@ -685,8 +685,8 @@ export default function ProjectsPage() {
                   style={{
                     width: "100%",
                     padding: "12px",
-                    backgroundColor: "#242424",
-                    border: "1px solid #2A2A2A",
+                    backgroundColor: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "8px",
                     color: "#E8E0D4",
                     fontSize: "14px",
@@ -707,8 +707,8 @@ export default function ProjectsPage() {
                     style={{
                       width: "100%",
                       padding: "12px",
-                      backgroundColor: "#242424",
-                      border: "1px solid #2A2A2A",
+                      backgroundColor: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "8px",
                       color: "#E8E0D4",
                       fontSize: "14px",
@@ -728,8 +728,8 @@ export default function ProjectsPage() {
                     style={{
                       width: "100%",
                       padding: "12px",
-                      backgroundColor: "#242424",
-                      border: "1px solid #2A2A2A",
+                      backgroundColor: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "8px",
                       color: "#E8E0D4",
                       fontSize: "14px",
@@ -750,8 +750,8 @@ export default function ProjectsPage() {
                   style={{
                     width: "100%",
                     padding: "12px",
-                    backgroundColor: "#242424",
-                    border: "1px solid #2A2A2A",
+                    backgroundColor: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "8px",
                     color: "#E8E0D4",
                     fontSize: "14px",
@@ -765,8 +765,8 @@ export default function ProjectsPage() {
                   style={{
                     flex: 1,
                     padding: "14px",
-                    backgroundColor: "#242424",
-                    border: "1px solid #2A2A2A",
+                    backgroundColor: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "8px",
                     color: "#E8E0D4",
                     fontSize: "14px",
@@ -784,7 +784,7 @@ export default function ProjectsPage() {
                     backgroundColor: "#C4A882",
                     border: "none",
                     borderRadius: "8px",
-                    color: "#0F0F0F",
+                    color: "#1A1A1A",
                     fontSize: "14px",
                     fontWeight: "600",
                     cursor: "pointer",

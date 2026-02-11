@@ -41,7 +41,7 @@ export default function LoginPage() {
         justifyContent: "center",
         position: "relative",
         overflow: "hidden",
-        background: "#0F0F0F",
+        background: "#1A1A1A",
       }}
     >
       {/* Background cinematic grain */}
@@ -98,8 +98,8 @@ export default function LoginPage() {
           style={{
             borderRadius: 16,
             padding: 32,
-            border: "1px solid #2A2A2A",
-            background: "#1A1A1A",
+            border: "1px solid #3A3A3A",
+            background: "#262626",
             boxShadow: "0 8px 32px rgba(0,0,0,0.5), 0 0 80px rgba(196,168,130,0.03)",
           }}
         >
@@ -132,8 +132,8 @@ export default function LoginPage() {
                   fontWeight: 500,
                   outline: "none",
                   transition: "all 0.2s ease",
-                  background: "#242424",
-                  border: "1px solid #2A2A2A",
+                  background: "#333333",
+                  border: "1px solid #3A3A3A",
                   color: "#E8E0D4",
                   fontFamily: "inherit",
                   boxSizing: "border-box",
@@ -143,7 +143,7 @@ export default function LoginPage() {
                   e.target.style.boxShadow = "0 0 0 3px rgba(196,168,130,0.1)";
                 }}
                 onBlur={(e) => {
-                  e.target.style.borderColor = "#2A2A2A";
+                  e.target.style.borderColor = "#3A3A3A";
                   e.target.style.boxShadow = "none";
                 }}
                 required
@@ -178,8 +178,8 @@ export default function LoginPage() {
                   fontWeight: 500,
                   outline: "none",
                   transition: "all 0.2s ease",
-                  background: "#242424",
-                  border: "1px solid #2A2A2A",
+                  background: "#333333",
+                  border: "1px solid #3A3A3A",
                   color: "#E8E0D4",
                   fontFamily: "inherit",
                   boxSizing: "border-box",
@@ -189,7 +189,7 @@ export default function LoginPage() {
                   e.target.style.boxShadow = "0 0 0 3px rgba(196,168,130,0.1)";
                 }}
                 onBlur={(e) => {
-                  e.target.style.borderColor = "#2A2A2A";
+                  e.target.style.borderColor = "#3A3A3A";
                   e.target.style.boxShadow = "none";
                 }}
                 required
@@ -227,7 +227,7 @@ export default function LoginPage() {
                 justifyContent: "center",
                 gap: 8,
                 background: isLoading ? "#8B7355" : "linear-gradient(135deg, #C4A882, #A88E6A)",
-                color: "#0F0F0F",
+                color: "#1A1A1A",
                 cursor: isLoading ? "not-allowed" : "pointer",
                 fontFamily: "inherit",
               }}
@@ -257,7 +257,7 @@ export default function LoginPage() {
           </form>
 
           {/* Quick access for demo */}
-          <div style={{ marginTop: 24, paddingTop: 24, borderTop: "1px solid #2A2A2A" }}>
+          <div style={{ marginTop: 24, paddingTop: 24, borderTop: "1px solid #3A3A3A" }}>
             <p style={{ fontSize: 12, textAlign: "center", marginBottom: 12, color: "#6B6560" }}>
               Quick access (demo)
             </p>
@@ -281,8 +281,8 @@ export default function LoginPage() {
                     fontSize: 12,
                     fontWeight: 500,
                     transition: "all 0.15s ease",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     color: "#9A9080",
                     cursor: "pointer",
                     fontFamily: "inherit",
@@ -292,7 +292,7 @@ export default function LoginPage() {
                     e.currentTarget.style.color = "#C4A882";
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = "#2A2A2A";
+                    e.currentTarget.style.borderColor = "#3A3A3A";
                     e.currentTarget.style.color = "#9A9080";
                   }}
                 >

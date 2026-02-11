@@ -141,7 +141,7 @@ export default function RevenuePage() {
   }, [stats]);
 
   return (
-    <div style={{ minHeight: "100vh", background: "#0F0F0F", color: "#E8E0D4", padding: "2rem" }}>
+    <div style={{ minHeight: "100vh", background: "#1A1A1A", color: "#E8E0D4", padding: "2rem" }}>
       {/* Header */}
       <div style={{ marginBottom: "2rem" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start", marginBottom: "0.5rem" }}>
@@ -175,8 +175,8 @@ export default function RevenuePage() {
       >
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "1rem",
             padding: "1.25rem",
           }}
@@ -192,8 +192,8 @@ export default function RevenuePage() {
 
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "1rem",
             padding: "1.25rem",
           }}
@@ -207,8 +207,8 @@ export default function RevenuePage() {
 
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "1rem",
             padding: "1.25rem",
           }}
@@ -224,8 +224,8 @@ export default function RevenuePage() {
 
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "1rem",
             padding: "1.25rem",
           }}
@@ -239,8 +239,8 @@ export default function RevenuePage() {
 
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "1rem",
             padding: "1.25rem",
           }}
@@ -256,8 +256,8 @@ export default function RevenuePage() {
 
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "1rem",
             padding: "1.25rem",
           }}
@@ -277,8 +277,8 @@ export default function RevenuePage() {
         {/* Revenue by Stream */}
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "1rem",
             padding: "1.5rem",
           }}
@@ -341,7 +341,7 @@ export default function RevenuePage() {
                             style={{
                               width: "100%",
                               height: "24px",
-                              background: "#242424",
+                              background: "#333333",
                               borderRadius: "0.5rem",
                               overflow: "hidden",
                               position: "relative",
@@ -372,8 +372,8 @@ export default function RevenuePage() {
         {/* Pie Chart */}
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "1rem",
             padding: "1.5rem",
           }}
@@ -419,8 +419,8 @@ export default function RevenuePage() {
       {/* Break-even Analysis */}
       <div
         style={{
-          background: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          background: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "1rem",
           padding: "1.5rem",
           marginBottom: "2rem",
@@ -442,7 +442,7 @@ export default function RevenuePage() {
                 style={{
                   width: "100%",
                   height: "48px",
-                  background: "#242424",
+                  background: "#333333",
                   borderRadius: "0.5rem",
                   position: "relative",
                   overflow: "hidden",
@@ -473,7 +473,7 @@ export default function RevenuePage() {
                 style={{
                   width: "100%",
                   height: "48px",
-                  background: "#242424",
+                  background: "#333333",
                   borderRadius: "0.5rem",
                   position: "relative",
                   overflow: "hidden",
@@ -504,7 +504,7 @@ export default function RevenuePage() {
                 style={{
                   width: "100%",
                   height: "48px",
-                  background: "#242424",
+                  background: "#333333",
                   borderRadius: "0.5rem",
                   position: "relative",
                   overflow: "hidden",
@@ -528,7 +528,7 @@ export default function RevenuePage() {
           <div
             style={{
               padding: "1.5rem",
-              background: "#242424",
+              background: "#333333",
               borderRadius: "1rem",
               textAlign: "center",
               minWidth: "200px",
@@ -575,8 +575,8 @@ export default function RevenuePage() {
               <div
                 key={stream.id}
                 style={{
-                  background: "#1A1A1A",
-                  border: "1px solid #2A2A2A",
+                  background: "#262626",
+                  border: "1px solid #3A3A3A",
                   borderRadius: "1rem",
                   padding: "1.25rem",
                 }}
@@ -592,7 +592,7 @@ export default function RevenuePage() {
                 <div
                   style={{
                     padding: "0.5rem",
-                    background: "#242424",
+                    background: "#333333",
                     borderRadius: "0.5rem",
                     fontSize: "0.75rem",
                     color: streamColors[stream.type],
@@ -610,8 +610,8 @@ export default function RevenuePage() {
       {/* Scenario Simulator */}
       <div
         style={{
-          background: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          background: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "1rem",
           padding: "1.5rem",
           marginBottom: "2rem",
@@ -662,7 +662,7 @@ export default function RevenuePage() {
           <div
             style={{
               padding: "1.5rem",
-              background: "#242424",
+              background: "#333333",
               borderRadius: "1rem",
               textAlign: "center",
             }}
@@ -683,8 +683,8 @@ export default function RevenuePage() {
       {/* Revenue Timeline */}
       <div
         style={{
-          background: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          background: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "1rem",
           padding: "1.5rem",
         }}
@@ -714,7 +714,7 @@ export default function RevenuePage() {
                   style={{
                     width: "100%",
                     height: "32px",
-                    background: "#242424",
+                    background: "#333333",
                     borderRadius: "0.5rem",
                     position: "relative",
                     overflow: "hidden",
@@ -738,7 +738,7 @@ export default function RevenuePage() {
                     }}
                   >
                     {width > 15 && (
-                      <span style={{ fontSize: "0.75rem", color: "#0F0F0F", fontWeight: "700" }}>
+                      <span style={{ fontSize: "0.75rem", color: "#1A1A1A", fontWeight: "700" }}>
                         {week.week <= 4 ? t("theatrical") : t("digital")}
                       </span>
                     )}

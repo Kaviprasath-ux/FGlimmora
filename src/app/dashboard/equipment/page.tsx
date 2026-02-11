@@ -81,7 +81,7 @@ export default function EquipmentPage() {
   });
 
   return (
-    <div style={{ minHeight: "100vh", background: "#0F0F0F", padding: "32px" }}>
+    <div style={{ minHeight: "100vh", background: "#1A1A1A", padding: "32px" }}>
       {/* Header */}
       <div style={{ marginBottom: "32px" }}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "8px" }}>
@@ -95,7 +95,7 @@ export default function EquipmentPage() {
             onClick={() => setShowRequestModal(true)}
             style={{
               background: "#C4A882",
-              color: "#0F0F0F",
+              color: "#1A1A1A",
               border: "none",
               borderRadius: "12px",
               padding: "12px 24px",
@@ -120,8 +120,8 @@ export default function EquipmentPage() {
       <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: "16px", marginBottom: "32px" }}>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -134,8 +134,8 @@ export default function EquipmentPage() {
         </div>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -148,8 +148,8 @@ export default function EquipmentPage() {
         </div>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -162,8 +162,8 @@ export default function EquipmentPage() {
         </div>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -176,8 +176,8 @@ export default function EquipmentPage() {
         </div>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -204,11 +204,11 @@ export default function EquipmentPage() {
                 onClick={() => setSelectedCategory(category)}
                 style={{
                   flex: 1,
-                  background: selectedCategory === category ? "#C4A882" : "#1A1A1A",
-                  border: `1px solid ${selectedCategory === category ? "#C4A882" : "#2A2A2A"}`,
+                  background: selectedCategory === category ? "#C4A882" : "#262626",
+                  border: `1px solid ${selectedCategory === category ? "#C4A882" : "#3A3A3A"}`,
                   borderRadius: "12px",
                   padding: "12px 16px",
-                  color: selectedCategory === category ? "#0F0F0F" : "#9A9080",
+                  color: selectedCategory === category ? "#1A1A1A" : "#9A9080",
                   fontSize: "14px",
                   fontWeight: "600",
                   cursor: "pointer",
@@ -223,8 +223,8 @@ export default function EquipmentPage() {
           {/* Equipment Cards */}
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "24px",
             }}
@@ -236,8 +236,8 @@ export default function EquipmentPage() {
                   <div
                     key={equipment.id}
                     style={{
-                      background: "#242424",
-                      border: "1px solid #2A2A2A",
+                      background: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "12px",
                       padding: "16px",
                       display: "flex",
@@ -246,12 +246,12 @@ export default function EquipmentPage() {
                       transition: "all 0.2s ease",
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.borderColor = "#3A3A3A";
-                      e.currentTarget.style.background = "#2A2A2A";
+                      e.currentTarget.style.borderColor = "#4A4A4A";
+                      e.currentTarget.style.background = "#3A3A3A";
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.borderColor = "#2A2A2A";
-                      e.currentTarget.style.background = "#242424";
+                      e.currentTarget.style.borderColor = "#3A3A3A";
+                      e.currentTarget.style.background = "#333333";
                     }}
                   >
                     <div style={{ flex: 1 }}>
@@ -298,8 +298,8 @@ export default function EquipmentPage() {
         <div>
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "24px",
               marginBottom: "16px",
@@ -322,7 +322,7 @@ export default function EquipmentPage() {
                   cy="90"
                   r="70"
                   fill="none"
-                  stroke="#242424"
+                  stroke="#333333"
                   strokeWidth="20"
                 />
                 <circle
@@ -372,8 +372,8 @@ export default function EquipmentPage() {
           {/* Category Breakdown */}
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "24px",
             }}
@@ -394,7 +394,7 @@ export default function EquipmentPage() {
                     style={{
                       width: "100%",
                       height: "8px",
-                      background: "#242424",
+                      background: "#333333",
                       borderRadius: "4px",
                       overflow: "hidden",
                     }}
@@ -432,8 +432,8 @@ export default function EquipmentPage() {
         >
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "32px",
               maxWidth: "500px",
@@ -454,8 +454,8 @@ export default function EquipmentPage() {
                   onChange={(e) => setRequestForm({ ...requestForm, equipment: e.target.value })}
                   style={{
                     width: "100%",
-                    background: "#242424",
-                    border: "1px solid #3A3A3A",
+                    background: "#333333",
+                    border: "1px solid #4A4A4A",
                     borderRadius: "8px",
                     padding: "12px",
                     color: "#E8E0D4",
@@ -482,8 +482,8 @@ export default function EquipmentPage() {
                   onChange={(e) => setRequestForm({ ...requestForm, shootDate: e.target.value })}
                   style={{
                     width: "100%",
-                    background: "#242424",
-                    border: "1px solid #3A3A3A",
+                    background: "#333333",
+                    border: "1px solid #4A4A4A",
                     borderRadius: "8px",
                     padding: "12px",
                     color: "#E8E0D4",
@@ -501,8 +501,8 @@ export default function EquipmentPage() {
                   onChange={(e) => setRequestForm({ ...requestForm, duration: e.target.value })}
                   style={{
                     width: "100%",
-                    background: "#242424",
-                    border: "1px solid #3A3A3A",
+                    background: "#333333",
+                    border: "1px solid #4A4A4A",
                     borderRadius: "8px",
                     padding: "12px",
                     color: "#E8E0D4",
@@ -520,8 +520,8 @@ export default function EquipmentPage() {
                   onChange={(e) => setRequestForm({ ...requestForm, purpose: e.target.value })}
                   style={{
                     width: "100%",
-                    background: "#242424",
-                    border: "1px solid #3A3A3A",
+                    background: "#333333",
+                    border: "1px solid #4A4A4A",
                     borderRadius: "8px",
                     padding: "12px",
                     color: "#E8E0D4",
@@ -539,7 +539,7 @@ export default function EquipmentPage() {
                 style={{
                   flex: 1,
                   background: "transparent",
-                  border: "1px solid #3A3A3A",
+                  border: "1px solid #4A4A4A",
                   borderRadius: "8px",
                   padding: "12px",
                   color: "#9A9080",
@@ -560,7 +560,7 @@ export default function EquipmentPage() {
                   border: "none",
                   borderRadius: "8px",
                   padding: "12px",
-                  color: "#0F0F0F",
+                  color: "#1A1A1A",
                   fontSize: "14px",
                   fontWeight: "600",
                   cursor: "pointer",

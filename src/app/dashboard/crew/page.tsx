@@ -52,7 +52,7 @@ export default function CrewPage() {
   ];
 
   return (
-    <div style={{ minHeight: "100vh", background: "#0F0F0F", padding: "32px" }}>
+    <div style={{ minHeight: "100vh", background: "#1A1A1A", padding: "32px" }}>
       {/* Header */}
       <div style={{ marginBottom: "32px" }}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "8px" }}>
@@ -66,7 +66,7 @@ export default function CrewPage() {
             onClick={() => setShowAddModal(true)}
             style={{
               background: "#C4A882",
-              color: "#0F0F0F",
+              color: "#1A1A1A",
               border: "none",
               borderRadius: "12px",
               padding: "12px 24px",
@@ -93,8 +93,8 @@ export default function CrewPage() {
           <div
             key={idx}
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "20px",
             }}
@@ -114,8 +114,8 @@ export default function CrewPage() {
           {/* Filters */}
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "20px",
               marginBottom: "16px",
@@ -129,8 +129,8 @@ export default function CrewPage() {
               value={filterDepartment}
               onChange={(e) => setFilterDepartment(e.target.value)}
               style={{
-                background: "#242424",
-                border: "1px solid #3A3A3A",
+                background: "#333333",
+                border: "1px solid #4A4A4A",
                 borderRadius: "8px",
                 padding: "8px 12px",
                 color: "#E8E0D4",
@@ -149,8 +149,8 @@ export default function CrewPage() {
               value={filterAvailability}
               onChange={(e) => setFilterAvailability(e.target.value)}
               style={{
-                background: "#242424",
-                border: "1px solid #3A3A3A",
+                background: "#333333",
+                border: "1px solid #4A4A4A",
                 borderRadius: "8px",
                 padding: "8px 12px",
                 color: "#E8E0D4",
@@ -170,7 +170,7 @@ export default function CrewPage() {
                 }}
                 style={{
                   background: "transparent",
-                  border: "1px solid #3A3A3A",
+                  border: "1px solid #4A4A4A",
                   borderRadius: "8px",
                   padding: "8px 12px",
                   color: "#9A9080",
@@ -186,15 +186,15 @@ export default function CrewPage() {
           {/* Table */}
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               overflow: "hidden",
             }}
           >
             <table style={{ width: "100%", borderCollapse: "collapse" }}>
               <thead>
-                <tr style={{ background: "#242424", borderBottom: "1px solid #2A2A2A" }}>
+                <tr style={{ background: "#333333", borderBottom: "1px solid #3A3A3A" }}>
                   <th style={{ padding: "16px", textAlign: "left", fontSize: "13px", color: "#9A9080", fontWeight: "600" }}>
                     {t("thName")}
                   </th>
@@ -220,7 +220,7 @@ export default function CrewPage() {
                   <tr
                     key={crew.id}
                     style={{
-                      borderBottom: idx < filteredCrew.length - 1 ? "1px solid #2A2A2A" : "none",
+                      borderBottom: idx < filteredCrew.length - 1 ? "1px solid #3A3A3A" : "none",
                     }}
                   >
                     <td style={{ padding: "16px" }}>
@@ -256,7 +256,7 @@ export default function CrewPage() {
                       <button
                         style={{
                           background: "transparent",
-                          border: "1px solid #3A3A3A",
+                          border: "1px solid #4A4A4A",
                           borderRadius: "8px",
                           padding: "6px 12px",
                           color: "#9A9080",
@@ -278,8 +278,8 @@ export default function CrewPage() {
         <div>
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "24px",
             }}
@@ -298,7 +298,7 @@ export default function CrewPage() {
                     style={{
                       width: "100%",
                       height: "8px",
-                      background: "#242424",
+                      background: "#333333",
                       borderRadius: "4px",
                       overflow: "hidden",
                     }}
@@ -335,8 +335,8 @@ export default function CrewPage() {
         >
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "32px",
               maxWidth: "500px",
@@ -358,8 +358,8 @@ export default function CrewPage() {
                   onChange={(e) => setNewCrew({ ...newCrew, name: e.target.value })}
                   style={{
                     width: "100%",
-                    background: "#242424",
-                    border: "1px solid #3A3A3A",
+                    background: "#333333",
+                    border: "1px solid #4A4A4A",
                     borderRadius: "8px",
                     padding: "12px",
                     color: "#E8E0D4",
@@ -377,8 +377,8 @@ export default function CrewPage() {
                   onChange={(e) => setNewCrew({ ...newCrew, department: e.target.value })}
                   style={{
                     width: "100%",
-                    background: "#242424",
-                    border: "1px solid #3A3A3A",
+                    background: "#333333",
+                    border: "1px solid #4A4A4A",
                     borderRadius: "8px",
                     padding: "12px",
                     color: "#E8E0D4",
@@ -403,8 +403,8 @@ export default function CrewPage() {
                   onChange={(e) => setNewCrew({ ...newCrew, role: e.target.value })}
                   style={{
                     width: "100%",
-                    background: "#242424",
-                    border: "1px solid #3A3A3A",
+                    background: "#333333",
+                    border: "1px solid #4A4A4A",
                     borderRadius: "8px",
                     padding: "12px",
                     color: "#E8E0D4",
@@ -423,8 +423,8 @@ export default function CrewPage() {
                   onChange={(e) => setNewCrew({ ...newCrew, dailyRate: e.target.value })}
                   style={{
                     width: "100%",
-                    background: "#242424",
-                    border: "1px solid #3A3A3A",
+                    background: "#333333",
+                    border: "1px solid #4A4A4A",
                     borderRadius: "8px",
                     padding: "12px",
                     color: "#E8E0D4",
@@ -441,7 +441,7 @@ export default function CrewPage() {
                 style={{
                   flex: 1,
                   background: "transparent",
-                  border: "1px solid #3A3A3A",
+                  border: "1px solid #4A4A4A",
                   borderRadius: "8px",
                   padding: "12px",
                   color: "#9A9080",
@@ -463,7 +463,7 @@ export default function CrewPage() {
                   border: "none",
                   borderRadius: "8px",
                   padding: "12px",
-                  color: "#0F0F0F",
+                  color: "#1A1A1A",
                   fontSize: "14px",
                   fontWeight: "600",
                   cursor: "pointer",

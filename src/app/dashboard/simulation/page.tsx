@@ -31,7 +31,7 @@ export default function SimulationPage() {
   const safetyColor = safetyRating >= 7 ? "#5B8C5A" : safetyRating >= 4 ? "#C4A042" : "#C45C5C";
 
   return (
-    <div style={{ minHeight: "100vh", background: "#0F0F0F", padding: "32px" }}>
+    <div style={{ minHeight: "100vh", background: "#1A1A1A", padding: "32px" }}>
       {/* Header */}
       <div style={{ marginBottom: "32px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "8px" }}>
@@ -49,8 +49,8 @@ export default function SimulationPage() {
       <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "16px", marginBottom: "32px" }}>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -63,8 +63,8 @@ export default function SimulationPage() {
         </div>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -79,8 +79,8 @@ export default function SimulationPage() {
         </div>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -95,8 +95,8 @@ export default function SimulationPage() {
         </div>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -118,8 +118,8 @@ export default function SimulationPage() {
           {/* Scene Selector */}
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "24px",
             }}
@@ -133,8 +133,8 @@ export default function SimulationPage() {
                   key={scene.id}
                   onClick={() => setSelectedScene(scene.id)}
                   style={{
-                    background: selectedScene === scene.id ? "#242424" : "transparent",
-                    border: `1px solid ${selectedScene === scene.id ? "#C4A882" : "#2A2A2A"}`,
+                    background: selectedScene === scene.id ? "#333333" : "transparent",
+                    border: `1px solid ${selectedScene === scene.id ? "#C4A882" : "#3A3A3A"}`,
                     borderRadius: "12px",
                     padding: "16px",
                     cursor: "pointer",
@@ -142,12 +142,12 @@ export default function SimulationPage() {
                   }}
                   onMouseEnter={(e) => {
                     if (selectedScene !== scene.id) {
-                      e.currentTarget.style.borderColor = "#3A3A3A";
+                      e.currentTarget.style.borderColor = "#4A4A4A";
                     }
                   }}
                   onMouseLeave={(e) => {
                     if (selectedScene !== scene.id) {
-                      e.currentTarget.style.borderColor = "#2A2A2A";
+                      e.currentTarget.style.borderColor = "#3A3A3A";
                     }
                   }}
                 >
@@ -170,8 +170,8 @@ export default function SimulationPage() {
           {/* Simulation Viewer */}
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "24px",
             }}
@@ -221,7 +221,7 @@ export default function SimulationPage() {
                     boxShadow: "0 0 40px rgba(196, 168, 130, 0.3)",
                   }}
                 >
-                  <LucideIcon name="Sparkles" size={48} style={{ color: "#0F0F0F" }} />
+                  <LucideIcon name="Sparkles" size={48} style={{ color: "#1A1A1A" }} />
                 </div>
                 <div style={{ fontSize: "16px", fontWeight: "600", color: "#E8E0D4", marginBottom: "8px" }}>
                   {selectedSceneData?.description}
@@ -261,8 +261,8 @@ export default function SimulationPage() {
           {/* Complexity Controls */}
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "24px",
             }}
@@ -297,7 +297,7 @@ export default function SimulationPage() {
                   width: "100%",
                   height: "8px",
                   borderRadius: "4px",
-                  background: `linear-gradient(to right, #C4A882 0%, #C4A882 ${stuntIntensity * 10}%, #242424 ${stuntIntensity * 10}%, #242424 100%)`,
+                  background: `linear-gradient(to right, #C4A882 0%, #C4A882 ${stuntIntensity * 10}%, #333333 ${stuntIntensity * 10}%, #333333 100%)`,
                   outline: "none",
                   appearance: "none",
                   cursor: "pointer",
@@ -335,7 +335,7 @@ export default function SimulationPage() {
                   width: "100%",
                   height: "8px",
                   borderRadius: "4px",
-                  background: `linear-gradient(to right, #5B7C8C 0%, #5B7C8C ${(crowdSize / 200) * 100}%, #242424 ${(crowdSize / 200) * 100}%, #242424 100%)`,
+                  background: `linear-gradient(to right, #5B7C8C 0%, #5B7C8C ${(crowdSize / 200) * 100}%, #333333 ${(crowdSize / 200) * 100}%, #333333 100%)`,
                   outline: "none",
                   appearance: "none",
                   cursor: "pointer",
@@ -372,7 +372,7 @@ export default function SimulationPage() {
                   width: "100%",
                   height: "8px",
                   borderRadius: "4px",
-                  background: `linear-gradient(to right, #5B8C5A 0%, #5B8C5A ${vfxLevel * 10}%, #242424 ${vfxLevel * 10}%, #242424 100%)`,
+                  background: `linear-gradient(to right, #5B8C5A 0%, #5B8C5A ${vfxLevel * 10}%, #333333 ${vfxLevel * 10}%, #333333 100%)`,
                   outline: "none",
                   appearance: "none",
                   cursor: "pointer",
@@ -387,8 +387,8 @@ export default function SimulationPage() {
           {/* Cost Impact */}
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "24px",
             }}
@@ -403,7 +403,7 @@ export default function SimulationPage() {
                   display: "flex",
                   justifyContent: "space-between",
                   padding: "12px",
-                  background: "#242424",
+                  background: "#333333",
                   borderRadius: "8px",
                 }}
               >
@@ -418,7 +418,7 @@ export default function SimulationPage() {
                   display: "flex",
                   justifyContent: "space-between",
                   padding: "12px",
-                  background: "#242424",
+                  background: "#333333",
                   borderRadius: "8px",
                 }}
               >
@@ -433,7 +433,7 @@ export default function SimulationPage() {
                   display: "flex",
                   justifyContent: "space-between",
                   padding: "12px",
-                  background: "#242424",
+                  background: "#333333",
                   borderRadius: "8px",
                 }}
               >
@@ -448,7 +448,7 @@ export default function SimulationPage() {
                   display: "flex",
                   justifyContent: "space-between",
                   padding: "12px",
-                  background: "#242424",
+                  background: "#333333",
                   borderRadius: "8px",
                 }}
               >
@@ -490,7 +490,7 @@ export default function SimulationPage() {
           {/* Safety Display */}
           <div
             style={{
-              background: "#1A1A1A",
+              background: "#262626",
               border: `1px solid ${safetyColor}40`,
               borderRadius: "16px",
               padding: "24px",

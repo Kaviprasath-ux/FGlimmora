@@ -51,7 +51,7 @@ export default function ReworkPage() {
   };
 
   return (
-    <div style={{ minHeight: "100vh", background: "#0F0F0F", padding: "32px" }}>
+    <div style={{ minHeight: "100vh", background: "#1A1A1A", padding: "32px" }}>
       {/* Header */}
       <div style={{ marginBottom: "32px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "8px" }}>
@@ -69,8 +69,8 @@ export default function ReworkPage() {
       <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: "16px", marginBottom: "32px" }}>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -83,8 +83,8 @@ export default function ReworkPage() {
         </div>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -97,8 +97,8 @@ export default function ReworkPage() {
         </div>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -111,8 +111,8 @@ export default function ReworkPage() {
         </div>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -125,8 +125,8 @@ export default function ReworkPage() {
         </div>
         <div
           style={{
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: "16px",
             padding: "20px",
           }}
@@ -150,15 +150,15 @@ export default function ReworkPage() {
           </h2>
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               overflow: "hidden",
             }}
           >
             <table style={{ width: "100%", borderCollapse: "collapse" }}>
               <thead>
-                <tr style={{ background: "#242424", borderBottom: "1px solid #2A2A2A" }}>
+                <tr style={{ background: "#333333", borderBottom: "1px solid #3A3A3A" }}>
                   <th style={{ padding: "16px", textAlign: "left", fontSize: "13px", color: "#9A9080", fontWeight: "600" }}>
                     {t("shot")}
                   </th>
@@ -187,7 +187,7 @@ export default function ReworkPage() {
                     <tr
                       key={shot.id}
                       style={{
-                        borderBottom: idx < reworkShots.length - 1 ? "1px solid #2A2A2A" : "none",
+                        borderBottom: idx < reworkShots.length - 1 ? "1px solid #3A3A3A" : "none",
                       }}
                     >
                       <td style={{ padding: "16px" }}>
@@ -205,8 +205,8 @@ export default function ReworkPage() {
                         <span
                           style={{
                             display: "inline-block",
-                            background: "#242424",
-                            border: "1px solid #3A3A3A",
+                            background: "#333333",
+                            border: "1px solid #4A4A4A",
                             borderRadius: "6px",
                             padding: "4px 12px",
                             fontSize: "13px",
@@ -242,7 +242,7 @@ export default function ReworkPage() {
                         <button
                           style={{
                             background: "transparent",
-                            border: "1px solid #3A3A3A",
+                            border: "1px solid #4A4A4A",
                             borderRadius: "8px",
                             padding: "6px 12px",
                             color: "#9A9080",
@@ -266,8 +266,8 @@ export default function ReworkPage() {
           {/* Cost Impact */}
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "24px",
             }}
@@ -279,7 +279,7 @@ export default function ReworkPage() {
               style={{
                 textAlign: "center",
                 padding: "24px",
-                background: "#242424",
+                background: "#333333",
                 borderRadius: "12px",
                 marginBottom: "16px",
               }}
@@ -297,8 +297,8 @@ export default function ReworkPage() {
           {/* Top Rework Reasons */}
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "24px",
             }}
@@ -323,7 +323,7 @@ export default function ReworkPage() {
                     style={{
                       width: "100%",
                       height: "6px",
-                      background: "#242424",
+                      background: "#333333",
                       borderRadius: "3px",
                       overflow: "hidden",
                     }}
@@ -345,8 +345,8 @@ export default function ReworkPage() {
           {/* Vendor Performance */}
           <div
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "16px",
               padding: "24px",
             }}
@@ -365,8 +365,8 @@ export default function ReworkPage() {
                   <div
                     key={vendor.vendor}
                     style={{
-                      background: "#242424",
-                      border: "1px solid #2A2A2A",
+                      background: "#333333",
+                      border: "1px solid #3A3A3A",
                       borderRadius: "8px",
                       padding: "12px",
                     }}
@@ -399,8 +399,8 @@ export default function ReworkPage() {
       {/* Rework Timeline (Selected Shot) */}
       <div
         style={{
-          background: "#1A1A1A",
-          border: "1px solid #2A2A2A",
+          background: "#262626",
+          border: "1px solid #3A3A3A",
           borderRadius: "16px",
           padding: "24px",
           marginTop: "24px",
@@ -419,7 +419,7 @@ export default function ReworkPage() {
                 top: "16px",
                 bottom: "16px",
                 width: "2px",
-                background: "#2A2A2A",
+                background: "#3A3A3A",
               }}
             />
 
@@ -441,14 +441,14 @@ export default function ReworkPage() {
                     height: "12px",
                     borderRadius: "50%",
                     background: "#C4A882",
-                    border: "3px solid #1A1A1A",
+                    border: "3px solid #262626",
                   }}
                 />
 
                 <div
                   style={{
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "8px",
                     padding: "16px",
                   }}

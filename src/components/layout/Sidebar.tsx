@@ -34,8 +34,8 @@ export function Sidebar() {
         display: "flex",
         flexDirection: "column",
         width: "var(--sidebar-width)",
-        background: "#141414",
-        borderRight: "1px solid #1E1E1E",
+        background: "#161616",
+        borderRight: "1px solid #2D2D2D",
       }}
     >
       {/* Logo */}
@@ -46,7 +46,7 @@ export function Sidebar() {
           justifyContent: "center",
           padding: "0 20px",
           height: 64,
-          borderBottom: "1px solid #1E1E1E",
+          borderBottom: "1px solid #2D2D2D",
           flexShrink: 0,
         }}
       >
@@ -70,7 +70,7 @@ export function Sidebar() {
             gap: 8,
             padding: "8px 12px",
             borderRadius: 8,
-            background: "#1A1A1A",
+            background: "#262626",
           }}
         >
           <div
@@ -178,7 +178,7 @@ export function Sidebar() {
       </nav>
 
       {/* Project Selector */}
-      <div style={{ padding: "8px 12px", borderTop: "1px solid #1E1E1E" }}>
+      <div style={{ padding: "8px 12px", borderTop: "1px solid #2D2D2D" }}>
         <button
           style={{
             width: "100%",
@@ -189,13 +189,13 @@ export function Sidebar() {
             borderRadius: 12,
             border: "none",
             cursor: "pointer",
-            background: "#1A1A1A",
+            background: "#262626",
             transition: "all 0.15s ease",
             fontFamily: "inherit",
           }}
           onClick={() => router.push("/dashboard/projects")}
-          onMouseEnter={(e) => { e.currentTarget.style.background = "#242424"; }}
-          onMouseLeave={(e) => { e.currentTarget.style.background = "#1A1A1A"; }}
+          onMouseEnter={(e) => { e.currentTarget.style.background = "#333333"; }}
+          onMouseLeave={(e) => { e.currentTarget.style.background = "#262626"; }}
         >
           <div
             style={{
@@ -205,8 +205,8 @@ export function Sidebar() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              background: "linear-gradient(135deg, #2A2A2A, #1A1A1A)",
-              border: "1px solid #3A3A3A",
+              background: "linear-gradient(135deg, #3A3A3A, #262626)",
+              border: "1px solid #4A4A4A",
               flexShrink: 0,
             }}
           >
@@ -227,7 +227,7 @@ export function Sidebar() {
       </div>
 
       {/* User Profile */}
-      <div style={{ padding: "12px 16px", borderTop: "1px solid #1E1E1E" }}>
+      <div style={{ padding: "12px 16px", borderTop: "1px solid #2D2D2D" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
           <div
             style={{
@@ -240,7 +240,7 @@ export function Sidebar() {
               fontSize: 11,
               fontWeight: 700,
               background: "linear-gradient(135deg, #C4A882, #8B7355)",
-              color: "#0F0F0F",
+              color: "#1A1A1A",
               flexShrink: 0,
             }}
           >

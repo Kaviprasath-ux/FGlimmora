@@ -102,7 +102,7 @@ export default function ContentCalendarPage() {
   const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
   return (
-    <div style={{ padding: "32px", background: "#0F0F0F", minHeight: "100vh" }}>
+    <div style={{ padding: "32px", background: "#1A1A1A", minHeight: "100vh" }}>
       {/* Header */}
       <div style={{ marginBottom: "32px" }}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "8px" }}>
@@ -115,7 +115,7 @@ export default function ContentCalendarPage() {
               style={{
                 padding: "12px 24px",
                 background: "#C4A882",
-                color: "#0F0F0F",
+                color: "#1A1A1A",
                 border: "none",
                 borderRadius: "12px",
                 fontSize: "14px",
@@ -138,10 +138,10 @@ export default function ContentCalendarPage() {
           onClick={() => setSelectedView("calendar")}
           style={{
             padding: "10px 24px",
-            background: selectedView === "calendar" ? "#C4A882" : "#1A1A1A",
-            border: selectedView === "calendar" ? "1px solid #C4A882" : "1px solid #2A2A2A",
+            background: selectedView === "calendar" ? "#C4A882" : "#262626",
+            border: selectedView === "calendar" ? "1px solid #C4A882" : "1px solid #3A3A3A",
             borderRadius: "12px",
-            color: selectedView === "calendar" ? "#0F0F0F" : "#E8E0D4",
+            color: selectedView === "calendar" ? "#1A1A1A" : "#E8E0D4",
             fontSize: "14px",
             fontWeight: "600",
             cursor: "pointer",
@@ -157,10 +157,10 @@ export default function ContentCalendarPage() {
           onClick={() => setSelectedView("timeline")}
           style={{
             padding: "10px 24px",
-            background: selectedView === "timeline" ? "#C4A882" : "#1A1A1A",
-            border: selectedView === "timeline" ? "1px solid #C4A882" : "1px solid #2A2A2A",
+            background: selectedView === "timeline" ? "#C4A882" : "#262626",
+            border: selectedView === "timeline" ? "1px solid #C4A882" : "1px solid #3A3A3A",
             borderRadius: "12px",
-            color: selectedView === "timeline" ? "#0F0F0F" : "#E8E0D4",
+            color: selectedView === "timeline" ? "#1A1A1A" : "#E8E0D4",
             fontSize: "14px",
             fontWeight: "600",
             cursor: "pointer",
@@ -175,7 +175,7 @@ export default function ContentCalendarPage() {
       </div>
 
       {/* Event Type Legend */}
-      <div style={{ background: "#1A1A1A", padding: "20px", borderRadius: "16px", border: "1px solid #2A2A2A", marginBottom: "24px" }}>
+      <div style={{ background: "#262626", padding: "20px", borderRadius: "16px", border: "1px solid #3A3A3A", marginBottom: "24px" }}>
         <div style={{ display: "flex", flexWrap: "wrap", gap: "16px", alignItems: "center" }}>
           <span style={{ color: "#9A9080", fontSize: "13px", fontWeight: "600" }}>{t("eventTypes")}</span>
           {Object.entries(eventTypes).map(([key, value]) => {
@@ -209,8 +209,8 @@ export default function ContentCalendarPage() {
               disabled={selectedMonth === 0}
               style={{
                 padding: "8px 16px",
-                background: "#1A1A1A",
-                border: "1px solid #2A2A2A",
+                background: "#262626",
+                border: "1px solid #3A3A3A",
                 borderRadius: "8px",
                 color: "#E8E0D4",
                 cursor: selectedMonth === 0 ? "not-allowed" : "pointer",
@@ -227,8 +227,8 @@ export default function ContentCalendarPage() {
               disabled={selectedMonth === 11}
               style={{
                 padding: "8px 16px",
-                background: "#1A1A1A",
-                border: "1px solid #2A2A2A",
+                background: "#262626",
+                border: "1px solid #3A3A3A",
                 borderRadius: "8px",
                 color: "#E8E0D4",
                 cursor: selectedMonth === 11 ? "not-allowed" : "pointer",
@@ -240,7 +240,7 @@ export default function ContentCalendarPage() {
           </div>
 
           {/* Calendar Grid */}
-          <div style={{ background: "#1A1A1A", padding: "24px", borderRadius: "16px", border: "1px solid #2A2A2A", marginBottom: "32px" }}>
+          <div style={{ background: "#262626", padding: "24px", borderRadius: "16px", border: "1px solid #3A3A3A", marginBottom: "32px" }}>
             {/* Day headers */}
             <div style={{ display: "grid", gridTemplateColumns: "repeat(7, 1fr)", gap: "8px", marginBottom: "16px" }}>
               {[t("sun"), t("mon"), t("tue"), t("wed"), t("thu"), t("fri"), t("sat")].map((day) => (
@@ -274,8 +274,8 @@ export default function ContentCalendarPage() {
                     key={idx}
                     style={{
                       minHeight: "100px",
-                      background: day ? "#242424" : "transparent",
-                      border: isToday ? "2px solid #C4A882" : "1px solid #2A2A2A",
+                      background: day ? "#333333" : "transparent",
+                      border: isToday ? "2px solid #C4A882" : "1px solid #3A3A3A",
                       borderRadius: "8px",
                       padding: "8px",
                       position: "relative",
@@ -304,7 +304,7 @@ export default function ContentCalendarPage() {
                                 borderRadius: "4px",
                                 fontSize: "10px",
                                 fontWeight: "600",
-                                color: "#0F0F0F",
+                                color: "#1A1A1A",
                                 cursor: "pointer",
                                 whiteSpace: "nowrap",
                                 overflow: "hidden",
@@ -326,7 +326,7 @@ export default function ContentCalendarPage() {
         </>
       ) : (
         /* Timeline View */
-        <div style={{ background: "#1A1A1A", padding: "24px", borderRadius: "16px", border: "1px solid #2A2A2A", marginBottom: "32px" }}>
+        <div style={{ background: "#262626", padding: "24px", borderRadius: "16px", border: "1px solid #3A3A3A", marginBottom: "32px" }}>
           <div style={{ position: "relative", paddingLeft: "24px" }}>
             {/* Timeline line */}
             <div
@@ -336,7 +336,7 @@ export default function ContentCalendarPage() {
                 top: "0",
                 bottom: "0",
                 width: "2px",
-                background: "#2A2A2A",
+                background: "#3A3A3A",
               }}
             />
 
@@ -353,7 +353,7 @@ export default function ContentCalendarPage() {
                       height: "24px",
                       borderRadius: "50%",
                       background: eventTypes[event.type as keyof typeof eventTypes].color,
-                      border: "3px solid #1A1A1A",
+                      border: "3px solid #262626",
                       zIndex: 1,
                     }}
                   />
@@ -362,10 +362,10 @@ export default function ContentCalendarPage() {
                   <div
                     onClick={() => setSelectedEvent(event.id)}
                     style={{
-                      background: "#242424",
+                      background: "#333333",
                       padding: "16px 20px",
                       borderRadius: "12px",
-                      border: "1px solid #2A2A2A",
+                      border: "1px solid #3A3A3A",
                       cursor: "pointer",
                       transition: "all 0.2s",
                     }}
@@ -373,7 +373,7 @@ export default function ContentCalendarPage() {
                       e.currentTarget.style.borderColor = "#C4A882";
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.borderColor = "#2A2A2A";
+                      e.currentTarget.style.borderColor = "#3A3A3A";
                     }}
                   >
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "8px" }}>
@@ -407,7 +407,7 @@ export default function ContentCalendarPage() {
       )}
 
       {/* Upcoming Events List */}
-      <div style={{ background: "#1A1A1A", padding: "24px", borderRadius: "16px", border: "1px solid #2A2A2A" }}>
+      <div style={{ background: "#262626", padding: "24px", borderRadius: "16px", border: "1px solid #3A3A3A" }}>
         <h3 style={{ color: "#E8E0D4", fontSize: "20px", fontWeight: "600", marginBottom: "20px" }}>
           {t("upcomingEvents")}
         </h3>
@@ -422,10 +422,10 @@ export default function ContentCalendarPage() {
                 key={event.id}
                 onClick={() => setSelectedEvent(event.id)}
                 style={{
-                  background: "#242424",
+                  background: "#333333",
                   padding: "16px 20px",
                   borderRadius: "12px",
-                  border: "1px solid #2A2A2A",
+                  border: "1px solid #3A3A3A",
                   cursor: "pointer",
                   display: "flex",
                   justifyContent: "space-between",
@@ -435,7 +435,7 @@ export default function ContentCalendarPage() {
                   e.currentTarget.style.borderColor = "#C4A882";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = "#2A2A2A";
+                  e.currentTarget.style.borderColor = "#3A3A3A";
                 }}
               >
                 <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
@@ -448,7 +448,7 @@ export default function ContentCalendarPage() {
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
-                      color: "#0F0F0F",
+                      color: "#1A1A1A",
                       fontSize: "20px",
                       fontWeight: "700",
                     }}
@@ -512,8 +512,8 @@ export default function ContentCalendarPage() {
           <div
             onClick={(e) => e.stopPropagation()}
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "20px",
               padding: "32px",
               maxWidth: "500px",
@@ -555,21 +555,21 @@ export default function ContentCalendarPage() {
             </div>
 
             <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-              <div style={{ background: "#242424", padding: "16px", borderRadius: "12px" }}>
+              <div style={{ background: "#333333", padding: "16px", borderRadius: "12px" }}>
                 <div style={{ color: "#6B6560", fontSize: "12px", marginBottom: "4px" }}>{t("date")}</div>
                 <div style={{ color: "#E8E0D4", fontSize: "18px", fontWeight: "600" }}>
                   {formatDate(selectedEventData.date)}
                 </div>
               </div>
 
-              <div style={{ background: "#242424", padding: "16px", borderRadius: "12px" }}>
+              <div style={{ background: "#333333", padding: "16px", borderRadius: "12px" }}>
                 <div style={{ color: "#6B6560", fontSize: "12px", marginBottom: "4px" }}>{t("platformLabel")}</div>
                 <div style={{ color: "#E8E0D4", fontSize: "18px", fontWeight: "600" }}>
                   {selectedEventData.platform}
                 </div>
               </div>
 
-              <div style={{ background: "#242424", padding: "16px", borderRadius: "12px" }}>
+              <div style={{ background: "#333333", padding: "16px", borderRadius: "12px" }}>
                 <div style={{ color: "#6B6560", fontSize: "12px", marginBottom: "4px" }}>{t("status")}</div>
                 <div
                   style={{
@@ -612,8 +612,8 @@ export default function ContentCalendarPage() {
           <div
             onClick={(e) => e.stopPropagation()}
             style={{
-              background: "#1A1A1A",
-              border: "1px solid #2A2A2A",
+              background: "#262626",
+              border: "1px solid #3A3A3A",
               borderRadius: "20px",
               padding: "32px",
               maxWidth: "500px",
@@ -635,8 +635,8 @@ export default function ContentCalendarPage() {
                   style={{
                     width: "100%",
                     padding: "12px",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "8px",
                     color: "#E8E0D4",
                     fontSize: "14px",
@@ -662,8 +662,8 @@ export default function ContentCalendarPage() {
                   style={{
                     width: "100%",
                     padding: "12px",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "8px",
                     color: "#E8E0D4",
                     fontSize: "14px",
@@ -683,8 +683,8 @@ export default function ContentCalendarPage() {
                   style={{
                     width: "100%",
                     padding: "12px",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "8px",
                     color: "#E8E0D4",
                     fontSize: "14px",
@@ -703,8 +703,8 @@ export default function ContentCalendarPage() {
                   style={{
                     width: "100%",
                     padding: "12px",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "8px",
                     color: "#E8E0D4",
                     fontSize: "14px",
@@ -723,8 +723,8 @@ export default function ContentCalendarPage() {
                   style={{
                     width: "100%",
                     padding: "12px",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "8px",
                     color: "#E8E0D4",
                     fontSize: "14px",
@@ -742,8 +742,8 @@ export default function ContentCalendarPage() {
                   style={{
                     flex: 1,
                     padding: "12px",
-                    background: "#242424",
-                    border: "1px solid #2A2A2A",
+                    background: "#333333",
+                    border: "1px solid #3A3A3A",
                     borderRadius: "8px",
                     color: "#E8E0D4",
                     fontSize: "14px",
@@ -761,7 +761,7 @@ export default function ContentCalendarPage() {
                     background: "#C4A882",
                     border: "none",
                     borderRadius: "8px",
-                    color: "#0F0F0F",
+                    color: "#1A1A1A",
                     fontSize: "14px",
                     fontWeight: "600",
                     cursor: "pointer",

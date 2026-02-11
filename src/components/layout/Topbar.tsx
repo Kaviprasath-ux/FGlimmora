@@ -30,10 +30,10 @@ export function Topbar() {
         justifyContent: "space-between",
         padding: "0 24px",
         height: "var(--topbar-height)",
-        background: "rgba(15,15,15,0.85)",
+        background: "rgba(38,38,38,0.85)",
         backdropFilter: "blur(16px)",
         WebkitBackdropFilter: "blur(16px)",
-        borderBottom: "1px solid #1E1E1E",
+        borderBottom: "1px solid #2D2D2D",
       }}
     >
       {/* Search */}
@@ -80,8 +80,8 @@ export function Topbar() {
             fontSize: 13,
             outline: "none",
             transition: "all 0.2s ease",
-            background: searchFocused ? "#1A1A1A" : "#161616",
-            border: `1px solid ${searchFocused ? "#C4A882" : "#1E1E1E"}`,
+            background: searchFocused ? "#262626" : "#1F1F1F",
+            border: `1px solid ${searchFocused ? "#C4A882" : "#2D2D2D"}`,
             color: "#E8E0D4",
             fontFamily: "inherit",
           }}
@@ -103,9 +103,9 @@ export function Topbar() {
               borderRadius: 4,
               fontSize: 10,
               fontWeight: 500,
-              background: "#242424",
+              background: "#333333",
               color: "#6B6560",
-              border: "1px solid #2A2A2A",
+              border: "1px solid #3A3A3A",
               fontFamily: "inherit",
             }}
           >
@@ -117,9 +117,9 @@ export function Topbar() {
               borderRadius: 4,
               fontSize: 10,
               fontWeight: 500,
-              background: "#242424",
+              background: "#333333",
               color: "#6B6560",
-              border: "1px solid #2A2A2A",
+              border: "1px solid #3A3A3A",
               fontFamily: "inherit",
             }}
           >
@@ -144,7 +144,7 @@ export function Topbar() {
             display: "flex",
             alignItems: "center",
           }}
-          onMouseEnter={(e) => { e.currentTarget.style.background = "#1A1A1A"; e.currentTarget.style.color = "#E8E0D4"; }}
+          onMouseEnter={(e) => { e.currentTarget.style.background = "#262626"; e.currentTarget.style.color = "#E8E0D4"; }}
           onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#7A756E"; }}
         >
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -177,7 +177,7 @@ export function Topbar() {
             display: "flex",
             alignItems: "center",
           }}
-          onMouseEnter={(e) => { e.currentTarget.style.background = "#1A1A1A"; e.currentTarget.style.color = "#E8E0D4"; }}
+          onMouseEnter={(e) => { e.currentTarget.style.background = "#262626"; e.currentTarget.style.color = "#E8E0D4"; }}
           onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#7A756E"; }}
         >
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -191,8 +191,8 @@ export function Topbar() {
           style={{
             display: "flex",
             alignItems: "center",
-            background: "#1A1A1A",
-            border: "1px solid #2A2A2A",
+            background: "#262626",
+            border: "1px solid #3A3A3A",
             borderRadius: 8,
             padding: 2,
             gap: 0,
@@ -210,7 +210,7 @@ export function Topbar() {
               fontFamily: "inherit",
               transition: "all 0.15s ease",
               background: lang === "en" ? "#C4A882" : "transparent",
-              color: lang === "en" ? "#0F0F0F" : "#6B6560",
+              color: lang === "en" ? "#1A1A1A" : "#6B6560",
             }}
           >
             EN
@@ -227,7 +227,7 @@ export function Topbar() {
               fontFamily: "inherit",
               transition: "all 0.15s ease",
               background: lang === "te" ? "#C4A882" : "transparent",
-              color: lang === "te" ? "#0F0F0F" : "#6B6560",
+              color: lang === "te" ? "#1A1A1A" : "#6B6560",
             }}
           >
             తెలుగు
@@ -235,7 +235,7 @@ export function Topbar() {
         </div>
 
         {/* Separator */}
-        <div style={{ width: 1, height: 24, background: "#2A2A2A" }} />
+        <div style={{ width: 1, height: 24, background: "#3A3A3A" }} />
 
         {/* User */}
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
@@ -258,7 +258,7 @@ export function Topbar() {
               fontSize: 11,
               fontWeight: 700,
               background: "linear-gradient(135deg, #C4A882, #8B7355)",
-              color: "#0F0F0F",
+              color: "#1A1A1A",
               flexShrink: 0,
             }}
           >

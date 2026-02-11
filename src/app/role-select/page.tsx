@@ -101,7 +101,7 @@ export default function RoleSelectPage() {
         justifyContent: "center",
         padding: "48px 24px",
         position: "relative",
-        background: "#0F0F0F",
+        background: "#1A1A1A",
       }}
     >
       {/* Background */}
@@ -151,19 +151,19 @@ export default function RoleSelectPage() {
                 textAlign: "left",
                 borderRadius: 16,
                 padding: 24,
-                border: "1px solid #2A2A2A",
-                background: "#1A1A1A",
+                border: "1px solid #3A3A3A",
+                background: "#262626",
                 cursor: "pointer",
                 transition: "all 0.3s ease",
                 fontFamily: "inherit",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = "#3A3A3A";
+                e.currentTarget.style.borderColor = "#4A4A4A";
                 e.currentTarget.style.boxShadow = "0 8px 32px rgba(0,0,0,0.4), 0 0 40px rgba(196,168,130,0.05)";
                 e.currentTarget.style.transform = "translateY(-2px)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "#2A2A2A";
+                e.currentTarget.style.borderColor = "#3A3A3A";
                 e.currentTarget.style.boxShadow = "none";
                 e.currentTarget.style.transform = "translateY(0)";
               }}
@@ -179,7 +179,7 @@ export default function RoleSelectPage() {
                   borderRadius: 12,
                   marginBottom: 16,
                   background: gradientBg,
-                  color: "#0F0F0F",
+                  color: "#1A1A1A",
                 }}
               >
                 {icon}

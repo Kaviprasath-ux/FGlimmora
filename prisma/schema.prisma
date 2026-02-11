@@ -1,0 +1,847 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+// ============================================
+// CORE ENTITIES
+// ============================================
+
+model User {
+  id           String   @id @default(cuid())
+  name         String
+  email        String   @unique
+  passwordHash String
+  role         UserRole
+  avatar       String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  projectMemberships    ProjectMember[]
+  approvalsRequested    Approval[]              @relation("ApprovalRequester")
+  approvalsGiven        Approval[]              @relation("ApprovalApprover")
+  notifications         Notification[]
+  whatIfScenariosCreated WhatIfScenario[]
+
+  @@index([email])
+  @@index([role])
+}
+
+enum UserRole {
+  PRODUCER
+  DIRECTOR
+  PRODUCTION_HEAD
+  VFX_ACTION_HEAD
+  FINANCIER
+  MARKETING_HEAD
+  STUDIO_ADMIN
+}
+
+model Project {
+  id                String        @id @default(cuid())
+  name              String
+  description       String?
+  status            ProjectStatus @default(PLANNING)
+  budget            Float // in Crores
+  genre             String
+  language          String        @default("Telugu")
+  releaseTargetDate DateTime?
+  posterImage       String?
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+
+  members               ProjectMember[]
+  scripts               Script[]
+  castingChoices        CastingChoice[]
+  budgetCategories      BudgetCategory[]
+  costAlerts            CostAlert[]
+  shootingSchedules     ShootingSchedule[]
+  distributionTerritories DistributionTerritory[]
+  ottDeals              OttDeal[]
+  releaseStrategies     ReleaseStrategy[]
+  marketingEvents       MarketingEvent[]
+  revenueStreams        RevenueStream[]
+  revenueForecasts      RevenueForecasting[]
+  digitalTwinEntities   DigitalTwinEntity[]
+  whatIfScenarios       WhatIfScenario[]
+  visualizations3D      Visualization3D[]
+  campaigns             Campaign[]
+  approvals             Approval[]
+  dailyProgress         DailyProgress[]
+  riskAlerts            RiskAlert[]
+
+  @@index([status])
+  @@index([releaseTargetDate])
+}
+
+enum ProjectStatus {
+  PLANNING
+  PRE_PRODUCTION
+  PRODUCTION
+  POST_PRODUCTION
+  MARKETING
+  RELEASED
+  ARCHIVED
+}
+
+model ProjectMember {
+  id        String   @id @default(cuid())
+  projectId String
+  userId    String
+  role      String // e.g., "Lead Actor", "Director", "Producer"
+  joinedAt  DateTime @default(now())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([projectId, userId])
+  @@index([projectId])
+  @@index([userId])
+}
+
+// ============================================
+// MODULE 1: SCRIPT INTELLIGENCE
+// ============================================
+
+model Script {
+  id          String   @id @default(cuid())
+  projectId   String
+  content     String // Could be summary or full text
+  summary     String?
+  uploadDate  DateTime @default(now())
+  version     Int      @default(1)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  scenes  Scene[]
+
+  @@index([projectId])
+}
+
+model Scene {
+  id                String        @id @default(cuid())
+  scriptId          String
+  sceneNumber       String
+  description       String
+  location          String
+  complexity        SceneComplexity
+  estimatedCost     Float // in Lakhs
+  estimatedDuration Int // in minutes
+  castNeeded        String // Comma-separated or JSON
+  vfxRequired       Boolean       @default(false)
+  vfxIntensity      VfxIntensity?
+  status            SceneStatus   @default(NOT_STARTED)
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+
+  script               Script              @relation(fields: [scriptId], references: [id], onDelete: Cascade)
+  shootingSchedules    ShootingSchedule[]  @relation("ScheduleScenes")
+  vfxShots             VfxShot[]
+  visualizations3D     Visualization3D[]
+
+  @@index([scriptId])
+  @@index([status])
+  @@index([vfxRequired])
+}
+
+enum SceneComplexity {
+  ACTION
+  DIALOGUE
+  VFX
+  ROMANTIC
+  MIXED
+}
+
+enum VfxIntensity {
+  LOW
+  MEDIUM
+  HIGH
+  EXTREME
+}
+
+enum SceneStatus {
+  NOT_STARTED
+  PLANNED
+  IN_PROGRESS
+  COMPLETED
+  RETAKE_NEEDED
+}
+
+// ============================================
+// MODULE 2: STAR ECONOMICS
+// ============================================
+
+model Actor {
+  id                  String     @id @default(cuid())
+  name                String
+  fee                 Float // in Crores
+  image               String?
+  fanBaseScore        Int // 1-100
+  overseasPull        Int // 1-100
+  socialMediaFollowing Int // in millions
+  tier                ActorTier
+  createdAt           DateTime   @default(now())
+  updatedAt           DateTime   @updatedAt
+
+  castingChoices CastingChoice[]
+
+  @@index([tier])
+  @@index([fanBaseScore])
+}
+
+enum ActorTier {
+  A
+  B
+  C
+}
+
+model CastingChoice {
+  id             String              @id @default(cuid())
+  projectId      String
+  actorId        String
+  roleName       String
+  feeNegotiated  Float // in Crores
+  roiPrediction  Float // percentage
+  status         CastingStatus       @default(PROPOSED)
+  createdAt      DateTime            @default(now())
+  updatedAt      DateTime            @updatedAt
+
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  actor   Actor   @relation(fields: [actorId], references: [id], onDelete: Cascade)
+
+  @@index([projectId])
+  @@index([actorId])
+  @@index([status])
+}
+
+enum CastingStatus {
+  PROPOSED
+  NEGOTIATING
+  APPROVED
+  REJECTED
+  SIGNED
+}
+
+// ============================================
+// MODULE 3: BUDGET
+// ============================================
+
+model BudgetCategory {
+  id             String   @id @default(cuid())
+  projectId      String
+  categoryName   String // Production, VFX, Marketing, Talent, etc
+  plannedAmount  Float // in Crores
+  actualAmount   Float    @default(0)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  project Project      @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  items   BudgetItem[]
+
+  @@index([projectId])
+}
+
+model BudgetItem {
+  id          String           @id @default(cuid())
+  categoryId  String
+  description String
+  planned     Float // in Lakhs
+  actual      Float            @default(0)
+  status      BudgetItemStatus @default(PLANNED)
+  vendor      String?
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+
+  category BudgetCategory @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  @@index([categoryId])
+  @@index([status])
+}
+
+enum BudgetItemStatus {
+  PLANNED
+  APPROVED
+  IN_PROGRESS
+  PAID
+  OVERDUE
+}
+
+model CostAlert {
+  id          String       @id @default(cuid())
+  projectId   String
+  description String
+  severity    AlertSeverity
+  amount      Float // in Lakhs
+  resolved    Boolean      @default(false)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@index([projectId])
+  @@index([resolved])
+  @@index([severity])
+}
+
+enum AlertSeverity {
+  LOW
+  MEDIUM
+  HIGH
+  CRITICAL
+}
+
+// ============================================
+// MODULE 4: PRODUCTION PLANNING
+// ============================================
+
+model ShootingSchedule {
+  id        String         @id @default(cuid())
+  projectId String
+  dayNumber Int
+  date      DateTime
+  locationId String?
+  status    ScheduleStatus @default(PLANNED)
+  notes     String?
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+
+  project         Project           @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  location        Location?         @relation(fields: [locationId], references: [id], onDelete: SetNull)
+  scenes          Scene[]           @relation("ScheduleScenes")
+  crewAssignments CrewAssignment[]
+
+  @@index([projectId])
+  @@index([date])
+  @@index([status])
+  @@index([locationId])
+}
+
+enum ScheduleStatus {
+  PLANNED
+  CONFIRMED
+  IN_PROGRESS
+  COMPLETED
+  DELAYED
+  CANCELLED
+}
+
+model Location {
+  id          String   @id @default(cuid())
+  name        String
+  type        LocationType
+  city        String
+  dailyCost   Float // in Lakhs
+  weatherRisk Int // 1-10
+  image       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  shootingSchedules ShootingSchedule[]
+
+  @@index([city])
+  @@index([type])
+}
+
+enum LocationType {
+  STUDIO
+  OUTDOOR
+  HYBRID
+}
+
+model CrewMember {
+  id          String   @id @default(cuid())
+  name        String
+  department  String // Camera, Sound, Lighting, etc
+  role        String
+  dailyRate   Float // in thousands
+  availability String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  assignments CrewAssignment[]
+
+  @@index([department])
+}
+
+model CrewAssignment {
+  id         String   @id @default(cuid())
+  scheduleId String
+  crewId     String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  schedule ShootingSchedule @relation(fields: [scheduleId], references: [id], onDelete: Cascade)
+  crew     CrewMember       @relation(fields: [crewId], references: [id], onDelete: Cascade)
+
+  @@unique([scheduleId, crewId])
+  @@index([scheduleId])
+  @@index([crewId])
+}
+
+// ============================================
+// MODULE 5: VFX INTELLIGENCE
+// ============================================
+
+model VfxShot {
+  id            String      @id @default(cuid())
+  sceneId       String
+  shotNumber    String
+  type          VfxShotType
+  complexity    VfxIntensity
+  estimatedCost Float // in Lakhs
+  actualCost    Float       @default(0)
+  vendorId      String?
+  status        VfxStatus   @default(NOT_STARTED)
+  reworkCount   Int         @default(0)
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  scene  Scene       @relation(fields: [sceneId], references: [id], onDelete: Cascade)
+  vendor VfxVendor?  @relation(fields: [vendorId], references: [id], onDelete: SetNull)
+
+  @@index([sceneId])
+  @@index([vendorId])
+  @@index([status])
+}
+
+enum VfxShotType {
+  CGI
+  ROTO
+  PAINT
+  CROWD
+  MATTE_PAINTING
+  COMPOSITING
+}
+
+enum VfxStatus {
+  NOT_STARTED
+  IN_PROGRESS
+  REVIEW
+  APPROVED
+  REWORK
+  COMPLETED
+}
+
+model VfxVendor {
+  id             String   @id @default(cuid())
+  name           String
+  speciality     String
+  rate           Float // per shot in Lakhs
+  qualityRating  Int // 1-10
+  turnaroundDays Int
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  vfxShots VfxShot[]
+
+  @@index([qualityRating])
+}
+
+// ============================================
+// MODULE 6: DISTRIBUTION
+// ============================================
+
+model DistributionTerritory {
+  id              String                 @id @default(cuid())
+  projectId       String
+  territoryName   String // AP, TS, Overseas-US, etc
+  mgValuation     Float // Minimum Guarantee in Crores
+  actualDeal      Float                  @default(0)
+  distributorName String?
+  status          DistributionStatus     @default(NEGOTIATING)
+  createdAt       DateTime               @default(now())
+  updatedAt       DateTime               @updatedAt
+
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@index([projectId])
+  @@index([status])
+}
+
+enum DistributionStatus {
+  NEGOTIATING
+  DEAL_SIGNED
+  RELEASED
+  SETTLED
+}
+
+model OttDeal {
+  id           String      @id @default(cuid())
+  projectId    String
+  platformName String
+  dealValue    Float // in Crores
+  status       OttStatus   @default(NEGOTIATING)
+  territory    String      @default("All India")
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@index([projectId])
+  @@index([status])
+}
+
+enum OttStatus {
+  NEGOTIATING
+  DEAL_SIGNED
+  STREAMING
+  COMPLETED
+}
+
+// ============================================
+// MODULE 7: MARKETING STRATEGY
+// ============================================
+
+model ReleaseStrategy {
+  id          String        @id @default(cuid())
+  projectId   String
+  releaseDate DateTime
+  type        ReleaseType
+  window      Int // days before OTT
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@index([projectId])
+  @@index([releaseDate])
+}
+
+enum ReleaseType {
+  THEATRICAL
+  OTT
+  HYBRID
+  DIRECT_OTT
+}
+
+model MarketingEvent {
+  id          String           @id @default(cuid())
+  projectId   String
+  type        MarketingEventType
+  plannedDate DateTime
+  actualDate  DateTime?
+  platform    String
+  impactScore Int              @default(0) // 1-100
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@index([projectId])
+  @@index([plannedDate])
+}
+
+enum MarketingEventType {
+  TEASER
+  TRAILER
+  SONG
+  FIRST_LOOK
+  POSTER
+  TITLE_ANNOUNCEMENT
+  AUDIO_LAUNCH
+  PRE_RELEASE_EVENT
+}
+
+// ============================================
+// MODULE 8: REVENUE
+// ============================================
+
+model RevenueStream {
+  id         String            @id @default(cuid())
+  projectId  String
+  type       RevenueStreamType
+  territory  String
+  projected  Float // in Crores
+  actual     Float             @default(0)
+  createdAt  DateTime          @default(now())
+  updatedAt  DateTime          @updatedAt
+
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@index([projectId])
+  @@index([type])
+}
+
+enum RevenueStreamType {
+  THEATRICAL
+  OTT
+  SATELLITE
+  MUSIC
+  DUBBING
+  DIGITAL_RIGHTS
+  MERCHANDISE
+}
+
+model RevenueForecasting {
+  id                    String   @id @default(cuid())
+  projectId             String
+  openingWeekendEstimate Float // in Crores
+  lifetimeGrossEstimate Float // in Crores
+  breakEvenPoint        Float // in Crores
+  confidenceScore       Int // 1-100
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@index([projectId])
+}
+
+// ============================================
+// MODULE 9: DIGITAL TWIN
+// ============================================
+
+model DigitalTwinEntity {
+  id         String           @id @default(cuid())
+  projectId  String
+  entityType DigitalTwinType
+  name       String
+  status     String
+  data       String // JSON string
+  lastSynced DateTime         @default(now())
+  createdAt  DateTime         @default(now())
+  updatedAt  DateTime         @updatedAt
+
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@index([projectId])
+  @@index([entityType])
+}
+
+enum DigitalTwinType {
+  SET
+  SCENE
+  SCHEDULE
+  BUDGET
+  ACTOR
+}
+
+model WhatIfScenario {
+  id               String   @id @default(cuid())
+  projectId        String
+  createdByUserId  String
+  name             String
+  description      String?
+  parameterChanges String // JSON string
+  impactSummary    String // JSON string
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  project   Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  createdBy User    @relation(fields: [createdByUserId], references: [id], onDelete: Cascade)
+
+  @@index([projectId])
+  @@index([createdByUserId])
+}
+
+// ============================================
+// MODULE 10: 3D VISUALIZATION
+// ============================================
+
+model Visualization3D {
+  id          String             @id @default(cuid())
+  projectId   String
+  sceneId     String?
+  type        Visualization3DType
+  name        String
+  thumbnail   String?
+  modelUrl    String?
+  status      VisualizationStatus @default(DRAFT)
+  costLinked  Float              @default(0) // in Lakhs
+  notes       String?
+  createdAt   DateTime           @default(now())
+  updatedAt   DateTime           @updatedAt
+
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  scene   Scene?  @relation(fields: [sceneId], references: [id], onDelete: SetNull)
+
+  @@index([projectId])
+  @@index([sceneId])
+  @@index([status])
+}
+
+enum Visualization3DType {
+  SET
+  SHOT
+  ACTION
+  STUNT
+  PROP
+}
+
+enum VisualizationStatus {
+  DRAFT
+  IN_REVIEW
+  APPROVED
+  IN_PRODUCTION
+  COMPLETED
+}
+
+// ============================================
+// MODULE 11: GLOBAL MARKETING
+// ============================================
+
+model Campaign {
+  id        String         @id @default(cuid())
+  projectId String
+  name      String
+  platform  String // youtube, instagram, x, tiktok
+  budget    Float // in Lakhs
+  spent     Float          @default(0)
+  region    String
+  startDate DateTime
+  endDate   DateTime?
+  status    CampaignStatus @default(PLANNED)
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+
+  project              Project              @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  audienceMetrics      AudienceMetric[]
+  revenueAttributions  RevenueAttribution[]
+
+  @@index([projectId])
+  @@index([status])
+  @@index([startDate])
+}
+
+enum CampaignStatus {
+  PLANNED
+  ACTIVE
+  PAUSED
+  COMPLETED
+  CANCELLED
+}
+
+model AudienceMetric {
+  id             String   @id @default(cuid())
+  campaignId     String
+  date           DateTime
+  impressions    Int
+  engagement     Int
+  sentimentScore Float // -1 to 1
+  buzzScore      Int // 1-100
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  campaign Campaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+
+  @@index([campaignId])
+  @@index([date])
+}
+
+model RevenueAttribution {
+  id                 String   @id @default(cuid())
+  campaignId         String
+  attributedRevenue  Float // in Crores
+  ticketBookings     Int
+  confidence         Float // 0-1
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  campaign Campaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+
+  @@index([campaignId])
+}
+
+// ============================================
+// SUPPORTING ENTITIES
+// ============================================
+
+model Approval {
+  id            String         @id @default(cuid())
+  projectId     String
+  type          String // Budget, Casting, Schedule, VFX, etc
+  title         String
+  description   String?
+  requestedById String
+  approvedById  String?
+  status        ApprovalStatus @default(PENDING)
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+
+  project      Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  requestedBy  User     @relation("ApprovalRequester", fields: [requestedById], references: [id], onDelete: Cascade)
+  approvedBy   User?    @relation("ApprovalApprover", fields: [approvedById], references: [id], onDelete: SetNull)
+
+  @@index([projectId])
+  @@index([status])
+  @@index([requestedById])
+  @@index([approvedById])
+}
+
+enum ApprovalStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+model Notification {
+  id        String   @id @default(cuid())
+  userId    String
+  title     String
+  message   String
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([read])
+  @@index([createdAt])
+}
+
+model DailyProgress {
+  id              String   @id @default(cuid())
+  projectId       String
+  date            DateTime
+  scenesCompleted Int      @default(0)
+  budgetSpentToday Float   @default(0) // in Lakhs
+  notes           String?
+  issues          String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@unique([projectId, date])
+  @@index([projectId])
+  @@index([date])
+}
+
+model RiskAlert {
+  id           String        @id @default(cuid())
+  projectId    String
+  type         RiskType
+  severity     AlertSeverity
+  description  String
+  impactAmount Float         @default(0) // in Lakhs/Crores depending on context
+  mitigated    Boolean       @default(false)
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@index([projectId])
+  @@index([severity])
+  @@index([mitigated])
+}
+
+enum RiskType {
+  BUDGET
+  SCHEDULE
+  WEATHER
+  VFX
+  MARKET
+  TALENT
+  TECHNICAL
+}

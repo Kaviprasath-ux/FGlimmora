@@ -35,7 +35,7 @@ export interface NavItem {
   label: string;
   href: string;
   icon: string;
-  badge?: number;
+  badge?: number | string;
   children?: NavItem[];
 }
 
@@ -180,6 +180,40 @@ export interface CrewMember {
   role: string;
   dailyRate: number;
   availability: "available" | "assigned" | "unavailable";
+}
+
+export interface LiveCamera {
+  id: string;
+  label: string;
+  location: string;
+  status: "live" | "standby" | "offline";
+  resolution: string;
+  operator: string;
+}
+
+export interface LiveStreamSession {
+  id: string;
+  sceneId: string;
+  sceneNumber: number;
+  sceneDescription: string;
+  status: "live" | "scheduled" | "completed" | "paused";
+  startTime: string;
+  endTime?: string;
+  cameras: LiveCamera[];
+  viewers: { name: string; role: string }[];
+  shotNumber: number;
+  totalShots: number;
+  budgetBurn: number;
+  scheduledStart: string;
+  isHighRisk: boolean;
+}
+
+export interface StreamActivityLog {
+  id: string;
+  timestamp: string;
+  type: "scene_start" | "scene_wrap" | "shot_approved" | "viewer_joined" | "alert";
+  message: string;
+  user?: string;
 }
 
 export interface WhatIfScenario {

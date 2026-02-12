@@ -307,6 +307,41 @@ export default function LoginPage() {
         <p style={{ textAlign: "center", marginTop: 32, fontSize: 12, color: "#6B6560" }}>
           FilmGlimmora v1.0 — Tollywood Edition
         </p>
+
+        {/* Studio Partner */}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: 8,
+            marginTop: 20,
+          }}
+        >
+          <span
+            style={{
+              fontSize: 9,
+              fontWeight: 500,
+              textTransform: "uppercase",
+              letterSpacing: "0.12em",
+              color: "#4A4A4A",
+            }}
+          >
+            Studio Partner
+          </span>
+          <img
+            src="/ramoji-logo.png"
+            alt="Ramoji Film City"
+            style={{
+              height: 36,
+              objectFit: "contain",
+              opacity: 0.5,
+              transition: "opacity 0.3s ease",
+            }}
+            onMouseEnter={(e) => { (e.target as HTMLImageElement).style.opacity = "0.8"; }}
+            onMouseLeave={(e) => { (e.target as HTMLImageElement).style.opacity = "0.5"; }}
+          />
+        </div>
       </div>
     </div>
   );

@@ -42,6 +42,7 @@ export function getNavigationForRole(role: UserRole): NavItem[] {
         { label: "Revenue Forecast", href: "/dashboard/revenue", icon: "TrendingUp" },
         { label: "Distribution", href: "/dashboard/distribution", icon: "Globe" },
         { label: "Digital Twin", href: "/dashboard/digital-twin", icon: "Box" },
+        { label: "Live Production", href: "/dashboard/live-production", icon: "Radio", badge: "LIVE" },
         { label: "Approvals", href: "/dashboard/approvals", icon: "CheckCircle", badge: 4 },
         { label: "Risk Alerts", href: "/dashboard/risks", icon: "AlertTriangle" },
         { label: "Reports", href: "/dashboard/reports", icon: "BarChart3" },
@@ -121,6 +122,7 @@ export function getNavigationForRole(role: UserRole): NavItem[] {
         { label: "Marketing", href: "/dashboard/campaigns", icon: "Megaphone" },
         { label: "Revenue", href: "/dashboard/revenue", icon: "TrendingUp" },
         { label: "Digital Twin", href: "/dashboard/digital-twin", icon: "Box" },
+        { label: "Live Production", href: "/dashboard/live-production", icon: "Radio" },
         { label: "User Management", href: "/dashboard/users", icon: "UserCog" },
         { label: "Settings", href: "/dashboard/settings", icon: "Settings" },
       ];

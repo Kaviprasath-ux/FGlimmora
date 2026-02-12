@@ -6,6 +6,7 @@ import {
   Building, GitBranch, RotateCcw, Clock, PiggyBank, Shield, Target, Megaphone,
   Heart, PieChart, Link, Rocket, Star, FolderOpen, UserCog, Settings, Warehouse,
   ClipboardList, Wrench, Film, Clapperboard, HardHat, Landmark,
+  Radio, Lock, Eye, History, Activity, Play, Check, Circle,
 } from "lucide-react";
 import type { LucideProps } from "lucide-react";
 
@@ -49,6 +50,14 @@ const iconMap: Record<string, React.ComponentType<LucideProps>> = {
   Clapperboard,
   HardHat,
   Landmark,
+  Radio,
+  Lock,
+  Eye,
+  History,
+  Activity,
+  Play,
+  Check,
+  Circle,
 };
 
 interface LucideIconProps extends Omit<LucideProps, "ref"> {

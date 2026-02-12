@@ -2,6 +2,7 @@ import type {
   Project, Scene, BudgetCategory, ShootDay, Actor, VfxShot,
   Campaign, RevenueStream, Approval, RiskAlert, DailyProgress,
   DistributionTerritory, CrewMember, WhatIfScenario, StatItem,
+  LiveCamera, LiveStreamSession, StreamActivityLog,
 } from "@/lib/types";
 
 // ═══════════════════════════════════════════════════════════
@@ -386,4 +387,96 @@ export const marketingHeadStats: StatItem[] = [
   { label: "Marketing Spend", value: "₹12.3 Cr", icon: "IndianRupee", color: "warning" },
   { label: "Engagement Rate", value: "8.2%", change: 1.5, trend: "up", icon: "TrendingUp", color: "gold" },
   { label: "Attributed Revenue", value: "₹45 Cr", icon: "Link", color: "success" },
+];
+
+// ═══════════════════════════════════════════════════════════
+// LIVE PRODUCTION — Cameras, Sessions, Activity Log
+// ═══════════════════════════════════════════════════════════
+
+export const liveCameras: LiveCamera[] = [
+  { id: "cam_a", label: "Camera A — Main", location: "Vizag Port Area", status: "live", resolution: "4K UHD", operator: "Ravi Kumar" },
+  { id: "cam_b", label: "Camera B — Wide", location: "Vizag Port Area", status: "live", resolution: "1080p", operator: "Suresh Babu" },
+  { id: "cam_c", label: "Camera C — Drone", location: "Vizag Port Aerial", status: "standby", resolution: "4K UHD", operator: "Karthik M." },
+  { id: "cam_d", label: "Camera D — Steadicam", location: "Vizag Port Interior", status: "live", resolution: "1080p", operator: "Venkat R." },
+];
+
+export const liveStreamSessions: LiveStreamSession[] = [
+  {
+    id: "sess_001",
+    sceneId: "sc_004",
+    sceneNumber: 4,
+    sceneDescription: "Smuggling warehouse raid sequence",
+    status: "live",
+    startTime: "2026-02-12T10:30:00",
+    cameras: liveCameras,
+    viewers: [
+      { name: "Dil Raju", role: "Producer" },
+      { name: "Studio Admin", role: "Admin" },
+    ],
+    shotNumber: 4,
+    totalShots: 12,
+    budgetBurn: 1.2,
+    scheduledStart: "2026-02-12T10:00:00",
+    isHighRisk: true,
+  },
+  {
+    id: "sess_002",
+    sceneId: "sc_012",
+    sceneNumber: 12,
+    sceneDescription: "Village celebration mass dance",
+    status: "completed",
+    startTime: "2026-02-12T07:00:00",
+    endTime: "2026-02-12T09:45:00",
+    cameras: liveCameras.map((c) => ({ ...c, status: "offline" as const })),
+    viewers: [{ name: "Dil Raju", role: "Producer" }],
+    shotNumber: 8,
+    totalShots: 8,
+    budgetBurn: 2.1,
+    scheduledStart: "2026-02-12T07:00:00",
+    isHighRisk: false,
+  },
+  {
+    id: "sess_003",
+    sceneId: "sc_005",
+    sceneNumber: 5,
+    sceneDescription: "Interval fight — Truck chase on highway",
+    status: "scheduled",
+    startTime: "2026-02-12T14:00:00",
+    cameras: liveCameras.map((c) => ({ ...c, status: "offline" as const })),
+    viewers: [],
+    shotNumber: 0,
+    totalShots: 18,
+    budgetBurn: 0,
+    scheduledStart: "2026-02-12T14:00:00",
+    isHighRisk: true,
+  },
+  {
+    id: "sess_004",
+    sceneId: "sc_003",
+    sceneNumber: 3,
+    sceneDescription: "Srivalli emotional confrontation scene",
+    status: "completed",
+    startTime: "2026-02-11T15:00:00",
+    endTime: "2026-02-11T17:30:00",
+    cameras: liveCameras.slice(0, 2).map((c) => ({ ...c, status: "offline" as const })),
+    viewers: [{ name: "Dil Raju", role: "Producer" }],
+    shotNumber: 6,
+    totalShots: 6,
+    budgetBurn: 0.5,
+    scheduledStart: "2026-02-11T15:00:00",
+    isHighRisk: false,
+  },
+];
+
+export const streamActivityLog: StreamActivityLog[] = [
+  { id: "log_001", timestamp: "2026-02-12T10:30:00", type: "scene_start", message: "Scene 4 — Warehouse raid sequence started", user: "AD Team" },
+  { id: "log_002", timestamp: "2026-02-12T10:35:00", type: "viewer_joined", message: "Dil Raju joined live stream", user: "Dil Raju" },
+  { id: "log_003", timestamp: "2026-02-12T10:42:00", type: "shot_approved", message: "Shot 1 — Master wide approved by Director", user: "Sukumar" },
+  { id: "log_004", timestamp: "2026-02-12T10:58:00", type: "shot_approved", message: "Shot 2 — Close-up Pushpa approved", user: "Sukumar" },
+  { id: "log_005", timestamp: "2026-02-12T11:15:00", type: "alert", message: "30 min behind schedule — stunt setup delay" },
+  { id: "log_006", timestamp: "2026-02-12T11:22:00", type: "viewer_joined", message: "Studio Admin joined live stream", user: "Admin" },
+  { id: "log_007", timestamp: "2026-02-12T11:35:00", type: "shot_approved", message: "Shot 3 — Action sequence take approved", user: "Sukumar" },
+  { id: "log_008", timestamp: "2026-02-12T09:45:00", type: "scene_wrap", message: "Scene 12 — Village celebration wrapped", user: "AD Team" },
+  { id: "log_009", timestamp: "2026-02-12T07:00:00", type: "scene_start", message: "Scene 12 — Village celebration started", user: "AD Team" },
+  { id: "log_010", timestamp: "2026-02-12T11:50:00", type: "shot_approved", message: "Shot 4 — Explosion wide take 2 approved", user: "Sukumar" },
 ];

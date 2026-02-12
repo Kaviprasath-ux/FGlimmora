@@ -44,8 +44,8 @@ export function Sidebar() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          padding: "0 20px",
-          height: 64,
+          padding: "16px 10px",
+          height: 120,
           borderBottom: "1px solid #2D2D2D",
           flexShrink: 0,
         }}
@@ -54,9 +54,8 @@ export function Sidebar() {
           src="/logo.png"
           alt="FilmGlimmora"
           style={{
-            height: 70,
+            height: "100%",
             objectFit: "contain",
-            borderRadius: 6,
           }}
         />
       </div>
@@ -165,10 +164,23 @@ export function Sidebar() {
                     fontWeight: 700,
                     padding: "2px 6px",
                     borderRadius: 10,
-                    background: "rgba(196,168,130,0.2)",
-                    color: "#C4A882",
+                    background: item.badge === "LIVE" ? "rgba(220,60,60,0.2)" : "rgba(196,168,130,0.2)",
+                    color: item.badge === "LIVE" ? "#E85C5C" : "#C4A882",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 4,
                   }}
                 >
+                  {item.badge === "LIVE" && (
+                    <span style={{
+                      width: 6,
+                      height: 6,
+                      borderRadius: "50%",
+                      background: "#E85C5C",
+                      animation: "pulse-gold 2s infinite",
+                      boxShadow: "0 0 4px rgba(220,60,60,0.6)",
+                    }} />
+                  )}
                   {item.badge}
                 </span>
               )}

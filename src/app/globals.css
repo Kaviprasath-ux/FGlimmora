@@ -147,6 +147,79 @@ body {
   animation: pulse-gold 2s infinite;
 }
 
+/* Live feed simulation */
+@keyframes feedNoise {
+  0% { background-position: 0% 0%; }
+  25% { background-position: 40% 60%; }
+  50% { background-position: 80% 20%; }
+  75% { background-position: 20% 80%; }
+  100% { background-position: 0% 0%; }
+}
+
+@keyframes scanLine {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes feedPulse {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; }
+}
+
+@keyframes timecodeFlash {
+  0%, 90% { opacity: 1; }
+  95% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+@keyframes liveDot {
+  0%, 100% { opacity: 1; box-shadow: 0 0 4px rgba(220,60,60,0.8); }
+  50% { opacity: 0.4; box-shadow: 0 0 8px rgba(220,60,60,0.4); }
+}
+
+.live-feed-bg {
+  background:
+    radial-gradient(ellipse at 30% 40%, rgba(90,80,70,0.15) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 60%, rgba(60,70,80,0.12) 0%, transparent 50%),
+    linear-gradient(180deg, #0D0D0D 0%, #141414 50%, #0A0A0A 100%);
+  background-size: 200% 200%, 200% 200%, 100% 100%;
+  animation: feedNoise 8s ease-in-out infinite, feedPulse 4s ease-in-out infinite;
+}
+
+.live-feed-scanline::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(255,255,255,0.015) 2px,
+    rgba(255,255,255,0.015) 4px
+  );
+  pointer-events: none;
+}
+
+.live-feed-sweep::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(196,168,130,0.15) 50%, transparent 100%);
+  animation: scanLine 6s linear infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.animate-live-dot {
+  animation: liveDot 1.5s ease-in-out infinite;
+}
+
+.animate-timecode {
+  animation: timecodeFlash 3s linear infinite;
+}
+
 /* Glass effect */
 .glass {
   background: rgba(38, 38, 38, 0.8);

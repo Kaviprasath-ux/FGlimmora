@@ -130,6 +130,49 @@ export function Topbar() {
 
       {/* Right section */}
       <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+        {/* Filming at Ramoji */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 8,
+            padding: "5px 12px 5px 8px",
+            borderRadius: 10,
+            background: "rgba(196,168,130,0.05)",
+            border: "1px solid rgba(196,168,130,0.1)",
+            transition: "all 0.2s ease",
+            cursor: "default",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = "rgba(196,168,130,0.08)";
+            e.currentTarget.style.borderColor = "rgba(196,168,130,0.2)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = "rgba(196,168,130,0.05)";
+            e.currentTarget.style.borderColor = "rgba(196,168,130,0.1)";
+          }}
+        >
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#6B6560" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          <span style={{ fontSize: 10, color: "#6B6560", fontWeight: 500, whiteSpace: "nowrap" }}>
+            Filming at
+          </span>
+          <img
+            src="/ramoji-logo.png"
+            alt="Ramoji Film City"
+            style={{
+              height: 24,
+              objectFit: "contain",
+              opacity: 0.85,
+            }}
+          />
+        </div>
+
+        {/* Separator */}
+        <div style={{ width: 1, height: 24, background: "#3A3A3A" }} />
+
         {/* Notifications */}
         <button
           style={{

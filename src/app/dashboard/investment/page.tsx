@@ -11,19 +11,19 @@ export default function InvestmentPage() {
   const { t } = useTranslation(investmentTranslations);
   const [selectedTimeline, setSelectedTimeline] = useState("6m");
 
-  // Investment data
-  const totalInvestment = 35000000000; // 350 Cr
-  const capitalDeployed = 24500000000; // 245 Cr
+  // Investment data (values in crores)
+  const totalInvestment = 350;
+  const capitalDeployed = 245;
   const remaining = totalInvestment - capitalDeployed;
 
-  // Deployment timeline data (monthly)
+  // Deployment timeline data (monthly, in crores)
   const deploymentData = [
-    { month: "Jan", amount: 2800000000 },
-    { month: "Feb", amount: 3200000000 },
-    { month: "Mar", amount: 4100000000 },
-    { month: "Apr", amount: 3800000000 },
-    { month: "May", amount: 4200000000 },
-    { month: "Jun", amount: 6400000000 },
+    { month: "Jan", amount: 28 },
+    { month: "Feb", amount: 32 },
+    { month: "Mar", amount: 41 },
+    { month: "Apr", amount: 38 },
+    { month: "May", amount: 42 },
+    { month: "Jun", amount: 64 },
   ];
 
   const maxDeployment = Math.max(...deploymentData.map((d) => d.amount));
@@ -32,31 +32,16 @@ export default function InvestmentPage() {
   const colors = ["#C4A882", "#5B8C5A", "#C4A042", "#5B7C8C", "#C45C5C", "#8B7355", "#7C9EB5"];
   const categoryBreakdown = budgetCategories.map((cat, i) => ({
     name: cat.name,
-    amount: cat.planned * 10000000,
+    amount: cat.planned,
     color: colors[i % colors.length],
     percentage: (cat.planned / 350) * 100,
   }));
 
-  // Comparable films
+  // Comparable films (values in crores)
   const comparableFilms = [
-    {
-      name: "Epic Saga Returns",
-      budget: 32000000000,
-      revenue: 68000000000,
-      roi: 112.5,
-    },
-    {
-      name: "Kingdom Chronicles",
-      budget: 38000000000,
-      revenue: 82000000000,
-      roi: 115.8,
-    },
-    {
-      name: "Legacy of Warriors",
-      budget: 29000000000,
-      revenue: 59000000000,
-      roi: 103.4,
-    },
+    { name: "Epic Saga Returns", budget: 320, revenue: 680, roi: 112.5 },
+    { name: "Kingdom Chronicles", budget: 380, revenue: 820, roi: 115.8 },
+    { name: "Legacy of Warriors", budget: 290, revenue: 590, roi: 103.4 },
   ];
 
   // Investment protection score (0-100)
@@ -64,10 +49,10 @@ export default function InvestmentPage() {
 
   // Capital call schedule
   const capitalCalls = [
-    { date: "2025-03-15", amount: 2500000000, purposeKey: "vfxProduction" },
-    { date: "2025-04-01", amount: 1800000000, purposeKey: "marketingCampaign" },
-    { date: "2025-04-20", amount: 3200000000, purposeKey: "postProduction" },
-    { date: "2025-05-10", amount: 2500000000, purposeKey: "distribution" },
+    { date: "2025-03-15", amount: 25, purposeKey: "vfxProduction" },
+    { date: "2025-04-01", amount: 18, purposeKey: "marketingCampaign" },
+    { date: "2025-04-20", amount: 32, purposeKey: "postProduction" },
+    { date: "2025-05-10", amount: 25, purposeKey: "distribution" },
   ];
 
   return (

@@ -11,38 +11,38 @@ export default function BreakEvenPage() {
   const { t } = useTranslation(breakEvenTranslations);
   const [selectedScenario, setSelectedScenario] = useState("expected");
 
-  // Budget data
-  const totalBudget = 35000000000; // 350 Cr
-  const projectedRevenue = 76100000000; // 761 Cr
-  const breakEvenPoint = 28500000000; // 285 Cr (including distribution costs)
+  // Budget data (values in crores)
+  const totalBudget = 350;
+  const projectedRevenue = 761;
+  const breakEvenPoint = 285;
 
   // Revenue streams with cumulative data
   const revenueBreakdown = [
-    { name: "Theatrical", amount: 45000000000, color: "#C4A882", cumulative: 45000000000 },
-    { name: "OTT Rights", amount: 18000000000, color: "#5B7C8C", cumulative: 63000000000 },
-    { name: "Satellite Rights", amount: 8500000000, color: "#5B8C5A", cumulative: 71500000000 },
-    { name: "Music Rights", amount: 4600000000, color: "#C4A042", cumulative: 76100000000 },
+    { name: "Theatrical", amount: 450, color: "#C4A882", cumulative: 450 },
+    { name: "OTT Rights", amount: 180, color: "#5B7C8C", cumulative: 630 },
+    { name: "Satellite Rights", amount: 85, color: "#5B8C5A", cumulative: 715 },
+    { name: "Music Rights", amount: 46, color: "#C4A042", cumulative: 761 },
   ];
 
   // Scenarios comparison
   const scenarios = {
     best: {
       nameKey: "bestCase",
-      revenue: 92000000000,
+      revenue: 920,
       roi: 162.9,
       breakEvenWeek: 1,
       color: "#5B8C5A",
     },
     expected: {
       nameKey: "expectedCase",
-      revenue: 76100000000,
+      revenue: 761,
       roi: 117.4,
       breakEvenWeek: 2,
       color: "#C4A882",
     },
     worst: {
       nameKey: "worstCase",
-      revenue: 52000000000,
+      revenue: 520,
       roi: 48.6,
       breakEvenWeek: 4,
       color: "#C4A042",
@@ -51,11 +51,11 @@ export default function BreakEvenPage() {
 
   // Time to break-even (weekly collection curve)
   const collectionCurve = [
-    { week: "Week 1", collection: 18500000000, cumulative: 18500000000 },
-    { week: "Week 2", collection: 12000000000, cumulative: 30500000000 },
-    { week: "Week 3", collection: 7500000000, cumulative: 38000000000 },
-    { week: "Week 4", collection: 4200000000, cumulative: 42200000000 },
-    { week: "Week 5+", collection: 3800000000, cumulative: 46000000000 },
+    { week: "Week 1", collection: 185, cumulative: 185 },
+    { week: "Week 2", collection: 120, cumulative: 305 },
+    { week: "Week 3", collection: 75, cumulative: 380 },
+    { week: "Week 4", collection: 42, cumulative: 422 },
+    { week: "Week 5+", collection: 38, cumulative: 460 },
   ];
 
   const maxCollection = Math.max(...collectionCurve.map((w) => w.collection));
@@ -101,79 +101,47 @@ export default function BreakEvenPage() {
           {t("budgetVsProjectedRevenue")}
         </h2>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "48px" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
           {/* Budget Bar */}
-          <div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                marginBottom: "16px",
-              }}
-            >
-              <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                <LucideIcon name="DollarSign" size={20} color="#C45C5C" />
-                <span style={{ color: "#E8E0D4", fontSize: "16px", fontWeight: "500" }}>
-                  {t("totalBudget")}
-                </span>
-              </div>
-              <span style={{ color: "#C45C5C", fontSize: "24px", fontWeight: "600" }}>
-                {formatCrores(totalBudget)}
-              </span>
-            </div>
-            <div
-              style={{
-                height: "48px",
-                backgroundColor: "#C45C5C",
-                borderRadius: "12px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "#E8E0D4",
-                fontWeight: "600",
-              }}
-            >
-              {t("productionMarketingDistribution")}
-            </div>
+          <div
+            style={{
+              height: "48px",
+              backgroundColor: "#C45C5C",
+              borderRadius: "12px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              padding: "0 16px",
+              color: "#E8E0D4",
+            }}
+          >
+            <span style={{ fontSize: "13px", fontWeight: "600" }}>
+              {t("totalBudget")} — {t("productionMarketingDistribution")}
+            </span>
+            <span style={{ fontSize: "18px", fontWeight: "700" }}>
+              {formatCrores(totalBudget)}
+            </span>
           </div>
 
           {/* Revenue Bar */}
-          <div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                marginBottom: "16px",
-              }}
-            >
-              <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                <LucideIcon name="TrendingUp" size={20} color="#5B8C5A" />
-                <span style={{ color: "#E8E0D4", fontSize: "16px", fontWeight: "500" }}>
-                  {t("projectedRevenue")}
-                </span>
-              </div>
-              <span style={{ color: "#5B8C5A", fontSize: "24px", fontWeight: "600" }}>
-                {formatCrores(projectedRevenue)}
-              </span>
-            </div>
-            <div
-              style={{
-                height: "48px",
-                backgroundColor: "#5B8C5A",
-                borderRadius: "12px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "#E8E0D4",
-                fontWeight: "600",
-                position: "relative",
-                width: `${(projectedRevenue / totalBudget) * 100}%`,
-              }}
-            >
-              {t("allRevenueStreams")}
-            </div>
+          <div
+            style={{
+              height: "48px",
+              backgroundColor: "#5B8C5A",
+              borderRadius: "12px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              padding: "0 16px",
+              color: "#E8E0D4",
+            }}
+          >
+            <span style={{ fontSize: "13px", fontWeight: "600" }}>
+              {t("projectedRevenue")} — {t("allRevenueStreams")}
+            </span>
+            <span style={{ fontSize: "18px", fontWeight: "700" }}>
+              {formatCrores(projectedRevenue)}
+            </span>
           </div>
         </div>
 

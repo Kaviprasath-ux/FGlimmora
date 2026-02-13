@@ -7,6 +7,8 @@ import {
   Heart, PieChart, Link, Rocket, Star, FolderOpen, UserCog, Settings, Warehouse,
   ClipboardList, Wrench, Film, Clapperboard, HardHat, Landmark,
   Radio, Lock, Eye, History, Activity, Play, Check, Circle,
+  GripVertical, ArrowUpDown, Upload, FileUp, Receipt, Banknote, Download, FileDown, Printer,
+  X, Pencil, Trash2, Info, AlertCircle, File, Plus,
 } from "lucide-react";
 import type { LucideProps } from "lucide-react";
 
@@ -58,6 +60,22 @@ const iconMap: Record<string, React.ComponentType<LucideProps>> = {
   Play,
   Check,
   Circle,
+  GripVertical,
+  ArrowUpDown,
+  Upload,
+  FileUp,
+  Receipt,
+  Banknote,
+  Download,
+  FileDown,
+  Printer,
+  X,
+  Pencil,
+  Trash2,
+  Info,
+  AlertCircle,
+  File,
+  Plus,
 };
 
 interface LucideIconProps extends Omit<LucideProps, "ref"> {

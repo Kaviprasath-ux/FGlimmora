@@ -63,6 +63,13 @@ export const reportsTranslations: Record<string, Record<string, string>> = {
     to: "To",
     generateCustomReport: "Generate Custom Report",
     modulesSelected: "modules selected",
+
+    // Export
+    downloadCSV: "Download CSV",
+    printReport: "Print Report",
+    exportAll: "Export All Reports",
+    downloading: "Downloading...",
+    exported: "Exported",
   },
   te: {
     // Header
@@ -128,5 +135,12 @@ export const reportsTranslations: Record<string, Record<string, string>> = {
     to: "వరకు",
     generateCustomReport: "కస్టమ్ రిపోర్ట్ రూపొందించు",
     modulesSelected: "మాడ్యూల్స్ ఎంచుకోబడ్డాయి",
+
+    // Export
+    downloadCSV: "CSV డౌన్‌లోడ్",
+    printReport: "రిపోర్ట్ ప్రింట్",
+    exportAll: "అన్ని రిపోర్ట్‌లను ఎక్స్‌పోర్ట్ చేయండి",
+    downloading: "డౌన్‌లోడ్ అవుతోంది...",
+    exported: "ఎక్స్‌పోర్ట్ చేయబడింది",
   },
 };

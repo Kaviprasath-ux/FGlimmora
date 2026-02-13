@@ -228,3 +228,74 @@ export interface WhatIfScenario {
     riskChange: string;
   };
 }
+
+export interface StripBoardScene {
+  sceneId: string;
+  sceneNumber: number;
+  description: string;
+  location: string;
+  complexity: Scene["complexity"];
+  castNeeded: string[];
+  estimatedCost: number;
+  estimatedDuration: number;
+  order: number;
+}
+
+export interface DayBreak {
+  id: string;
+  dayNumber: number;
+  location: string;
+  afterOrder: number;
+}
+
+export interface PurchaseOrder {
+  id: string;
+  poNumber: string;
+  vendor: string;
+  description: string;
+  category: string;
+  amount: number;
+  requestedBy: string;
+  requestedDate: string;
+  status: "pending" | "approved" | "rejected";
+  approvedBy?: string;
+  approvedDate?: string;
+  notes?: string;
+}
+
+export interface CostReport {
+  id: string;
+  category: string;
+  planned: number;
+  actual: number;
+  committed: number;
+  variance: number;
+  variancePercent: number;
+}
+
+export interface AuditEntry {
+  id: string;
+  timestamp: string;
+  action: string;
+  user: string;
+  module: string;
+  details: string;
+  amount?: number;
+  status?: "success" | "warning" | "info";
+}
+
+export interface ActivityEvent {
+  id: string;
+  timestamp: string;
+  category: "approval" | "budget" | "schedule" | "vfx" | "marketing" | "access" | "system";
+  user: string;
+  userRole: string;
+  description: string;
+  metadata?: {
+    amount?: number;
+    module?: string;
+    status?: string;
+    oldValue?: string;
+    newValue?: string;
+  };
+}

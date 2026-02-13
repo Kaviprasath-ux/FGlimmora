@@ -3,6 +3,7 @@ import type {
   Campaign, RevenueStream, Approval, RiskAlert, DailyProgress,
   DistributionTerritory, CrewMember, WhatIfScenario, StatItem,
   LiveCamera, LiveStreamSession, StreamActivityLog,
+  StripBoardScene, DayBreak, PurchaseOrder, AuditEntry, ActivityEvent,
 } from "@/lib/types";
 
 // ═══════════════════════════════════════════════════════════
@@ -479,4 +480,98 @@ export const streamActivityLog: StreamActivityLog[] = [
   { id: "log_008", timestamp: "2026-02-12T09:45:00", type: "scene_wrap", message: "Scene 12 — Village celebration wrapped", user: "AD Team" },
   { id: "log_009", timestamp: "2026-02-12T07:00:00", type: "scene_start", message: "Scene 12 — Village celebration started", user: "AD Team" },
   { id: "log_010", timestamp: "2026-02-12T11:50:00", type: "shot_approved", message: "Shot 4 — Explosion wide take 2 approved", user: "Sukumar" },
+];
+
+// ═══════════════════════════════════════════════════════════
+// STRIP BOARD
+// ═══════════════════════════════════════════════════════════
+
+export const stripBoardScenes: StripBoardScene[] = [
+  { sceneId: "sc_001", sceneNumber: 1, description: "Opening - Red sandalwood forest chase at dawn", location: "Seshachalam Forest", complexity: "action", castNeeded: ["Pushpa", "Henchmen"], estimatedCost: 2.5, estimatedDuration: 3, order: 0 },
+  { sceneId: "sc_002", sceneNumber: 2, description: "Pushpa's grand entry in village market", location: "Ramoji Film City - Village Set", complexity: "action", castNeeded: ["Pushpa", "Srivalli", "Villagers"], estimatedCost: 1.8, estimatedDuration: 2, order: 1 },
+  { sceneId: "sc_011", sceneNumber: 11, description: "Police station confrontation", location: "Studio Set - Police Station", complexity: "dialogue", castNeeded: ["Pushpa", "SP Bhanwar Singh"], estimatedCost: 0.6, estimatedDuration: 1.5, order: 2 },
+  { sceneId: "sc_003", sceneNumber: 3, description: "Srivalli emotional confrontation scene", location: "Indoor Studio - House Set", complexity: "dialogue", castNeeded: ["Pushpa", "Srivalli"], estimatedCost: 0.5, estimatedDuration: 1, order: 3 },
+  { sceneId: "sc_004", sceneNumber: 4, description: "Smuggling warehouse raid sequence", location: "Vizag Port Area", complexity: "action", castNeeded: ["Pushpa", "Antagonist", "Police"], estimatedCost: 4.2, estimatedDuration: 4, order: 4 },
+  { sceneId: "sc_012", sceneNumber: 12, description: "Village celebration mass dance", location: "Ramoji Film City", complexity: "song", castNeeded: ["Pushpa", "Srivalli", "Villagers", "Dancers"], estimatedCost: 3.5, estimatedDuration: 3, order: 5 },
+  { sceneId: "sc_005", sceneNumber: 5, description: "Interval fight - Truck chase on highway", location: "Outer Ring Road, Hyderabad", complexity: "stunt", castNeeded: ["Pushpa", "Stunt doubles"], estimatedCost: 8.5, estimatedDuration: 6, order: 6 },
+  { sceneId: "sc_007", sceneNumber: 7, description: "International syndicate boardroom scene", location: "Indoor Studio - Office Set", complexity: "dialogue", castNeeded: ["Antagonist", "Syndicate members"], estimatedCost: 0.8, estimatedDuration: 1, order: 7 },
+  { sceneId: "sc_006", sceneNumber: 6, description: "Romantic song - Pushpa & Srivalli in Europe", location: "Switzerland", complexity: "song", castNeeded: ["Pushpa", "Srivalli", "Dancers"], estimatedCost: 5.0, estimatedDuration: 5, order: 8 },
+  { sceneId: "sc_008", sceneNumber: 8, description: "Mass item song in underworld den", location: "Custom Built Set - Annapurna Studios", complexity: "song", castNeeded: ["Pushpa", "Item dancer", "Background dancers"], estimatedCost: 6.0, estimatedDuration: 4, order: 9 },
+  { sceneId: "sc_009", sceneNumber: 9, description: "Climax fight on cargo ship", location: "Vizag Shipyard + VFX", complexity: "stunt", castNeeded: ["Pushpa", "Antagonist", "Stunt team"], estimatedCost: 12.0, estimatedDuration: 8, order: 10 },
+  { sceneId: "sc_010", sceneNumber: 10, description: "Emotional climax - Pushpa's sacrifice scene", location: "Forest Set", complexity: "dialogue", castNeeded: ["Pushpa", "Srivalli", "Supporting cast"], estimatedCost: 1.5, estimatedDuration: 2, order: 11 },
+];
+
+export const dayBreaks: DayBreak[] = [
+  { id: "db_001", dayNumber: 1, location: "Seshachalam Forest", afterOrder: -1 },
+  { id: "db_002", dayNumber: 2, location: "Ramoji Film City", afterOrder: 1 },
+  { id: "db_003", dayNumber: 3, location: "Studio Sets", afterOrder: 3 },
+  { id: "db_004", dayNumber: 4, location: "Vizag Port Area", afterOrder: 5 },
+  { id: "db_005", dayNumber: 5, location: "Outer Ring Road", afterOrder: 6 },
+  { id: "db_006", dayNumber: 6, location: "Indoor Studio / Switzerland", afterOrder: 8 },
+  { id: "db_007", dayNumber: 7, location: "Annapurna Studios", afterOrder: 9 },
+  { id: "db_008", dayNumber: 8, location: "Vizag Shipyard", afterOrder: 10 },
+];
+
+// ═══════════════════════════════════════════════════════════
+// PURCHASE ORDERS (Finance Module)
+// ═══════════════════════════════════════════════════════════
+
+export const purchaseOrders: PurchaseOrder[] = [
+  { id: "po_001", poNumber: "PO-2026-001", vendor: "DNEG India", description: "VFX shots for climax ship explosion — 4 full-CG shots", category: "VFX & Post Production", amount: 4.5, requestedBy: "Srinivas Mohan", requestedDate: "2026-02-08", status: "pending" },
+  { id: "po_002", poNumber: "PO-2026-002", vendor: "Ramoji Group", description: "Extended set rental — Village set for 10 additional days", category: "Locations & Sets", amount: 2.8, requestedBy: "Rajesh Naidu", requestedDate: "2026-02-07", status: "pending" },
+  { id: "po_003", poNumber: "PO-2026-003", vendor: "DSP Music", description: "Background score recording — 45 tracks orchestral", category: "Music & Songs", amount: 1.2, requestedBy: "Sukumar", requestedDate: "2026-02-06", status: "pending" },
+  { id: "po_004", poNumber: "PO-2026-004", vendor: "Framestore UK", description: "Crowd multiplication VFX for scenes 9, 12", category: "VFX & Post Production", amount: 2.0, requestedBy: "Srinivas Mohan", requestedDate: "2026-02-05", status: "approved", approvedBy: "Dil Raju", approvedDate: "2026-02-06" },
+  { id: "po_005", poNumber: "PO-2026-005", vendor: "Swiss Location Services", description: "Location permits & logistics for Switzerland song shoot", category: "Locations & Sets", amount: 3.5, requestedBy: "Rajesh Naidu", requestedDate: "2026-02-04", status: "approved", approvedBy: "Dil Raju", approvedDate: "2026-02-05" },
+  { id: "po_006", poNumber: "PO-2026-006", vendor: "Stunt Solutions Intl", description: "Stunt rigging equipment for highway chase sequence", category: "Production & Crew", amount: 0.8, requestedBy: "Ram-Lakshman", requestedDate: "2026-02-03", status: "approved", approvedBy: "Rajesh Naidu", approvedDate: "2026-02-04" },
+  { id: "po_007", poNumber: "PO-2026-007", vendor: "Local Transport Co", description: "50 trucks rental for highway chase scene blocking", category: "Production & Crew", amount: 0.5, requestedBy: "Rajesh Naidu", requestedDate: "2026-02-01", status: "rejected", notes: "Too expensive, sourcing alternatives" },
+  { id: "po_008", poNumber: "PO-2026-008", vendor: "Resul Pookutty Audio", description: "Dolby Atmos sound design & mixing sessions", category: "VFX & Post Production", amount: 1.8, requestedBy: "Sukumar", requestedDate: "2026-01-30", status: "approved", approvedBy: "Dil Raju", approvedDate: "2026-02-01" },
+];
+
+// ═══════════════════════════════════════════════════════════
+// AUDIT ENTRIES (Finance Module)
+// ═══════════════════════════════════════════════════════════
+
+export const auditEntries: AuditEntry[] = [
+  { id: "aud_001", timestamp: "2026-02-12T10:30:00", action: "PO Submitted", user: "Srinivas Mohan", module: "Finance", details: "PO-2026-001 submitted for DNEG India — ₹4.5 Cr VFX work", amount: 4.5, status: "info" },
+  { id: "aud_002", timestamp: "2026-02-12T09:15:00", action: "Budget Revised", user: "Dil Raju", module: "Budget", details: "VFX budget category increased from ₹80 Cr to ₹85 Cr", amount: 5, status: "warning" },
+  { id: "aud_003", timestamp: "2026-02-11T16:45:00", action: "PO Approved", user: "Dil Raju", module: "Finance", details: "PO-2026-004 approved — Framestore crowd VFX ₹2 Cr", amount: 2, status: "success" },
+  { id: "aud_004", timestamp: "2026-02-11T14:20:00", action: "Payment Released", user: "Finance Team", module: "Finance", details: "Payment to Ramoji Group — Set rental Q1 ₹3.5 Cr", amount: 3.5, status: "success" },
+  { id: "aud_005", timestamp: "2026-02-11T11:00:00", action: "PO Rejected", user: "Dil Raju", module: "Finance", details: "PO-2026-007 rejected — Transport rental too expensive", amount: 0.5, status: "warning" },
+  { id: "aud_006", timestamp: "2026-02-10T15:30:00", action: "Cost Overrun Alert", user: "System", module: "Budget", details: "Set Construction category exceeded planned budget by 8.3%", status: "warning" },
+  { id: "aud_007", timestamp: "2026-02-10T10:00:00", action: "PO Submitted", user: "Rajesh Naidu", module: "Finance", details: "PO-2026-002 submitted — Ramoji set rental extension", amount: 2.8, status: "info" },
+  { id: "aud_008", timestamp: "2026-02-09T17:00:00", action: "Vendor Onboarded", user: "Srinivas Mohan", module: "VFX", details: "Makuta VFX onboarded as additional VFX vendor", status: "info" },
+  { id: "aud_009", timestamp: "2026-02-09T12:00:00", action: "Budget Approval", user: "Dil Raju", module: "Budget", details: "Approved ₹2.5 Cr overrun for village set construction", amount: 2.5, status: "success" },
+  { id: "aud_010", timestamp: "2026-02-08T09:30:00", action: "PO Approved", user: "Rajesh Naidu", module: "Finance", details: "PO-2026-006 approved — Stunt equipment ₹0.8 Cr", amount: 0.8, status: "success" },
+];
+
+// ═══════════════════════════════════════════════════════════
+// ACTIVITY EVENTS (Global Audit Trail)
+// ═══════════════════════════════════════════════════════════
+
+export const activityEvents: ActivityEvent[] = [
+  { id: "evt_001", timestamp: "2026-02-13T10:32:00", category: "approval", user: "Dil Raju", userRole: "Producer", description: "Approved VFX budget increase request for climax sequence", metadata: { amount: 3.5, module: "Budget", status: "approved" } },
+  { id: "evt_002", timestamp: "2026-02-13T10:15:00", category: "schedule", user: "Rajesh Naidu", userRole: "Production Head", description: "Updated shoot schedule — added 2 extra days for highway chase", metadata: { module: "Schedule", oldValue: "3 days", newValue: "5 days" } },
+  { id: "evt_003", timestamp: "2026-02-13T09:45:00", category: "budget", user: "Finance Team", userRole: "System", description: "Released payment to DNEG India for Q1 VFX deliverables", metadata: { amount: 8.5, module: "Finance", status: "completed" } },
+  { id: "evt_004", timestamp: "2026-02-13T09:20:00", category: "access", user: "Studio Admin", userRole: "Admin", description: "Granted Makuta VFX team access to shot pipeline module", metadata: { module: "VFX" } },
+  { id: "evt_005", timestamp: "2026-02-13T08:50:00", category: "system", user: "System", userRole: "System", description: "Daily backup completed — all project data synced", metadata: { module: "System", status: "success" } },
+  { id: "evt_006", timestamp: "2026-02-12T17:30:00", category: "vfx", user: "Srinivas Mohan", userRole: "VFX Head", description: "Approved Shot 4 — Explosion wide take 2 from DNEG", metadata: { module: "VFX", status: "approved" } },
+  { id: "evt_007", timestamp: "2026-02-12T16:00:00", category: "schedule", user: "AD Team", userRole: "Production", description: "Scene 4 — Warehouse raid sequence wrapped for the day", metadata: { module: "Production" } },
+  { id: "evt_008", timestamp: "2026-02-12T15:20:00", category: "budget", user: "Rajesh Naidu", userRole: "Production Head", description: "Submitted PO for extended Ramoji Film City set rental", metadata: { amount: 2.8, module: "Finance", status: "pending" } },
+  { id: "evt_009", timestamp: "2026-02-12T14:00:00", category: "marketing", user: "Priya Sharma", userRole: "Marketing Head", description: "Launched BTS content series Phase 2 on Instagram", metadata: { module: "Marketing", status: "active" } },
+  { id: "evt_010", timestamp: "2026-02-12T11:15:00", category: "schedule", user: "System", userRole: "System", description: "Alert: Shoot running 30 min behind schedule — stunt setup delay", metadata: { module: "Production", status: "warning" } },
+  { id: "evt_011", timestamp: "2026-02-12T10:30:00", category: "schedule", user: "AD Team", userRole: "Production", description: "Scene 4 — Warehouse raid sequence started shooting", metadata: { module: "Production" } },
+  { id: "evt_012", timestamp: "2026-02-12T09:45:00", category: "schedule", user: "AD Team", userRole: "Production", description: "Scene 12 — Village celebration mass dance wrapped", metadata: { module: "Production", status: "completed" } },
+  { id: "evt_013", timestamp: "2026-02-11T16:45:00", category: "approval", user: "Dil Raju", userRole: "Producer", description: "Approved PO-2026-004 — Framestore crowd VFX work", metadata: { amount: 2.0, module: "Finance", status: "approved" } },
+  { id: "evt_014", timestamp: "2026-02-11T14:20:00", category: "budget", user: "Finance Team", userRole: "System", description: "Released payment to Ramoji Group — Set rental Q1", metadata: { amount: 3.5, module: "Finance", status: "completed" } },
+  { id: "evt_015", timestamp: "2026-02-11T11:00:00", category: "approval", user: "Dil Raju", userRole: "Producer", description: "Rejected PO-2026-007 — Transport rental cost too high", metadata: { amount: 0.5, module: "Finance", status: "rejected" } },
+  { id: "evt_016", timestamp: "2026-02-11T09:30:00", category: "vfx", user: "Srinivas Mohan", userRole: "VFX Head", description: "Submitted 3 new VFX shots for review — Scene 1 composites", metadata: { module: "VFX" } },
+  { id: "evt_017", timestamp: "2026-02-10T15:30:00", category: "budget", user: "System", userRole: "System", description: "Cost overrun alert: Set Construction exceeded budget by 8.3%", metadata: { module: "Budget", status: "warning" } },
+  { id: "evt_018", timestamp: "2026-02-10T12:00:00", category: "marketing", user: "Priya Sharma", userRole: "Marketing Head", description: "Song promo campaign 'Angaaron' reached 28M impressions", metadata: { module: "Marketing", status: "active" } },
+  { id: "evt_019", timestamp: "2026-02-10T10:00:00", category: "schedule", user: "Rajesh Naidu", userRole: "Production Head", description: "Rain delay on Day 10 — Scene 12 shifted to next day", metadata: { module: "Schedule", status: "warning" } },
+  { id: "evt_020", timestamp: "2026-02-09T17:00:00", category: "vfx", user: "Srinivas Mohan", userRole: "VFX Head", description: "Onboarded Makuta VFX as additional vendor for crowd shots", metadata: { module: "VFX" } },
+  { id: "evt_021", timestamp: "2026-02-09T12:00:00", category: "approval", user: "Dil Raju", userRole: "Producer", description: "Approved ₹2.5 Cr budget overrun for village set construction", metadata: { amount: 2.5, module: "Budget", status: "approved" } },
+  { id: "evt_022", timestamp: "2026-02-08T15:00:00", category: "schedule", user: "AD Team", userRole: "Production", description: "Police station scene completed ahead of schedule", metadata: { module: "Production", status: "completed" } },
+  { id: "evt_023", timestamp: "2026-02-08T09:30:00", category: "approval", user: "Rajesh Naidu", userRole: "Production Head", description: "Approved PO-2026-006 — Stunt rigging equipment ₹0.8 Cr", metadata: { amount: 0.8, module: "Finance", status: "approved" } },
+  { id: "evt_024", timestamp: "2026-02-07T14:00:00", category: "access", user: "Studio Admin", userRole: "Admin", description: "Updated user permissions — added Director view for Script Import", metadata: { module: "System" } },
+  { id: "evt_025", timestamp: "2026-02-07T10:00:00", category: "system", user: "System", userRole: "System", description: "Platform maintenance completed — performance optimization deployed", metadata: { module: "System", status: "success" } },
 ];

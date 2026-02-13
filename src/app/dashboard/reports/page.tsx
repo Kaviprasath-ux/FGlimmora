@@ -1,11 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { budgetCategories, vfxShots, revenueStreams, riskAlerts, shootingSchedule } from "@/data/mock-data";
+import { budgetCategories, vfxShots, revenueStreams, riskAlerts, shootingSchedule, scenes, dailyProgress } from "@/data/mock-data";
 import { formatCrores, formatDate } from "@/lib/utils";
 import { LucideIcon } from "@/components/icons/LucideIcon";
 import { useTranslation } from "@/lib/translations";
 import { reportsTranslations } from "@/lib/translations/reports";
+import { exportToCSV } from "@/lib/export-utils";
 
 type ReportType = "budget" | "schedule" | "vfx" | "revenue" | "risk" | "production" | null;
 
@@ -80,6 +81,114 @@ export default function ReportsPage() {
     setSelectedModules((prev) =>
       prev.includes(moduleId) ? prev.filter((m) => m !== moduleId) : [...prev, moduleId]
     );
+  };
+
+  const handleExportCSV = (reportType: ReportType) => {
+    switch (reportType) {
+      case "budget":
+        exportToCSV(
+          budgetCategories.map((c) => ({
+            Category: c.name,
+            "Planned (Cr)": c.planned,
+            "Actual (Cr)": c.actual,
+            "Variance (Cr)": (c.actual - c.planned).toFixed(1),
+            "Variance %": (((c.actual - c.planned) / c.planned) * 100).toFixed(1) + "%",
+            Items: c.items.length,
+          })),
+          "FilmGlimmora_Budget_Report"
+        );
+        break;
+      case "schedule":
+        exportToCSV(
+          shootingSchedule.map((s) => ({
+            Day: s.dayNumber,
+            Date: s.date,
+            Location: s.location,
+            Scenes: s.scenes.join(", "),
+            Status: s.status,
+            Notes: s.notes || "",
+          })),
+          "FilmGlimmora_Schedule_Report"
+        );
+        break;
+      case "vfx":
+        exportToCSV(
+          vfxShots.map((s) => ({
+            Scene: s.sceneNumber,
+            Shot: s.shotNumber,
+            Type: s.type,
+            Complexity: s.complexity,
+            "Est. Cost (Cr)": s.estimatedCost,
+            "Actual Cost (Cr)": s.actualCost,
+            Vendor: s.vendor,
+            Status: s.status,
+            Reworks: s.reworkCount,
+          })),
+          "FilmGlimmora_VFX_Report"
+        );
+        break;
+      case "revenue":
+        exportToCSV(
+          revenueStreams.map((r) => ({
+            Type: r.type,
+            Territory: r.territory,
+            "Projected (Cr)": r.projected,
+            "Actual (Cr)": r.actual,
+          })),
+          "FilmGlimmora_Revenue_Report"
+        );
+        break;
+      case "risk":
+        exportToCSV(
+          riskAlerts.map((r) => ({
+            Type: r.type,
+            Severity: r.severity,
+            Description: r.description,
+            "Impact (Cr)": r.impactAmount,
+            Mitigated: r.mitigated ? "Yes" : "No",
+          })),
+          "FilmGlimmora_Risk_Report"
+        );
+        break;
+      case "production":
+        exportToCSV(
+          scenes.map((s) => ({
+            Scene: s.sceneNumber,
+            Description: s.description,
+            Location: s.location,
+            Complexity: s.complexity,
+            "Cost (Cr)": s.estimatedCost,
+            "Duration (days)": s.estimatedDuration,
+            Status: s.status,
+            Cast: s.castNeeded.join(", "),
+          })),
+          "FilmGlimmora_Production_Report"
+        );
+        break;
+    }
+  };
+
+  const handleCustomExport = () => {
+    const rows: Record<string, unknown>[] = [];
+    if (selectedModules.includes("budget")) {
+      budgetCategories.forEach((c) => rows.push({ Module: "Budget", Category: c.name, Planned: c.planned, Actual: c.actual }));
+    }
+    if (selectedModules.includes("schedule")) {
+      shootingSchedule.forEach((s) => rows.push({ Module: "Schedule", Day: s.dayNumber, Date: s.date, Location: s.location, Status: s.status }));
+    }
+    if (selectedModules.includes("vfx")) {
+      vfxShots.forEach((s) => rows.push({ Module: "VFX", Scene: s.sceneNumber, Shot: s.shotNumber, Type: s.type, Vendor: s.vendor, Status: s.status }));
+    }
+    if (selectedModules.includes("revenue")) {
+      revenueStreams.forEach((r) => rows.push({ Module: "Revenue", Type: r.type, Territory: r.territory, Projected: r.projected }));
+    }
+    if (selectedModules.includes("risks")) {
+      riskAlerts.forEach((r) => rows.push({ Module: "Risk", Type: r.type, Severity: r.severity, Description: r.description, Impact: r.impactAmount }));
+    }
+    if (selectedModules.includes("daily")) {
+      dailyProgress.forEach((d) => rows.push({ Module: "Daily Progress", Date: d.date, Scenes: d.scenesCompleted, Spend: d.budgetSpentToday, Notes: d.notes }));
+    }
+    if (rows.length > 0) exportToCSV(rows, "FilmGlimmora_Custom_Report");
   };
 
   const getReportSummary = (reportType: ReportType) => {
@@ -242,24 +351,48 @@ export default function ReportsPage() {
                   {formatDate(report.lastGenerated)}
                 </div>
               </div>
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  console.log(`Generating ${report.title}`);
-                }}
-                style={{
-                  background: report.color,
-                  color: "#1A1A1A",
-                  border: "none",
-                  padding: "0.5rem 1rem",
-                  borderRadius: "0.5rem",
-                  fontSize: "0.875rem",
-                  fontWeight: "600",
-                  cursor: "pointer",
-                }}
-              >
-                {t("generate")}
-              </button>
+              <div style={{ display: "flex", gap: "0.5rem" }}>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleExportCSV(report.id);
+                  }}
+                  style={{
+                    background: "#333333",
+                    color: "#C4A882",
+                    border: "1px solid #3A3A3A",
+                    padding: "0.5rem 0.75rem",
+                    borderRadius: "0.5rem",
+                    fontSize: "0.75rem",
+                    fontWeight: "600",
+                    cursor: "pointer",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.375rem",
+                  }}
+                >
+                  <LucideIcon name="Download" size={14} color="#C4A882" />
+                  CSV
+                </button>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedReport(report.id);
+                  }}
+                  style={{
+                    background: report.color,
+                    color: "#1A1A1A",
+                    border: "none",
+                    padding: "0.5rem 1rem",
+                    borderRadius: "0.5rem",
+                    fontSize: "0.875rem",
+                    fontWeight: "600",
+                    cursor: "pointer",
+                  }}
+                >
+                  {t("generate")}
+                </button>
+              </div>
             </div>
           </div>
         ))}
@@ -281,24 +414,44 @@ export default function ReportsPage() {
               {reports.find((r) => r.id === selectedReport)?.title} {t("preview")}
             </h2>
             <div style={{ display: "flex", gap: "0.5rem" }}>
-              {["PDF", "Excel", "CSV"].map((format) => (
-                <button
-                  key={format}
-                  onClick={() => console.log(`Download ${format}`)}
-                  style={{
-                    background: "#333333",
-                    color: "#C4A882",
-                    border: "1px solid #3A3A3A",
-                    padding: "0.5rem 1rem",
-                    borderRadius: "0.5rem",
-                    fontSize: "0.875rem",
-                    fontWeight: "600",
-                    cursor: "pointer",
-                  }}
-                >
-                  {format}
-                </button>
-              ))}
+              <button
+                onClick={() => handleExportCSV(selectedReport)}
+                style={{
+                  background: "#333333",
+                  color: "#C4A882",
+                  border: "1px solid #3A3A3A",
+                  padding: "0.5rem 1rem",
+                  borderRadius: "0.5rem",
+                  fontSize: "0.875rem",
+                  fontWeight: "600",
+                  cursor: "pointer",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.375rem",
+                }}
+              >
+                <LucideIcon name="Download" size={16} color="#C4A882" />
+                {t("downloadCSV")}
+              </button>
+              <button
+                onClick={() => window.print()}
+                style={{
+                  background: "#333333",
+                  color: "#C4A882",
+                  border: "1px solid #3A3A3A",
+                  padding: "0.5rem 1rem",
+                  borderRadius: "0.5rem",
+                  fontSize: "0.875rem",
+                  fontWeight: "600",
+                  cursor: "pointer",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.375rem",
+                }}
+              >
+                <LucideIcon name="Printer" size={16} color="#C4A882" />
+                {t("printReport")}
+              </button>
             </div>
           </div>
           <div
@@ -459,7 +612,7 @@ export default function ReportsPage() {
 
             {/* Generate Button */}
             <button
-              onClick={() => console.log("Generating custom report", { selectedModules, dateRange })}
+              onClick={handleCustomExport}
               disabled={selectedModules.length === 0}
               style={{
                 background: selectedModules.length === 0 ? "#333333" : "#C4A882",

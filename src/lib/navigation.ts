@@ -36,7 +36,10 @@ export function getNavigationForRole(role: UserRole): NavItem[] {
       return [
         { label: "Home", href: "/dashboard", icon: "LayoutDashboard" },
         { label: "Script Overview", href: "/dashboard/script", icon: "FileText" },
+        { label: "Strip Board", href: "/dashboard/strip-board", icon: "ArrowUpDown" },
+        { label: "Script Import", href: "/dashboard/script-import", icon: "FileUp" },
         { label: "Budget & Cost", href: "/dashboard/budget", icon: "IndianRupee" },
+        { label: "Finance", href: "/dashboard/finance", icon: "Receipt" },
         { label: "Schedule", href: "/dashboard/schedule", icon: "Calendar" },
         { label: "Casting & Stars", href: "/dashboard/casting", icon: "Users" },
         { label: "Revenue Forecast", href: "/dashboard/revenue", icon: "TrendingUp" },
@@ -46,12 +49,15 @@ export function getNavigationForRole(role: UserRole): NavItem[] {
         { label: "Approvals", href: "/dashboard/approvals", icon: "CheckCircle", badge: 4 },
         { label: "Risk Alerts", href: "/dashboard/risks", icon: "AlertTriangle" },
         { label: "Reports", href: "/dashboard/reports", icon: "BarChart3" },
+        { label: "Activity Log", href: "/dashboard/activity", icon: "Activity" },
       ];
 
     case "director":
       return [
         { label: "Home", href: "/dashboard", icon: "LayoutDashboard" },
         { label: "Script & Scenes", href: "/dashboard/script", icon: "FileText" },
+        { label: "Strip Board", href: "/dashboard/strip-board", icon: "ArrowUpDown" },
+        { label: "Script Import", href: "/dashboard/script-import", icon: "FileUp" },
         { label: "Shot Planning", href: "/dashboard/shot-planning", icon: "Camera" },
         { label: "3D Previsualization", href: "/dashboard/previsualization", icon: "Box" },
         { label: "Action & Stunts", href: "/dashboard/action-stunts", icon: "Flame" },
@@ -64,6 +70,7 @@ export function getNavigationForRole(role: UserRole): NavItem[] {
     case "production_head":
       return [
         { label: "Home", href: "/dashboard", icon: "LayoutDashboard" },
+        { label: "Strip Board", href: "/dashboard/strip-board", icon: "ArrowUpDown" },
         { label: "Schedule", href: "/dashboard/schedule", icon: "Calendar" },
         { label: "Crew & Resources", href: "/dashboard/crew", icon: "Users" },
         { label: "Locations & Sets", href: "/dashboard/locations", icon: "MapPin" },
@@ -90,6 +97,7 @@ export function getNavigationForRole(role: UserRole): NavItem[] {
       return [
         { label: "Home", href: "/dashboard", icon: "LayoutDashboard" },
         { label: "Investment Summary", href: "/dashboard/investment", icon: "PiggyBank" },
+        { label: "Finance", href: "/dashboard/finance", icon: "Receipt" },
         { label: "Risk Scorecard", href: "/dashboard/risks", icon: "Shield" },
         { label: "Revenue Forecast", href: "/dashboard/revenue", icon: "TrendingUp" },
         { label: "Break-even", href: "/dashboard/break-even", icon: "Target" },
@@ -114,7 +122,10 @@ export function getNavigationForRole(role: UserRole): NavItem[] {
         { label: "Home", href: "/dashboard", icon: "LayoutDashboard" },
         { label: "All Projects", href: "/dashboard/projects", icon: "FolderOpen" },
         { label: "Script", href: "/dashboard/script", icon: "FileText" },
+        { label: "Strip Board", href: "/dashboard/strip-board", icon: "ArrowUpDown" },
+        { label: "Script Import", href: "/dashboard/script-import", icon: "FileUp" },
         { label: "Budget", href: "/dashboard/budget", icon: "IndianRupee" },
+        { label: "Finance", href: "/dashboard/finance", icon: "Receipt" },
         { label: "Schedule", href: "/dashboard/schedule", icon: "Calendar" },
         { label: "VFX", href: "/dashboard/vfx-breakdown", icon: "Sparkles" },
         { label: "Casting", href: "/dashboard/casting", icon: "Users" },
@@ -123,6 +134,7 @@ export function getNavigationForRole(role: UserRole): NavItem[] {
         { label: "Revenue", href: "/dashboard/revenue", icon: "TrendingUp" },
         { label: "Digital Twin", href: "/dashboard/digital-twin", icon: "Box" },
         { label: "Live Production", href: "/dashboard/live-production", icon: "Radio" },
+        { label: "Activity Log", href: "/dashboard/activity", icon: "Activity" },
         { label: "User Management", href: "/dashboard/users", icon: "UserCog" },
         { label: "Settings", href: "/dashboard/settings", icon: "Settings" },
       ];
